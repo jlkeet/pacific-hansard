@@ -1,0 +1,50 @@
+# Simple deployment for Railway - Static files only
+FROM php:7.4-apache
+
+# Enable Apache modules
+RUN a2enmod rewrite headers
+
+# Copy site files
+COPY site/ /var/www/html/
+
+# Set proper permissions
+RUN chown -R www-data:www-data /var/www/html
+
+# Configure Apache to serve index.html by default
+RUN echo '<Directory /var/www/html>\n\
+    Options Indexes FollowSymLinks\n\
+    AllowOverride All\n\
+    Require all granted\n\
+    DirectoryIndex index.html index.php\n\
+</Directory>' > /etc/apache2/sites-available/000-default.conf
+
+# Add ServerName to avoid warning
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# Create a simple .htaccess for routing
+RUN echo 'RewriteEngine On\n\
+# Redirect root to index.html\n\
+RewriteRule ^$ /index.html [L]\n\
+# Allow direct access to existing files\n\
+RewriteCond %{REQUEST_FILENAME} !-f\n\
+RewriteCond %{REQUEST_FILENAME} !-d\n\
+# Redirect API calls to a simple JSON response\n\
+RewriteRule ^api/(.*)$ /api_mock.php?endpoint=$1 [L]' > /var/www/html/.htaccess
+
+# Create a mock API response for now
+RUN echo '<?php\n\
+header("Content-Type: application/json");\n\
+header("Access-Control-Allow-Origin: *");\n\
+$endpoint = $_GET["endpoint"] ?? "";\n\
+if ($endpoint == "hansard-list.php") {\n\
+    echo json_encode(["data" => [], "total" => 0]);\n\
+} else {\n\
+    echo json_encode(["error" => "Not implemented yet"]);\n\
+}\n\
+?>' > /var/www/html/api_mock.php
+
+# Expose port 80
+EXPOSE 80
+
+# Start Apache
+CMD ["apache2-foreground"]

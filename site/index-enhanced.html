@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Hansard Search - Enhanced</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Enhanced mobile styles */
+        @media (max-width: 768px) {
+            .search-controls {
+                flex-direction: column;
+            }
+            .search-control {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            .advanced-filters {
+                display: none;
+            }
+            .mobile-filter-toggle {
+                display: block;
+                margin-bottom: 15px;
+            }
+            .search-result-item {
+                padding: 10px;
+            }
+            .export-buttons {
+                flex-direction: column;
+            }
+            .export-buttons button {
+                margin-bottom: 5px;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-filter-toggle {
+                display: none;
+            }
+        }
+        
+        /* Speaker search styles */
+        .speaker-search-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .speaker-search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        /* Quick search templates */
+        .search-templates {
+            margin-bottom: 20px;
+        }
+        
+        .template-btn {
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        /* Export buttons */
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        /* Enhanced result display */
+        .speaker-badge {
+            background-color: #007bff;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-right: 5px;
+        }
+        
+        .question-type-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+        
+        /* Loading indicator */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        /* Advanced filters */
+        .advanced-filters {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .filter-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading overlay -->
+    <div class="loading-overlay">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="tkb.png" style="height: 40px;" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Enhanced Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hansard-browser.html">Browse</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main role="main">
+        <div class="container-flex search-page-container">
+            <br />
+            <!-- Logo -->
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="logo">
+                    <img src="tkb.png" />
+                </div>
+            </div>
+            
+            <!-- Quick Search Templates -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10">
+                    <div class="search-templates text-center">
+                        <h5>Quick Searches:</h5>
+                        <button class="btn btn-sm btn-outline-primary template-btn" data-template="recent-questions">
+                            Recent Questions
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary template-btn" data-template="ministerial">
+                            Ministerial Statements
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary template-btn" data-template="today-in-history">
+                            Today in History
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary template-btn" data-template="my-mp">
+                            Find My MP
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Search Box -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10 search-form-container">
+                    <form class="card card-sm" id="search-form">
+                        <div class="card-body row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <i class="fa fa-search h4 text-body"></i>
+                            </div>
+                            <div class="col">
+                                <input class="form-control form-control-lg form-control-borderless" 
+                                       type="search" 
+                                       placeholder="Search Pacific Hansard (try: climate change, education, health)" 
+                                       id="search-query">
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-dark" type="submit" id="search-button">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Speaker Search -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10">
+                    <div class="speaker-search-container">
+                        <input type="text" 
+                               class="form-control speaker-search-input" 
+                               id="speaker-search"
+                               placeholder="Filter by speaker name (e.g., HON. T. PUPUKE BROWNE, MR T. HEATHER)...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile filter toggle -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10">
+                    <button class="btn btn-secondary mobile-filter-toggle" id="mobile-filter-btn">
+                        <i class="fa fa-filter"></i> Show Filters
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Advanced Filters -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10">
+                    <div class="advanced-filters" id="advanced-filters">
+                        <h5>Advanced Filters</h5>
+                        <div class="filter-row">
+                            <div class="filter-group">
+                                <label>Date Range</label>
+                                <select class="form-control" id="date-filter">
+                                    <option value="">Any time</option>
+                                    <option value="day">Past day</option>
+                                    <option value="week">Past week</option>
+                                    <option value="month">Past month</option>
+                                    <option value="year">Past year</option>
+                                    <option value="custom">Custom range</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Source</label>
+                                <select class="form-control" id="source-filter">
+                                    <option value="">All sources</option>
+                                    <option value="Cook Islands">Cook Islands</option>
+                                    <option value="Fiji">Fiji</option>
+                                    <option value="Papua New Guinea">Papua New Guinea</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Document Type</label>
+                                <select class="form-control" id="type-filter">
+                                    <option value="">All types</option>
+                                    <option value="Oral Question">Oral Questions</option>
+                                    <option value="Written Question">Written Questions</option>
+                                    <option value="Hansard Document">General Debate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-row">
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="questions-only"> Questions Only
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="answers-only"> Answers Only
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="recent-first" checked> Most Recent First
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Export Buttons & Summary -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="search-summary"></div>
+                        <div class="export-buttons" style="display: none;">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="exportResults('csv')">
+                                <i class="fa fa-download"></i> Export CSV
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="exportResults('json')">
+                                <i class="fa fa-download"></i> Export JSON
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="exportResults('citations')">
+                                <i class="fa fa-quote-right"></i> Export Citations
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search results -->
+            <div class="row justify-content-center" id="result-row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="search-result-list"></div>
+                    <div class="d-flex justify-content-center search-bottom">
+                        <div class="spinner-border loading" role="status" style="display: none;">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <a href="#" class="back-to-top">Back to top ^</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom Date Modal -->
+    <div class="modal fade" id="customDateModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Custom Date Range</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="customStartDate">Start Date:</label>
+                        <input type="date" class="form-control" id="customStartDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="customEndDate">End Date:</label>
+                        <input type="date" class="form-control" id="customEndDate">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="applyCustomDateRange">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js"></script>
+    
+    <!-- Enhanced Search JavaScript -->
+    <script src="tkb-search-enhanced.js"></script>
+</body>
+
+</html>

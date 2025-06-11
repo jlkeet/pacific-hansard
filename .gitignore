@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+scripts/env/
+
+# Logs
+*.log
+logs/
+
+# PDFs and large files
+*.pdf
+scripts/*/pdf_hansards/
+scripts/*/html_hansards/
+
+# Processing directories
+scripts/Cook Islands/DAY-*
+scripts/Cook Islands/Hansard_*
+scripts/Cook Islands/processed_hansards/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Local data
+scripts/*/data/

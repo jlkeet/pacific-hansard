@@ -1,0 +1,25 @@
+FROM python:3.9
+
+WORKDIR /app
+
+# Install necessary packages
+COPY ../../requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install requests beautifulsoup4 pdfminer.six
+
+# Copy the scripts
+COPY CI_hansard_converter.py /app/
+COPY CI_gpt_hansard.py /app/
+COPY CI-hansard-scraper.py /app/
+
+# Create directories for data
+RUN mkdir -p /app/pdf_hansards /app/html_hansards /app/processed_hansards /app/data /app/logs
+
+# Set up a cron job to run the scraper daily
+RUN apt-get update && apt-get -y install cron
+COPY cron_script.sh /app/
+RUN chmod +x /app/cron_script.sh
+RUN (crontab -l 2>/dev/null; echo "0 1 * * * /app/cron_script.sh >> /app/logs/cron.log 2>&1") | crontab -
+
+# Start the cron service and keep container running
+CMD ["bash", "-c", "service cron start && tail -f /dev/null"]

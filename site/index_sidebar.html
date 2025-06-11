@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Knowledge Basket</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    -->
+   <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="tkb.png" style=""/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container-flex search-page-container">
+                <br/>
+
+                <!-- Logo, etc -->
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="logo">
+                        <img src="tkb.png"/>
+                    </div>
+                    <!--
+                    <div class="banner">
+                        <h2>Search Newztext (new demonstration)</h2>
+                    </div>
+                    -->
+                </div>
+                <!-- Search box -->
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-10 search-form-container">
+                        <form class="card card-sm" id="search-form">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <i class="fas fa-search h4 text-body"></i>
+                                </div>
+                                <!--end of col-->
+                                <div class="col">
+                                    <input class="form-control form-control-lg form-control-borderless"
+                                           type="search" placeholder="Search PINI" id="search-query">
+                                </div>
+                                <!--end of col-->
+                                <div class="col-auto">
+                                    <button class="btn btn-lg btn-dark" type="submit" id="search-button">Search</button>
+                                </div>
+                                <!--end of col-->
+                            </div>
+                        </form>
+                    </div>
+                    <!--end of col-->
+                </div>
+                <!-- new search controls -->
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-10">
+                        <div class="d-flex flex-row search-controls">
+                                <div class="input-group-prepend search-control">
+                                    <span class="search-control-label" id="publication-date-control">Published:</span>
+                                    &nbsp;
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="publication-date-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Any time
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="publication-date-dropdownMenuLink" style="">
+                                            <a class="dropdown-item" href="#">Any time</a>
+                                            <a class="dropdown-item" href="#">Past day</a>
+                                            <a class="dropdown-item" href="#">Past week</a>
+                                            <a class="dropdown-item" href="#">Past month</a>
+                                            <a class="dropdown-item" href="#">Past year</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Custom range</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group-prepend search-control">
+                                    <span class="search-control-label" id="publication-source-control">Source:</span>
+                                    &nbsp;
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="publication-source-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Any publication
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="publication-source-dropdownMenuLink" style="">
+                                            <a class="dropdown-item" href="#">The National</a>
+                                            <a class="dropdown-item" href="#">Solomon Times</a>
+                                            <a class="dropdown-item" href="#">Samoa News</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group-prepend search-control">
+                                    <span class="search-control-label" id="search-type-control">Operator:</span>
+                                    &nbsp;
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="search-type-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Any terms match
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="source-type-dropdownMenuLink" style="">
+                                            <a id="search-type__or" class="dropdown-item" href="#">Any terms match ("OR")</a>
+                                            <a id="search-type__and" class="dropdown-item" href="#">All terms match ("AND")</a>
+                                            <a id="search-type__quote" class="dropdown-item" href="#">Exact phrase match ("QUOTED")</a>
+                                            <a class="dropdown-item" href="#">(some other common search style?)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group-prepend search-control">
+                                    <span class="search-control-label" id="search-detail">Display:</span>
+                                    &nbsp;
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="search-detail-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Detailed
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="source-type-dropdownMenuLink" style="">
+                                            <a id="search-display-detailed" class="dropdown-item" href="#">Detailed
+                                                <span class="tick"><svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg></span>
+                                            </a>
+                                            <a id="search-display-basic" class="dropdown-item" href="#">Basic
+                                                <span class="tick"><svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg></span>
+                                            </a>
+                                            <a id="search-display-debug" class="dropdown-item" href="#">Debug
+                                                <span class="tick"><svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of col-->
+
+                <div class="row justify-content-center">
+                    <div class="search-summary">
+
+                    </div>
+                </div>
+                <!-- Search results -->
+                <div class="row justify-content-center" id="result-row">
+                    <div class="col-9">
+                        <div class="search-result-list">
+                        </div>
+                    </div>
+                    <div class="col-3" id="facet-column">
+                        <div class="d-flex justify-content-between filter-heading-row">
+                            <h5 class="filter-by-heading">Filter by</h5>
+                            <a class="reset-link" href="#">Reset</a>
+                        </div>
+                        <div id="search-facets">
+                            <!-- Search facets will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    <script>
+
+        operator = 'OR';
+        filters = {};
+
+        $("#search-form").on('submit', function(e) {
+            e.preventDefault();
+            // TODO - discuss merits of keeping vs discarding filters
+            filters = {};
+            var query = $("#search-query").val();
+            search(query);
+        });
+
+        $(".reset-link").click(function(e){
+            e.preventDefault();
+            filters = {};
+            var query = $("#search-query").val();
+            search(query);
+        });
+
+        $("#search-type__and").click(function(e) {
+            var query = $("#search-query").val();
+            operator = 'AND';
+           $("#search-type-dropdownMenuLink").html($("#search-type__and").html());
+           search(query);
+        });
+
+
+        $("#search-type__or").click(function(e) {
+            var query = $("#search-query").val();
+            operator = 'OR';
+            $("#search-type-dropdownMenuLink").html($("#search-type__or").html());
+            search(query);
+        });
+
+
+        $("#search-type__quote").click(function(e) {
+            operator = 'OR';
+            $("#search-type-dropdownMenuLink").html($("#search-type__quote").html());
+            var query = $("#search-query").val();
+            // escape quotes
+            query = query.replaceAll('"','\"');
+            query = '"' + query + '"';
+            search(query);
+        });
+
+        var tick = '';
+
+        $("#search-display-detailed").click(function(e) {
+           $(".search-result-snippet").show();
+           $(".search-result-score").show();
+           $("#search-detail-dropdownMenuLink").html($(this).html());
+           $(".tick").hide();
+           $("#search-display-detailed>span.tick").show();
+        });
+
+        $("#search-display-debug").click(function(e) {
+            $(".search-result-snippet").show();
+            $(".search-result-score").show();
+            $("#search-detail-dropdownMenuLink").html($(this).html());
+            $(".tick").hide();
+            $("#search-display-debug>span.tick").show();
+        });
+
+        $("#search-display-basic").click(function(e) {
+            $(".search-result-snippet").hide();
+            $(".search-result-score").hide();
+            $("#search-detail-dropdownMenuLink").html($(this).html());
+            $(".tick").hide();
+            $("#search-display-basic>span.tick").show();
+        });
+
+        function search(query) {
+
+            var search_url = '/solr/pini_ext/select?q={!q.op='+operator+' df=content}' + query;
+            search_url += '&fl=crawltime,url,title,content,author,collection,collection_label,date,category,id,collection_place,timestamp,local_id,score';
+            search_url += '&hl=true&hl.fl=content&hl.snippets=3&hl.fragsize=250';
+            search_url += '&facet=true&facet.mincount=1&facet.field=collection_place_str&facet.field=collection_label_str&facet.field=author_str';
+
+            $.each(filters, function(filter_field, filter_values) {
+               if (filter_values.length > 0) {
+                   $.each(filter_values, function(index, filter_value) {
+                       search_url += '&fq=' + filter_field + '_str:"' + filter_value +'"';
+                   })
+               }
+            });
+
+            console.log("Search URL: " + search_url);
+
+            $.get(search_url,
+                function(data) {
+                    console.dir(data);
+                    if(data.response !== undefined && data.response.docs !== undefined) {
+                        $(".search-result-list").html('');
+                        $(".search-summary").html("Your search matched " + data.response.numFound + " documents.");
+
+                        // Main search
+                        for(var i = 0; i < data.response.docs.length; i++) {
+                            var d = data.response.docs[i];
+                            var result = "<div class='search-result-item'><div class='d-flex align-items-stretch'>";
+                            result += '<div><h4 class="search-result-title">'+d.title+'</h4>';
+                            result += '<p class="search-result-attribution d-flex align-items-center justify-content-start">' +
+                                '<svg class="bi bi-calendar" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
+                                '  <path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>\n' +
+                                '  <path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>\n' +
+                                '</svg> <span class="search-result-date">' + format_date(d.timestamp, true) + '</span>';
+                            result += '<span class="badge badge-warning search-result-source">'+ d.collection_label +'</span>';
+                            if (d.author && false) {
+                                result += '<br/><svg class="bi bi-person-fill" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '  <path fill-rule="evenodd" d="M5 16s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H5zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>\n' +
+                                    '</svg> <span class="search-result-author">' + d.author + '</span>';
+                            }
+                            result += '</p>';
+                            var favicon = d.collection + '_fav.png';
+                            result += '<p class="search-result-reference">' +
+                                '<img class="item-favicon" src="'+favicon+'"/>' +
+                                ' <a class="search-result-link" target="_blank" href="' + d.id + '">'+d.id+'</a></p>';
+
+                            // Highlighting
+                            if (data.highlighting && data.highlighting[d.id]) {
+                                $.each(data.highlighting[d.id].content, function(idx, snippet) {
+                                    result += '<p class="search-result-snippet">&hellip;' + snippet + '&hellip;</p>';
+                                });
+                            }
+                            result += '<p class="d-flex justify-content-end">' +
+                                '<span class="search-result-source">Source: ' + d.collection_label +
+                                '. </span> <span class="search-result-crawltime">Last retrieved: ' +
+                                format_date(d.crawltime, false) + '</span></p>';
+
+                            // Score - temp, hidden by default?
+                            result += '<p class="d-flex justify-content-end">' +
+                                '<span class="search-result-score">Score: ' + d.score +
+                                '</span></p>';
+                            $(".search-result-list").append(result);
+                        }
+
+                        $("#search-facets").html('');
+
+                        if (data.facet_counts && data.facet_counts.facet_fields) {
+                            var facets = data.facet_counts.facet_fields;
+                            var any_facets = false;
+
+                            if (facets.collection_place_str && facets.collection_place_str.length > 0) {
+                                populate_facet(facets.collection_place_str, "Region", "collection_place");
+                                any_facets = true;
+                            }
+                            if (facets.collection_label_str && facets.collection_label_str.length > 0) {
+                                populate_facet(facets.collection_label_str, "Source", "collection_label");
+                                any_facets = true;
+                            }
+                            if (facets.author_str && facets.author_str.length > 0) {
+                                populate_facet(facets.author_str, "Author" ,"author");
+                                any_facets = true;
+                            }
+                            if(!any_facets) {
+                                $("#search-facets").html('<br/><p><em>No facets were returned for this search</em></p>');
+                                $("#facet-column").hide();
+                            } else {
+                                $("#facet-column").show();
+                            }
+
+                        } else {
+                            $("#search-facets").html('<br/><p><em>No facets were returned for this search</em></p>');
+                        }
+
+                        $(".facet-checkbox").unbind('click');
+
+                        $(".facet-checkbox").click(function(e){
+                            e.preventDefault();
+                            var filter_value = $(this).val();
+                            var filter_field = $(this).prop('id');
+
+                            if (this.checked) {
+                                if (filters.hasOwnProperty(filter_field)) {
+                                    // This is already in filters;
+                                    console.log("Found " + filter_field + " in filters");
+                                    var val_idx = filters[filter_field].indexOf(filter_value);
+                                    if (val_idx > -1) {
+                                        // this shouldn't happen...
+                                    } else {
+                                        filters[filter_field].push(filter_value);
+                                    }
+                                } else {
+                                    filters[filter_field] = [];
+                                    filters[filter_field].push(filter_value);
+                                }
+                            } else {
+                                if (filters.hasOwnProperty(filter_field)) {
+                                    // This is already in filters;
+                                    console.log("Found " + filter_field + " in filters");
+                                    var val_idx = filters[filter_field].indexOf(filter_value);
+                                    if (val_idx > -1) {
+                                        filters[filter_field].splice(val_idx, 1);
+                                    } else {
+                                        // this shouldn't happen...
+                                    }
+                                } else {
+                                    filters[filter_field] = [];
+                                    filters[filter_field].push(filter_value);
+                                }
+                            }
+
+                            var query = $("#search-query").val();
+                            search(query);
+
+                        });
+                    }
+                });
+        }
+
+        function populate_facet(facet_data, facet_header, facet_id) {
+            console.log("populating " + facet_header);
+            var facets_string = "";
+            facets_string += "<div class='search-facet'><h6 class='facet-field-header'>" + facet_header + "</h6><ul class='list-group'>";
+            for (var x = 0; x < facet_data.length; x++) {
+                facets_string += '<li class="filter-list-item list-group-item d-flex justify-content-between align-items-center"><div class="form-check form-check-inline">';
+
+                var checked = false;
+                if(filters.hasOwnProperty(facet_id) && filters[facet_id].indexOf(facet_data[x]) > -1) {
+                    checked = true;
+                }
+
+                facets_string += '<input class="form-check-input facet-checkbox" type="checkbox" id="' + facet_id + '" value="'+ facet_data[x] +'"' +
+                    (checked ? 'checked="checked"' : '') + '>';
+                facets_string += '<label class="form-check-label" for="' + facet_id + '">' + facet_data[x] + '</label></div>';
+                facets_string += '<span class="badge badge-primary badge-pill">';
+                facets_string += facet_data[++x];
+                facets_string += "</span></li>";
+                if (x > 18) {
+                    break;
+                }
+            }
+            facets_string += "</ul></div>";
+            $("#search-facets").append(facets_string);
+        }
+
+        function format_date(timestamp, long) {
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var date  = new Date(timestamp);
+            if(long) {
+                return (date.toLocaleDateString("en-NZ", options)); // Saturday, September 17, 2016
+            } else {
+                return date.toLocaleDateString("en-NZ");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

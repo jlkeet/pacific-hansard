@@ -1,0 +1,85 @@
+version: "3.8"
+
+services:
+  solr:
+    image: solr:latest
+    container_name: solr_hansard
+    ports:
+      - "8983:8983"
+    volumes:
+      - solr_data:/var/solr
+    command:
+      - solr-precreate
+      - hansard_core
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql_pacific_hansard
+    environment:
+      MYSQL_ROOT_PASSWORD: Wh1t3sh33ts
+      MYSQL_DATABASE: pacific_hansard_db
+      MYSQL_USER: hansard_user
+      MYSQL_PASSWORD: test_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  web:
+    image: nginx:latest
+    container_name: web_hansard
+    volumes:
+      - "./site:/site"
+      - "./config/site.conf:/etc/nginx/conf.d/default.conf"
+      - "./config/scripts:/scripts"
+    ports:
+      - "8080:80"
+    environment:
+      SOLR_URL: "http://solr:8983/solr/hansard_core"
+      DB_HOST: "mysql"
+      DB_NAME: "pacific_hansard_db"
+      DB_USER: "hansard_user"
+      DB_PASSWORD: "test_pass"
+    depends_on:
+      - mysql
+      - php
+      - solr
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    image: php:7-fpm
+    volumes:
+      - "./site:/site"
+    ports:
+      - "9000:9000"
+    environment:
+      SOLR_URL: "http://solr:8983/solr/hansard_core"
+      DB_HOST: "mysql"
+      DB_NAME: "pacific_hansard_db"
+      DB_USER: "hansard_user"
+      DB_PASSWORD: "test_pass"
+
+  python_script:
+    build: .
+    container_name: python_hansard
+    volumes:
+      - ./collections:/app/collections
+    environment:
+      DB_HOST: "mysql"
+      DB_NAME: "pacific_hansard_db"
+      DB_USER: "hansard_user"
+      DB_PASSWORD: "test_pass"
+      SOLR_URL: "http://solr:8983/solr/hansard_core"
+    depends_on:
+      - mysql
+      - solr
+    command: python -u /app/pipelines_enhanced.py
+
+
+
+volumes:
+  solr_data:
+  mysql_data:

@@ -1,0 +1,26 @@
+{
+  "generated": "2025-06-06T14:24:15.538828",
+  "stats": {
+    "total_files": 52,
+    "hansards_by_year": {
+      "2023": 10,
+      "2024": 42
+    },
+    "total_parts": 999,
+    "unique_speakers": 272,
+    "questions": {
+      "oral": 249,
+      "written": 3
+    },
+    "hansards_with_questions": 20,
+    "content_size_mb": 13.888092994689941
+  },
+  "production_ready": true,
+  "overall_score": 91.6923076923077,
+  "deployment_checklist": [
+    "PDF conversion complete",
+    "Speaker extraction complete",
+    "Question extraction complete",
+    "Ready for Solr indexing"
+  ]
+}

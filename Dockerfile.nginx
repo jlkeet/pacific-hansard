@@ -1,0 +1,43 @@
+# Simple static site deployment using Nginx
+FROM nginx:alpine
+
+# Install gettext for envsubst
+RUN apk add --no-cache gettext
+
+# Copy the site files
+COPY site/ /usr/share/nginx/html/
+
+# Create nginx config template
+RUN echo 'server { \n\
+    listen ${PORT}; \n\
+    server_name localhost; \n\
+    root /usr/share/nginx/html; \n\
+    index index.html index.htm; \n\
+    \n\
+    location / { \n\
+        try_files $uri $uri/ /index.html; \n\
+    } \n\
+    \n\
+    location /health { \n\
+        return 200 "OK"; \n\
+        add_header Content-Type text/plain; \n\
+    } \n\
+    \n\
+    location /api/ { \n\
+        add_header Content-Type application/json; \n\
+        add_header Access-Control-Allow-Origin *; \n\
+        return 200 \'{"data": [], "total": 0, "message": "API coming soon"}\'; \n\
+    } \n\
+}' > /etc/nginx/templates/default.conf.template
+
+# Create a startup script that substitutes PORT
+RUN echo '#!/bin/sh\n\
+export PORT=${PORT:-80}\n\
+envsubst \047${PORT}\047 < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf\n\
+nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
+
+# Railway uses dynamic ports
+EXPOSE ${PORT}
+
+# Start nginx with PORT substitution
+CMD ["/start.sh"]

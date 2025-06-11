@@ -1,0 +1,36 @@
+# Gitpod configuration for Pacific Hansard
+tasks:
+  - name: Start Services
+    init: |
+      echo "Setting up Pacific Hansard..."
+      docker-compose pull
+    command: |
+      docker-compose up -d
+      echo "Waiting for services to start..."
+      sleep 30
+      echo ""
+      echo "🎉 Pacific Hansard is ready!"
+      echo ""
+      echo "Web Interface: $(gp url 8080)"
+      echo "Solr Admin: $(gp url 8983)"
+      echo ""
+      gp preview $(gp url 8080)
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+    visibility: public
+    description: Pacific Hansard Web Interface
+  - port: 8983
+    onOpen: ignore
+    visibility: public
+    description: Solr Admin Panel
+  - port: 3307
+    onOpen: ignore
+    visibility: private
+    description: MySQL Database
+
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-azuretools.vscode-docker

@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  hansard_scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile.scraper
+    container_name: hansard_scraper
+    volumes:
+      - ./pdf_hansards:/app/pdf_hansards
+      - ./html_hansards:/app/html_hansards
+      - ./processed_hansards:/app/processed_hansards
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    environment:
+      - TZ=Pacific/Rarotonga

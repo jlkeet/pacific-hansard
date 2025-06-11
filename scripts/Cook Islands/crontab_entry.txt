@@ -1,0 +1,9 @@
+# Run the Cook Islands Hansard scraper daily at 1:00 AM
+0 1 * * * cd /Users/jacksonkeet/Pacific\ Hansard\ Development/scripts/Cook\ Islands/ && bash run_daily_scraper.sh
+
+# To install this crontab entry, run:
+# crontab -e
+# Then paste the line above (without this comment) and save
+
+# Alternatively, run:
+# (crontab -l 2>/dev/null; echo "0 1 * * * cd /Users/jacksonkeet/Pacific\ Hansard\ Development/scripts/Cook\ Islands/ && bash run_daily_scraper.sh") | crontab -

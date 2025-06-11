@@ -1,0 +1,1363 @@
+Searching for question sections in Fiji hansards...
+============================================================
+
+Found question sections in 41 hansards:
+------------------------------------------------------------
+
+2023/November/20:
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2023/November/21:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part18.html
+  Pattern: QUESTION:
+  Matches: 1
+  Examples: ['question:']
+
+2023/November/22:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part19.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part19.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part18.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part18.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2023/November/23:
+  File: part10.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 1
+  Examples: ['supplementary question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2023/November/24:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+
+2023/September/12:
+  File: part21.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part21.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part20.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part11.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part22.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+
+2023/September/13:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part9.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part14.html
+  Pattern: ORAL QUESTION
+  Matches: 2
+  Examples: ['Oral Question', 'Oral Question']
+
+2023/September/14:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2023/September/15:
+  File: part17.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part11.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part13.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['written question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part15.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part15.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part18.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+
+2024/April/15:
+  File: part11.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['oral question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/April/16:
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/April/17:
+  File: part7.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part7.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+
+2024/April/18:
+  File: part7.html
+  Pattern: Question No\.
+  Matches: 3
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part7.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part7.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+
+2024/April/19:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+
+2024/August/5:
+  File: part17.html
+  Pattern: Question No\.
+  Matches: 3
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part17.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+  File: part16.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part11.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part19.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part15.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part15.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part14.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part14.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part18.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part18.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/August/6:
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+
+2024/August/7:
+  File: part11.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part11.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part11.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part9.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part9.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part14.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+
+2024/August/8:
+  File: part11.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 3
+  Examples: ['written questions', 'written questions', 'Written Questions']
+  File: part11.html
+  Pattern: Question No\.
+  Matches: 13
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part11.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 3
+  Examples: ['supplementary question', 'supplementary question', 'supplementary question']
+  File: part11.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 3
+  Examples: ['written question', 'written question', 'Written Question']
+  File: part13.html
+  Pattern: Question No\.
+  Matches: 3
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part13.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'written question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part12.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part12.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+  File: part9.html
+  Pattern: QUESTION TIME
+  Matches: 2
+  Examples: ['question time', 'question time']
+  File: part9.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part9.html
+  Pattern: ORAL QUESTION
+  Matches: 2
+  Examples: ['oral question', 'Oral Question']
+
+2024/August/9:
+  File: part10.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part10.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part10.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part12.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part12.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part14.html
+  Pattern: Question No\.
+  Matches: 4
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part14.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+
+2024/December/2:
+  File: part21.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part21.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'written question']
+  File: part20.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part20.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part22.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+
+2024/December/3:
+  File: part26.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part26.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part13.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part13.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 2
+  Examples: ['Written Questions', 'Written Questions']
+  File: part13.html
+  Pattern: Question No\.
+  Matches: 9
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part13.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 3
+  Examples: ['supplementary question', 'supplementary question', 'supplementary question']
+  File: part13.html
+  Pattern: ORAL QUESTION
+  Matches: 2
+  Examples: ['Oral Question', 'oral question']
+  File: part13.html
+  Pattern: WRITTEN QUESTION
+  Matches: 3
+  Examples: ['Written Question', 'Written Question', 'Written Question']
+  File: part25.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part14.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part14.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+  File: part18.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part18.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/December/4:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part12.html
+  Pattern: Question No\.
+  Matches: 8
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part12.html
+  Pattern: Question \d+
+  Matches: 1
+  Examples: ['Question 290']
+  File: part12.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 1
+  Examples: ['supplementary question']
+  File: part12.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part12.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/December/5:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+
+2024/December/6:
+  File: part11.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part13.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part13.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part14.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part14.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'written question']
+
+2024/July/10:
+  File: part7.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part7.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 8
+  Examples: ['supplementary question', 'supplementary question', 'supplementary question']
+  File: part7.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/July/11:
+  File: part7.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 6
+  Examples: ['supplementary question', 'supplementary question', 'supplementary question']
+  File: part7.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part7.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['written question']
+
+2024/July/9:
+  File: part6.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part6.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part6.html
+  Pattern: WRITTEN QUESTION
+  Matches: 3
+  Examples: ['Written Question', 'Written Question', 'Written Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/May/20:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/May/21:
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/May/22:
+  File: part11.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part9.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['written question']
+
+2024/May/23:
+  File: part10.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part10.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part18.html
+  Pattern: ORAL QUESTIONS
+  Matches: 2
+  Examples: ['Oral Questions', 'Oral Questions']
+  File: part18.html
+  Pattern: QUESTION TIME
+  Matches: 2
+  Examples: ['question time', 'question time']
+  File: part18.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 1
+  Examples: ['Supplementary Question']
+  File: part18.html
+  Pattern: ORAL QUESTION
+  Matches: 2
+  Examples: ['Oral Question', 'Oral Question']
+
+2024/May/24:
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part9.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part9.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/October/1:
+  File: part16.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part16.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part11.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/October/2:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part9.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 1
+  Examples: ['supplementary question']
+
+2024/October/3:
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part19.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part19.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part14.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part14.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/September/2:
+  File: part7.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 2
+  Examples: ['Written Questions', 'written questions']
+  File: part7.html
+  Pattern: Question No\.
+  Matches: 3
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part7.html
+  Pattern: WRITTEN QUESTION
+  Matches: 5
+  Examples: ['Written Question', 'Written Question', 'Written Question']
+  File: part11.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part11.html
+  Pattern: Question No\.
+  Matches: 3
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part11.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+  File: part13.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part13.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 2
+  Examples: ['Written Questions', 'Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 2
+  Examples: ['Written Question', 'Written Question']
+  File: part12.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part12.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/September/3:
+  File: part6.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part6.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part6.html
+  Pattern: WRITTEN QUESTION
+  Matches: 3
+  Examples: ['Written Question', 'Written Question', 'Written Question']
+  File: part2.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part2.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part2.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part2.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/September/30:
+  File: part17.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part17.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part18.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part18.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/September/4:
+  File: part21.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part7.html
+  Pattern: QUESTION TIME
+  Matches: 1
+  Examples: ['question time']
+  File: part7.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 1
+  Examples: ['supplementary question']
+  File: part20.html
+  Pattern: Question No\.
+  Matches: 2
+  Examples: ['Question No.', 'Question No.']
+  File: part20.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part11.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part10.html
+  Pattern: Question No\.
+  Matches: 3
+  Examples: ['Question No.', 'Question No.', 'Question No.']
+  File: part10.html
+  Pattern: WRITTEN QUESTION
+  Matches: 3
+  Examples: ['Written Question', 'Written Question', 'Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: WRITTEN QUESTIONS
+  Matches: 1
+  Examples: ['Written Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part19.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part18.html
+  Pattern: Question No\.
+  Matches: 1
+  Examples: ['Question No.']
+  File: part18.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+2024/September/5:
+  File: part10.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part10.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+
+2024/September/6:
+  File: part7.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part11.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part11.html
+  Pattern: SUPPLEMENTARY QUESTION
+  Matches: 1
+  Examples: ['supplementary question']
+  File: part11.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part11.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+  File: part3.html
+  Pattern: ORAL QUESTIONS
+  Matches: 1
+  Examples: ['Oral Questions']
+  File: part3.html
+  Pattern: ORAL QUESTION
+  Matches: 1
+  Examples: ['Oral Question']
+  File: part3.html
+  Pattern: WRITTEN QUESTION
+  Matches: 1
+  Examples: ['Written Question']
+
+============================================================
+DETAILED CONTENT ANALYSIS
+============================================================
+
+Analyzing 2023/November/20 in detail:
+
+  Context from part2.html:
+      
+      </span></p>
+  >>> <p><span>Oral Questions 
+      
+      (1)</span><span> </span><span>Survey/Study on Skills Shortage 
+      
+      (2)</span><span> </span><span>High Seas Treaty (BBNJ) - UNCLOS 
+      
+      (3)</span><span> </span><span>Clarification on the Inflation Level   
+      
+      (4)</span><span> </span><span>Poverty Alleviation Programme – Monitoring Mechanism 
+      
+
+Analyzing 2023/November/21 in detail:
+
+  Context from part3.html:
+      
+      </span></p>
+  >>> <p><span>Oral Questions 
+      
+      (1)</span><span> </span><span>Leadership Training for Multi-Ethnic Groups   
+      
+      (2)</span><span> </span><span>Status of Issuance of PSV Licence   
+      
+      (3)</span><span> </span><span>2023-2026 Strategic Action Plan Framework   
+      
+      (4)</span><span> </span><span>Market Employability Survey 
+      
+
+Analyzing 2023/November/24 in detail:
+
+  Context from part3.html:
+      
+      </span></p>
+  >>> <p><span>Oral Questions 
+      
+      (1)</span><span> </span><span>Forum Fisheries Committee Members-Distribution of Funds 
+      
+      (2)</span><span> </span><span>Trafficking and Usage of Hard Drugs in Fiji 
+      
+      (3)</span><span> </span><span>Empowerment of Co-operatives &amp; Business Sustainability   
+      
+      (4)</span><span> </span><span>Progress of Savusavu, Levuka &amp; Nakasi Markets 
+      
+
+Analyzing 2023/November/23 in detail:
+
+  Context from part10.html:
+      <p><span>Mr. Speaker, Sir, before I commence with my Ministerial Statement, I just wish to provide a 
+      
+  >>> </span><span>response to the supplementary question that was asked by the other side of Parliament yesterday on 
+      
+      </span><span>the Volunteer Service Abroad (VSA).   
+      
+      </span></p>
+      <p><span>Mr. Speaker, Sir, our records show that there are two Volunteer Schemes that the Ministry is 
+      
+      </span></p>
+      <p><span>engaged in: 
+      
+
+Analyzing 2023/November/22 in detail:
+
+  Context from part3.html:
+      
+      </span></p>
+  >>> <p><span>Oral Questions 
+      
+      (1)</span><span> </span><span>Banning/Regulating Pornographic Sites in Fiji  
+      
+      (2)</span><span> </span><span>Update on Changes to Bus Fare Programme 
+      
+      (3)</span><span> </span><span>Establishment of Roadside Stalls 
+      
+      (4)</span><span> </span><span>Volunteer Service Abroad of New Zealand 
+      

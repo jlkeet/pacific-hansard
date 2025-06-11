@@ -1,0 +1,23 @@
+{
+  "generated": "2025-06-06T14:11:18.008317",
+  "stats": {
+    "total_files": 52,
+    "date_range": {
+      "min": "2023-March-15",
+      "max": "2024-September-30"
+    },
+    "hansards_by_year": {
+      "2023": 10,
+      "2024": 42
+    },
+    "total_parts": 762,
+    "unique_speakers": 200,
+    "content_size_mb": 10.241157531738281
+  },
+  "production_ready": true,
+  "notes": [
+    "Speaker extraction fixed and working well",
+    "Duplicate speaker names exist but are minor variations",
+    "Question extraction not implemented for 2023-2024 format"
+  ]
+}

@@ -1,0 +1,53 @@
+# Ignore large files and directories for Railway deployment
+
+# PDF files (these are huge)
+*.pdf
+scripts/PNG/*.pdf
+scripts/Fiji/*.pdf
+scripts/Cook Islands/pdf_hansards/
+scripts/Fiji/pdf_hansards/
+
+# HTML source files (not needed for deployment)
+scripts/*/html_hansards/
+scripts/*/*/*.html
+
+# Processing directories (generated locally)
+scripts/Cook Islands/DAY-*
+scripts/Cook Islands/Hansard_*
+scripts/Cook Islands/Monday-*
+scripts/Cook Islands/Tuesday-*
+scripts/Cook Islands/Wednesday-*
+
+# Logs and temporary files
+*.log
+logs/
+scripts/*/logs/
+scripts/Cook Islands/hansard_processing.log
+
+# Python environments
+env/
+venv/
+scripts/env/
+__pycache__/
+*.pyc
+
+# Development files
+.git/
+.gitignore
+*.md
+!CLAUDE.md
+
+# Data files not needed for web interface
+scripts/*/data/
+documents/
+
+# Processed hansards (keep only collections)
+scripts/Cook Islands/processed_hansards/
+scripts/Fiji/processed_hansards/
+
+# Large test files
+test_*.py
+
+# OS files
+.DS_Store
+Thumbs.db
