@@ -1,21 +1,35 @@
 <?php
 // Solr proxy for Railway deployment
-header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
 // Get the Solr URL from environment
 $solrBaseUrl = getenv('SOLR_URL') ?: 'http://localhost:8983/solr/hansard_core';
 
-// Get the request path
-$requestPath = $_SERVER['REQUEST_URI'];
+// Get the request path without query string
+$requestUri = $_SERVER['REQUEST_URI'];
+$requestPath = parse_url($requestUri, PHP_URL_PATH);
 $requestPath = str_replace('/solr/hansard_core/', '', $requestPath);
 $requestPath = str_replace('/solr/', '', $requestPath);
 
-// Build the full Solr URL with query string
-$solrUrl = $solrBaseUrl . '/' . $requestPath;
+// Remove any leading slashes from the path
+$requestPath = ltrim($requestPath, '/');
+
+// Build the full Solr URL
+if ($requestPath) {
+    $solrUrl = $solrBaseUrl . '/' . $requestPath;
+} else {
+    $solrUrl = $solrBaseUrl;
+}
+
+// Add query string if present
 if ($_SERVER['QUERY_STRING']) {
     $solrUrl .= '?' . $_SERVER['QUERY_STRING'];
 }
+
+// Debug logging (comment out in production)
+error_log("Solr Proxy - Request URI: " . $_SERVER['REQUEST_URI']);
+error_log("Solr Proxy - Query String: " . $_SERVER['QUERY_STRING']);
+error_log("Solr Proxy - Final URL: " . $solrUrl);
 
 // Initialize cURL
 $ch = curl_init();
@@ -39,6 +53,11 @@ if ($error) {
 
 // Forward the HTTP status code
 http_response_code($httpCode);
+
+// Set content type based on response
+if ($httpCode == 200) {
+    header('Content-Type: application/json');
+}
 
 // Output the response
 echo $response;
