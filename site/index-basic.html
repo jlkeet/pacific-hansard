@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Knowledge Basket</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-1.8.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .loading-more.active {
+            display: block !important;
+        }
+        .no-more-results.active {
+            display: block !important;
+        }
+    </style>
+    <style>
+        /* Speaker dropdown styling */
+        #speaker-dropdown .dropdown-menu {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .speaker-option .badge {
+            margin-left: 5px;
+        }
+        
+        .speaker-option.active {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .speaker-option.active .badge {
+            background-color: white;
+            color: #007bff;
+        }
+        
+        #speaker-search-input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="tkb.png" style="" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <main role="main">
+        <div class="container-flex search-page-container">
+            <br />
+            <!-- Logo, etc -->
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="logo">
+                    <img src="tkb.png" />
+                </div>
+                <!--
+                    <div class="banner">
+                        <h2>Search Newztext (new demonstration)</h2>
+                    </div>
+                    -->
+            </div>
+            <!-- Search box -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10 search-form-container">
+                    <form class="card card-sm" id="search-form">
+                        <div class="card-body row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <i class="fa fa-search h4 text-body"></i>
+                            </div>
+                            <!--end of col-->
+                            <div class="col">
+                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search Pacific Hansard" id="search-query">
+                            </div>
+                            <!--end of col-->
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-dark" type="submit" id="search-button">Search</button>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                    </form>
+                </div>
+                <!--end of col-->
+            </div>
+            <!-- new search controls -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10">
+                    <div class="d-flex flex-row search-controls">
+                        <div class="input-group-prepend search-control">
+                            <span class="search-control-label" id="publication-date-control">Published:</span>
+                            &nbsp;
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="publication-date-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Any time
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="publication-date-dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Any time</a>
+                                    <a class="dropdown-item" href="#">Past day</a>
+                                    <a class="dropdown-item" href="#">Past week</a>
+                                    <a class="dropdown-item" href="#">Past month</a>
+                                    <a class="dropdown-item" href="#">Past year</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Custom range</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend search-control">
+                            <span class="search-control-label" id="publication-source-control">Source:</span>
+                            &nbsp;
+                            <div class="dropdown" id="publication-source-dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="publication-source-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Any publication
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="publication-source-dropdownMenuLink" style="">
+                                    <a class="dropdown-item" href="#">Fiji Hansard</a>
+                                    <a class="dropdown-item" href="#">Cook Islands Hansard</a>
+                                    <a class="dropdown-item" href="#">Samoan Hansard</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend search-control">
+                            <span id="document-type-control" class="search-control-label">Type:</span>
+                            <div class="dropdown" id="document-type-dropdown">
+                                <a class="dropdown-toggle" href="#" id="document-type-dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Any type
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="document-type-dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Any type</a>
+                                    <a class="dropdown-item" href="#">Questions</a>
+                                    <a class="dropdown-item" href="#">Oral Question</a>
+                                    <a class="dropdown-item" href="#">Written Question</a>
+                                    <a class="dropdown-item" href="#">Ministerial Statement</a>
+                                    <!-- Add more document types as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend search-control">
+                            <span class="search-control-label" id="speaker-control">Speaker:</span>
+                            &nbsp;
+                            <div class="dropdown" id="speaker-dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="speaker-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Any speaker
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="speaker-dropdownMenuLink" style="max-height: 300px; overflow-y: auto;">
+                                    <input type="text" class="form-control speaker-search-input" id="speaker-search-input" placeholder="Search speakers..." style="margin: 5px 10px; width: calc(100% - 20px);">
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item speaker-option" href="#" data-speaker="">Any speaker</a>
+                                    <div id="speaker-list">
+                                        <!-- Speakers will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend search-control">
+                            <span class="search-control-label" id="search-type-control">Operator:</span>
+                            &nbsp;
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="search-type-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    All terms match
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="source-type-dropdownMenuLink" style="">
+                                    <a id="search-type__and" class="dropdown-item" href="#">All terms match ("AND")</a>
+                                    <a id="search-type__or" class="dropdown-item" href="#">Any terms match ("OR")</a>
+                                    <a id="search-type__quote" class="dropdown-item" href="#">Exact phrase match ("QUOTED")</a>
+                                    <a class="dropdown-item" href="#">(some other common search style?)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend search-control">
+                            <span class="search-control-label" id="search-detail">Display:</span>
+                            &nbsp;
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="search-detail-dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Detailed
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="source-type-dropdownMenuLink" style="">
+                                    <a id="search-display-detailed" class="dropdown-item" href="#">Detailed
+                                        <span class="tick"><svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                                            </svg></span>
+                                    </a>
+                                    <a id="search-display-basic" class="dropdown-item" href="#">Basic
+                                        <span class="tick"><svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                                            </svg></span>
+                                    </a>
+                                    <a id="search-display-debug" class="dropdown-item" href="#">Debug
+                                        <span class="tick"><svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                                            </svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend search-control">
+                            <a class="caretdown" href="#" role="button" id="advanced-search-link">
+                                Search tools
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of col-->
+            <div class="row justify-content-center">
+                <div class="search-summary">
+                </div>
+            </div>
+            <div class="row d-none justify-content-center advanced-search-controls">
+                <div class="col-10">
+                    <div class="flex-row d-flex">
+                        <div class="source-checkboxes flex-item">
+                        </div>
+                        <div class="date-checkboxes flex-item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search results -->
+            <div class="row justify-content-center" id="result-row">
+                <div class="col-1">
+                </div>
+                <div class="col-10">
+                    <div id="graph"></div>
+                    <div class="search-result-list">
+                    </div>
+                    <div class="loading-more" style="text-align: center; padding: 20px; display: none;">
+                        <i class="fa fa-spinner fa-spin"></i> Loading more results...
+                    </div>
+                    <div class="no-more-results" style="text-align: center; padding: 20px; color: #666; display: none;">
+                        No more results to load
+                    </div>
+                    <div class="d-flex justify-content-center search-bottom">
+                        <div class="spinner-border loading" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <a href="#" class="back-to-top">Back to top ^</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function() {
+
+        var win = $(window);
+
+        operator = 'AND';
+        filters = {};
+        source_or_filters = [];
+        date_or_filters = [];
+        start = 0;
+        selectedSpeaker = '';
+        var selectedDocumentType = '';
+        var selectedCountry = '';
+        var customStartDate = null;
+        var customEndDate = null;
+        var dateFilter = '';
+        var totalResults = 0;
+        var hasMoreResults = true;
+        
+        // Store search state for back button functionality
+        function saveSearchState() {
+            var searchState = {
+                query: $("#search-query").val(),
+                start: start,
+                scrollPosition: $(window).scrollTop(),
+                results: $(".search-result-list").html(),
+                summary: $(".search-summary").html(),
+                selectedDocumentType: selectedDocumentType,
+                selectedCountry: selectedCountry,
+                selectedSpeaker: selectedSpeaker,
+                operator: operator,
+                filters: filters,
+                source_or_filters: source_or_filters,
+                dateFilter: dateFilter,
+                totalResults: totalResults,
+                hasMoreResults: hasMoreResults
+            };
+            sessionStorage.setItem('searchState', JSON.stringify(searchState));
+        }
+        
+        // Restore search state when coming back
+        function restoreSearchState() {
+            var searchState = sessionStorage.getItem('searchState');
+            if (searchState) {
+                searchState = JSON.parse(searchState);
+                $("#search-query").val(searchState.query);
+                start = searchState.start || 0;
+                selectedDocumentType = searchState.selectedDocumentType || '';
+                selectedCountry = searchState.selectedCountry || '';
+                selectedSpeaker = searchState.selectedSpeaker || '';
+                operator = searchState.operator || 'AND';
+                filters = searchState.filters || {};
+                source_or_filters = searchState.source_or_filters || [];
+                dateFilter = searchState.dateFilter || '';
+                totalResults = searchState.totalResults || 0;
+                hasMoreResults = searchState.hasMoreResults !== false;
+                
+                // Restore UI state
+                if (searchState.results) {
+                    $(".search-result-list").html(searchState.results);
+                    $(".search-summary").html(searchState.summary);
+                    
+                    // Update dropdowns
+                    if (selectedDocumentType) {
+                        $('#document-type-dropdownMenuLink').text(selectedDocumentType);
+                    }
+                    if (selectedCountry) {
+                        $('#country-dropdownMenuLink').text(selectedCountry);
+                    }
+                    if (selectedSpeaker) {
+                        $('#speaker-dropdownMenuLink').text(selectedSpeaker || 'Any speaker');
+                    }
+                    
+                    // Show results container
+                    $("#landing-content").hide();
+                    $("#results-container").show();
+                    
+                    // Restore scroll position after a short delay
+                    setTimeout(function() {
+                        $(window).scrollTop(searchState.scrollPosition);
+                    }, 100);
+                    
+                    // Re-bind event handlers
+                    bindEventHandlers();
+                }
+                
+                // Clear the state after restoring
+                sessionStorage.removeItem('searchState');
+            }
+        }
+
+        // Load speakers on page load
+        loadSpeakers();
+        
+        // Restore search state if coming back from article
+        restoreSearchState();
+        
+        // Save state before navigating to article
+        $(document).on('click', 'a[href^="article.php"]', function(e) {
+            saveSearchState();
+        });
+
+        // Speaker search functionality
+        $('#speaker-search-input').on('input', function() {
+            var searchTerm = $(this).val().toLowerCase();
+            filterSpeakers(searchTerm);
+        });
+
+        // Prevent dropdown from closing when typing in search input
+        $('#speaker-search-input').on('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Speaker selection
+        $(document).on('click', '.speaker-option', function(e) {
+            e.preventDefault();
+            selectedSpeaker = $(this).data('speaker');
+            var displayText = selectedSpeaker || 'Any speaker';
+            $('#speaker-dropdownMenuLink').text(displayText);
+            
+            // Reset search to beginning when changing speaker filter
+            start = 0;
+            perform_search($('#search-query').val(), false);
+        });
+
+        function loadSpeakers() {
+            // Initial load - we'll update this with faceted results after first search
+            console.log('Loading initial speakers...');
+            $.getJSON('/api/speakers.php', function(data) {
+                console.log('Speaker API response:', data);
+                var speakerList = $('#speaker-list');
+                speakerList.empty();
+                
+                if (data.speakers && data.speakers.length > 0) {
+                    console.log('Found', data.speakers.length, 'speakers');
+                    data.speakers.forEach(function(speaker) {
+                        speakerList.append('<a class="dropdown-item speaker-option" href="#" data-speaker="' + speaker + '">' + speaker + '</a>');
+                    });
+                } else {
+                    console.log('No speakers found in API response');
+                    speakerList.append('<div class="dropdown-item">No speakers found</div>');
+                }
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                console.error('Failed to load speakers:', textStatus, errorThrown);
+                $('#speaker-list').append('<div class="dropdown-item text-danger">Error loading speakers</div>');
+            });
+        }
+
+        function filterSpeakers(searchTerm) {
+            if (searchTerm === '') {
+                $('.speaker-option').show();
+            } else {
+                $('.speaker-option').each(function() {
+                    var speakerName = $(this).text().toLowerCase();
+                    if (speakerName.includes(searchTerm)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+        }
+
+        // Enhanced infinite scroll with loading indicator
+        var isLoading = false;
+        var hasMoreResults = true;
+        var totalResults = 0;
+        var loadMoreThreshold = 200; // Load more when 200px from bottom
+        
+        win.scroll(function() {
+            if (isLoading || !hasMoreResults) return;
+            
+            var scrollPosition = win.scrollTop() + win.height();
+            var documentHeight = $(document).height();
+            
+            if (documentHeight - scrollPosition < loadMoreThreshold) {
+                loadMoreResults();
+            }
+        });
+        
+        function loadMoreResults() {
+            if (isLoading || !hasMoreResults) return;
+            
+            isLoading = true;
+            $('.loading-more').addClass('active');
+            
+            var query = $("#search-query").val();
+            start += 10;
+            
+            perform_search(query, true, function() {
+                isLoading = false;
+                $('.loading-more').removeClass('active');
+                
+                // Check if we've loaded all results
+                if (start >= totalResults) {
+                    hasMoreResults = false;
+                    $('.no-more-results').addClass('active');
+                }
+            });
+        }
+
+        $("#advanced-search-link").click(function(e) {
+            e.preventDefault();
+            if ($(".advanced-search-controls").hasClass('d-none')) {
+                $(".advanced-search-controls").removeClass('d-none');
+                $(".advanced-search-controls").addClass('d-flex');
+                $(this).removeClass('caretdown');
+                $(this).addClass('caretup');
+            } else {
+                $(".advanced-search-controls").removeClass('d-flex');
+                $(".advanced-search-controls").addClass('d-none');
+                $(this).removeClass('caretup');
+                $(this).addClass('caretdown');
+            }
+        });
+
+        $("#search-form").on('submit', function(e) {
+            e.preventDefault();
+            // TODO - discuss merits of keeping vs discarding filters
+            filters = {};
+            var query = $("#search-query").val();
+            perform_search(query, false);
+        });
+
+        $(".reset-link").click(function(e) {
+            e.preventDefault();
+            filters = {};
+            var query = $("#search-query").val();
+            perform_search(query, false);
+        });
+
+        $("#search-type__and").click(function(e) {
+            var query = $("#search-query").val();
+            operator = 'AND';
+            $("#search-type-dropdownMenuLink").html($("#search-type__and").html());
+            perform_search(query, false);
+        });
+
+
+        $("#search-type__or").click(function(e) {
+            var query = $("#search-query").val();
+            operator = 'OR';
+            $("#search-type-dropdownMenuLink").html($("#search-type__or").html());
+            perform_search(query, false);
+        });
+
+
+        $("#search-type__quote").click(function(e) {
+            operator = 'OR';
+            $("#search-type-dropdownMenuLink").html($("#search-type__quote").html());
+            var query = $("#search-query").val();
+            // escape quotes
+            query = query.replaceAll('"', '\"');
+            query = '"' + query + '"';
+            perform_search(query, false);
+        });
+
+        var tick = '';
+
+        $("#search-display-detailed").click(function(e) {
+            $(".search-result-snippet").show();
+            $(".search-result-score").show();
+            $("#search-detail-dropdownMenuLink").html($(this).html());
+            $("#graph").hide();
+            $(".tick").hide();
+            $("#search-display-detailed>span.tick").show();
+        });
+
+        $("#search-display-debug").click(function(e) {
+            $(".search-result-snippet").show();
+            $(".search-result-score").show();
+            $("#search-detail-dropdownMenuLink").html($(this).html());
+            $("#graph").show();
+            $(".tick").hide();
+            $("#search-display-debug>span.tick").show();
+        });
+
+        $("#search-display-basic").click(function(e) {
+            $(".search-result-snippet").hide();
+            $(".search-result-score").hide();
+            $("#search-detail-dropdownMenuLink").html($(this).html());
+            $("#graph").hide();
+            $(".tick").hide();
+            $("#search-display-basic>span.tick").show();
+        });
+
+        // Document type dropdown handler
+        $('#document-type-dropdown .dropdown-item').on('click', function(e) {
+            e.preventDefault();
+            selectedDocumentType = $(this).text();
+            $('#document-type-dropdownMenuLink').text(selectedDocumentType);
+            var query = $("#search-query").val();
+            perform_search(query, false);
+        });
+
+    // Date range filter event listener
+    $(".dropdown-menu a.dropdown-item").click(function(e) {
+        e.preventDefault();
+        var selected = $(this).text();
+        $("#publication-date-dropdownMenuLink").text(selected);
+        
+        var now = new Date();
+        var startDate;
+
+        switch(selected) {
+            case 'Any time':
+                dateFilter = '';
+                break;
+            case 'Past day':
+                startDate = new Date(now.getTime() - (24 * 60 * 60 * 1000));
+                dateFilter = getDateFilter(startDate, now);
+                break;
+            case 'Past week':
+                startDate = new Date(now.getTime() - (7 * 24 * 60 * 60 * 1000));
+                dateFilter = getDateFilter(startDate, now);
+                break;
+            case 'Past month':
+                startDate = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
+                dateFilter = getDateFilter(startDate, now);
+                break;
+            case 'Past year':
+                startDate = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
+                dateFilter = getDateFilter(startDate, now);
+                break;
+            case 'Custom range':
+                $('#customDateModal').modal('show');
+                return; // Don't perform search yet
+        }
+
+        performSearchWithCurrentFilters();
+    });
+
+        // Custom date range modal
+    $('#applyCustomDateRange').click(function() {
+        var customStartDate = new Date($('#customStartDate').val());
+        var customEndDate = new Date($('#customEndDate').val());
+        
+        if (customStartDate && customEndDate && customStartDate <= customEndDate) {
+            dateFilter = getDateFilter(customStartDate, customEndDate);
+            $("#publication-date-dropdownMenuLink").text('Custom: ' + formatDate(customStartDate) + ' - ' + formatDate(customEndDate));
+            $('#customDateModal').modal('hide');
+            performSearchWithCurrentFilters();
+        } else {
+            alert('Please select a valid date range.');
+        }
+    });
+
+    function getDateFilter(start, end) {
+        return 'date:[' + start.toISOString() + ' TO ' + end.toISOString() + ']';
+    }
+
+    function formatDate(date) {
+        return date.toISOString().split('T')[0];
+    }
+
+    function performSearchWithCurrentFilters() {
+        var query = $("#search-query").val();
+        perform_search(query, false);
+    }
+
+        function perform_search(query, append, callback) {
+            $(".loading").show();
+            if (append === undefined || append === false) {
+                $(".search-result-list").html('');
+                $(".search-summary").html('');
+                $(".back-to-top").hide();
+                start = 0;
+                hasMoreResults = true;
+                $('.no-more-results').removeClass('active');
+            }
+            setTimeout(function() {
+                search(query, append, function() {
+                    $(".loading").hide();
+                    $(".back-to-top").show();
+                    if (callback) callback();
+                });
+            }, 200)
+        }
+
+        // function search(query, append, callback) {
+        //     var search_url = '/solr/hansard_core/select?q={!q.op=' + operator + ' df=_text_}' + query;
+        //     search_url += '&fl=title,date,source';
+        //     search_url += '&hl=true&hl.fl=content&hl.snippets=3&hl.fragsize=250';
+        //     search_url += '&facet=true&facet.mincount=0&f.source.facet.mincount=0&facet.field=source';
+        //     search_url += '&rows=10&start=' + start;
+        //     search_url += '&facet.range=date&f.date.facet.range.start=2008-01-01T00:00:00Z&f.date.facet.range.end=2023-06-08T00:00:00Z&f.date.facet.range.gap=%2B1MONTH' +
+        //         '&f.source.facet.sort=name';
+        //     $.each(filters, function(filter_field, filter_values) {
+        //         if (filter_values.length > 0) {
+        //             $.each(filter_values, function(index, filter_value) {
+        //                 search_url += '&fq=' + filter_field + '_str:"' + filter_value + '"';
+        //             })
+        //         }
+        //     });
+
+
+        //     var or_fq = '&fq=source:('
+        //     $.each(source_or_filters, function(filter_index, filter_value) {
+        //         or_fq += '"' + filter_value + '"';
+        //         if ((filter_index + 1) < source_or_filters.length) {
+        //             // we have more left
+        //             or_fq += ' OR ';
+        //         } else {
+        //             or_fq += ')';
+        //         }
+        //     });
+        //     if (source_or_filters.length > 0) {
+        //         search_url += or_fq;
+        //     }
+
+        //     console.log("Search URL: " + search_url);
+
+        //     $.get(search_url,
+        //         function(data) {
+        //             console.dir(data);
+        //             if (data.response !== undefined && data.response.docs !== undefined) {
+        //                 $(".search-summary").html("Your search matched " + data.response.numFound + " documents.");
+
+        //                 // Main search
+        //                 for (var i = 0; i < data.response.docs.length; i++) {
+        //                     var d = data.response.docs[i];
+        //                     var result = "<div class='search-result-item'><div class='d-flex align-items-stretch'>";
+        //                     result += '<div><h4 class="search-result-title">' + d.title + '</h4>';
+        //                     result += '<p class="search-result-attribution d-flex align-items-center justify-content-start">' +
+        //                         '<svg class="bi bi-calendar" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
+        //                         '  <path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>\n' +
+        //                         '  <path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>\n' +
+        //                         '</svg> <span class="search-result-date">' + format_date(d.date, true) + '</span>';
+        //                     result += '<a href="#" class="search-result-source-filter" data="' + d.source + '"><span class="badge badge-warning search-result-source">' + d.source + '</span></a>';
+        //                     if (d.author && false) {
+        //                         result += '<br/><svg class="bi bi-person-fill" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
+        //                             '  <path fill-rule="evenodd" d="M5 16s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H5zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>\n' +
+        //                             '</svg> <span class="search-result-author">' + d.author + '</span>';
+        //                     }
+        //                     result += '</p>';
+        //                     var favicon = d.source + '_fav.png';
+        //                     var url = d.path;
+        //                     var external = false;
+        //                     if (url[0].startsWith("http")) {
+        //                         // This is external
+        //                         url = d.path;
+        //                         external = true;
+        //                     }
+
+        //                     // Construct proper view doc URL
+        //                     url = 'https://www.knowledge-basket.co.nz/databases/pacific_hansard/search-pacific-hansard/view/?d' + i + '=' + d.path;
+
+        //                     result += '<p class="search-result-reference">';
+
+        //                     if (external) {
+        //                         result += '<span class="ext-result-icon fa fa-globe"></span>';
+        //                     } else {
+        //                         result += '<span class="tkb-result-icon"><img src="tkb.png"/></span>';
+        //                     }
+        //                     result += ' <a class="search-result-link" target="_blank" href="' + url + '">' + url + '</a></p>';
+
+        //                     // Highlighting
+        //                     if (data.highlighting && data.highlighting[d.id] && data.highlighting[d.id].content) {
+        //                         $.each(data.highlighting[d.id].content, function(idx, snippet) {
+        //                             result += '<p class="search-result-snippet">&hellip;' + snippet + '&hellip;</p>';
+        //                         });
+        //                     } else if (data.highlighting && data.highlighting[d.id] && data.highlighting[d.id].description) {
+        //                         $.each(data.highlighting[d.id].description, function(idx, snippet) {
+        //                             result += '<p class="search-result-snippet">&hellip;' + snippet + '&hellip;</p>';
+        //                         });
+        //                     } else {
+        //                         result += '<p class="search-result-snippet">' + d.description + '</p>';
+        //                     }
+        //                     result += '<p class="d-flex justify-content-end">' +
+        //                         '<span class="search-result-source">Source: ' + d.source +
+        //                         '. </span>&nbsp;<span class="search-result-crawltime">Last retrieved: ' +
+        //                         format_date(d.created, false) + '</span></p>';
+
+        //                     // Score - temp, hidden by default?
+        //                     result += '<p class="d-flex justify-content-between">' +
+        //                         '<span class="search-result-index"># ' + (i + start + 1) + '</span>' +
+        //                         '<span class="search-result-score">Score: ' + d.score +
+        //                         '</span></p>';
+        //                     $(".search-result-list").append(result);
+        //                 }
+
+
+        //                 $("#search-facets").html('');
+
+        //                 if (data.facet_counts && data.facet_counts.facet_fields) {
+        //                     var facets = data.facet_counts.facet_fields;
+        //                     var any_facets = false;
+        //                     if (facets.source && facets.source.length > 0) {
+        //                         populate_facet(facets.source, "Source", "source");
+        //                         populate_source_dropdown(facets.source);
+        //                         any_facets = true;
+        //                     }
+        //                     if (!any_facets) {
+        //                         $("#search-facets").html('<br/><p><em>No facets were returned for this search</em></p>');
+        //                         $("#facet-column").hide();
+        //                     } else {
+        //                         $("#facet-column").show();
+        //                     }
+
+
+        //                 } else {
+        //                     $("#search-facets").html('<br/><p><em>No facets were returned for this search</em></p>');
+        //                 }
+
+        //                 if (data.facet_counts && data.facet_counts.facet_ranges &&
+        //                     data.facet_counts.facet_ranges.date &&
+        //                     data.facet_counts.facet_ranges.date.counts) {
+        //                     var dateRangeData = { x: [], y: [], type: 'bar' };
+        //                     var dateRanges = data.facet_counts.facet_ranges.date.counts;
+        //                     for (var d = 0; d < dateRanges.length; d++) {
+        //                         dateRangeData.x.push(new Date(dateRanges[d]));
+        //                         dateRangeData.y.push(dateRanges[++d]);
+        //                     }
+        //                     console.dir(dateRangeData);
+        //                     draw_date_ranges(dateRangeData);
+        //                 }
+
+        //                 $(".facet-checkbox").unbind('click');
+
+        //                 $(".facet-checkbox").click(function(e) {
+        //                     e.preventDefault();
+        //                     var filter_value = $(this).val();
+        //                     var filter_field = $(this).prop('id');
+
+        //                     if (this.checked) {
+        //                         if (filters.hasOwnProperty(filter_field)) {
+        //                             // This is already in filters;
+        //                             console.log("Found " + filter_field + " in filters");
+        //                             var val_idx = filters[filter_field].indexOf(filter_value);
+        //                             if (val_idx > -1) {
+        //                                 // this shouldn't happen...
+        //                             } else {
+        //                                 filters[filter_field].push(filter_value);
+        //                             }
+        //                         } else {
+        //                             filters[filter_field] = [];
+        //                             filters[filter_field].push(filter_value);
+        //                         }
+        //                     } else {
+        //                         if (filters.hasOwnProperty(filter_field)) {
+        //                             // This is already in filters;
+        //                             console.log("Found " + filter_field + " in filters");
+        //                             var val_idx = filters[filter_field].indexOf(filter_value);
+        //                             if (val_idx > -1) {
+        //                                 filters[filter_field].splice(val_idx, 1);
+        //                             } else {
+        //                                 // this shouldn't happen...
+        //                             }
+        //                         } else {
+        //                             filters[filter_field] = [];
+        //                             filters[filter_field].push(filter_value);
+        //                         }
+        //                     }
+
+        //                     var query = $("#search-query").val();
+        //                     search(query);
+
+        //                 });
+
+        //                 $(".search-result-source-filter").unbind('click');
+        //                 $(".search-result-source-filter").click(function(e) {
+        //                     e.preventDefault();
+        //                     var filter_field = "source";
+        //                     var filter_value = $(this).attr('data');
+        //                     filters[filter_field] = [];
+        //                     filters[filter_field].push(filter_value);
+        //                     console.dir(filters);
+        //                     var query = $("#search-query").val();
+        //                     perform_search(query, false);
+        //                 });
+        //             }
+
+        //             callback();
+
+        //         });
+        // }
+
+
+function search(query, append, callback) {
+    var operator = $("#search-type-dropdownMenuLink").text().includes("AND") ? "AND" : "OR";
+    var userQuery = query ? encodeURIComponent(query) : '*:*';
+    var search_url = '/solr/hansard_core/select?q={!q.op=' + operator + ' df=content}' + userQuery;
+    search_url += '&fl=id,title,date,source,content,created,score,path,new_id,document_type,speaker,speaker2';
+    search_url += '&hl=true&hl.fl=content&hl.snippets=3&hl.fragsize=250';
+    search_url += '&facet=true&facet.mincount=1&f.source.facet.mincount=0&f.speaker.facet.mincount=1&f.speaker2.facet.mincount=1&facet.field=source&facet.field=document_type&facet.field=speaker&facet.field=speaker2';
+    search_url += '&rows=10&start=' + start;
+    search_url += '&facet.range=date&f.date.facet.range.start=2020-01-01T00:00:00Z&f.date.facet.range.end=NOW&f.date.facet.range.gap=%2B1MONTH';
+    search_url += '&f.source.facet.sort=name';
+
+    // Add document type filter
+    if (selectedDocumentType && selectedDocumentType !== '' && selectedDocumentType !== 'Any type') {
+        if (selectedDocumentType === 'Questions') {
+            // Filter for both Oral and Written questions
+            search_url += '&fq=(document_type:"Oral Question" OR document_type:"Written Question")';
+        } else {
+            search_url += '&fq=document_type:"' + encodeURIComponent(selectedDocumentType) + '"';
+        }
+    }
+
+    // Add speaker filter
+    if (selectedSpeaker) {
+        search_url += '&fq=(speaker:"' + encodeURIComponent(selectedSpeaker) + '" OR speaker2:"' + encodeURIComponent(selectedSpeaker) + '")';
+    }
+
+    if (dateFilter) {
+         search_url += '&fq=' + encodeURIComponent(dateFilter);
+        }
+
+    // Add filters
+    $.each(filters, function(filter_field, filter_values) {
+        if (filter_values.length > 0) {
+            $.each(filter_values, function(index, filter_value) {
+                search_url += '&fq=' + filter_field + ':"' + encodeURIComponent(filter_value) + '"';
+            });
+        }
+    });
+
+    // Add source OR filters
+    if (source_or_filters.length > 0) {
+        var or_fq = '&fq=source:(' + source_or_filters.map(function(value) {
+            return '"' + encodeURIComponent(value) + '"';
+        }).join(' OR ') + ')';
+        search_url += or_fq;
+    }
+
+    console.log("Search URL: " + search_url);
+
+    $.get(search_url, function(data) {
+        console.dir(data);
+        console.log(data);
+        console.log('Facet counts:', data.facet_counts);
+        if (data.response !== undefined && data.response.docs !== undefined) {
+            totalResults = data.response.numFound;
+            $(".search-summary").html("Your search matched " + data.response.numFound + " documents.");
+
+            var resultList = "";
+            // Main search
+            for (var i = 0; i < data.response.docs.length; i++) {
+                var d = data.response.docs[i];
+                resultList += createResultItem(d, data.highlighting, i);
+            }
+
+            if (append) {
+                $(".search-result-list").append(resultList);
+            } else {
+                $(".search-result-list").html(resultList);
+            }
+
+            updateFacets(data.facet_counts);
+            updateDateGraph(data.facet_counts.facet_ranges.date);
+
+            bindEventHandlers();
+        }
+
+        if (callback) callback();
+    });
+}
+
+// Function viewFullArticle has been replaced with direct links to article.php
+
+function createResultItem(d, highlighting, index) {
+    console.log(d.content)
+    var result = "<div class='search-result-item'><div class='d-flex align-items-stretch'>";
+
+    result += '<div><h4 class="search-result-title">' + d.title + '</h4>';
+    
+    // Add speaker badges
+    if (d.speaker || d.speaker2) {
+        result += '<p class="search-result-speakers">';
+        if (d.speaker && d.speaker !== 'No speakers identified') {
+            result += '<span class="badge badge-info" style="margin-right: 5px;">' + d.speaker + '</span>';
+        }
+        if (d.speaker2 && d.speaker2 !== 'No speakers identified') {
+            result += '<span class="badge badge-info">' + d.speaker2 + '</span>';
+        }
+        result += '</p>';
+    }
+    
+    result += '<p class="search-result-attribution d-flex align-items-center justify-content-start">' +
+        '<span class="search-result-date">' + format_date(d.date, true) + '</span> ' +
+        '<a href="#" class="search-result-source-filter" data="' + d.source + '"><span class="badge badge-warning search-result-source">' + d.source + '</span></a></p>';
+
+    result += '<p class="search-result-reference">' +
+        '<a href="article.php?id=' + d.new_id + '" class="btn btn-primary">View Full Article</a>' +
+        '</p>';
+
+    // var url = 'https://www.knowledge-basket.co.nz/databases/pacific_hansard/search-pacific-hansard/view/?d' + index + '=' + encodeURIComponent(d.path);
+    // result += '<p class="search-result-reference"><a class="search-result-link" target="_blank" href="' + url + '">' + d.path + '</a></p>';
+
+    // var url = 'https://www.knowledge-basket.co.nz/databases/pacific_hansard/search-pacific-hansard/view/?d' + index + '=' + encodeURIComponent(d.path);
+    // result += '<p class="search-result-reference"><a class="search-result-link" target="_blank" href="' + url + '">' + d.path + '</a></p>';
+
+    // Highlighting
+    if (highlighting && highlighting[d.id] && highlighting[d.id].content) {
+        highlighting[d.id].content.forEach(function(snippet) {
+            result += '<p class="search-result-snippet">&hellip;' + snippet + '&hellip;</p>';
+        });
+    } else {
+        result += '<p class="search-result-snippet">' + (d.content ? d.content[0].substring(0, 200) + '...' : 'No content available') + '</p>';
+    }
+
+    result += '<p class="d-flex justify-content-end">' +
+        '<span class="search-result-source">Source: ' + d.source +
+        '. </span>&nbsp;<span class="search-result-crawltime">Last retrieved: ' +
+        format_date(d.created, false) + '</span></p>';
+
+    result += '<p class="d-flex justify-content-between">' +
+        '<span class="search-result-index"># ' + (index + start + 1) + '</span>' +
+        '<span class="search-result-score">Score: ' + d.score + '</span></p>';
+
+    result += '</div></div></div>';
+    return result;
+}
+
+function updateFacets(facetCounts) {
+
+    // Update document type facet
+    var documentTypeFacet = facetCounts.facet_fields.document_type;
+    var $documentTypeDropdown = $('#document-type-dropdown .dropdown-menu');
+    $documentTypeDropdown.empty();
+    $documentTypeDropdown.append('<a class="dropdown-item" href="#">Any type</a>');
+    $documentTypeDropdown.append('<a class="dropdown-item" href="#">Questions</a>');
+    for (var i = 0; i < documentTypeFacet.length; i += 2) {
+        $documentTypeDropdown.append('<a class="dropdown-item" href="#">' + documentTypeFacet[i] + ' (' + documentTypeFacet[i+1] + ')</a>');
+    }
+
+    // Update speaker facet
+    updateSpeakerFacet(facetCounts.facet_fields);
+
+    $("#search-facets").html('');
+    if (facetCounts && facetCounts.facet_fields) {
+        var facets = facetCounts.facet_fields;
+        var anyFacets = false;
+        if (facets.source && facets.source.length > 0) {
+            populate_facet(facets.source, "Source", "source");
+            populate_source_dropdown(facets.source);
+            anyFacets = true;
+        }
+        if (!anyFacets) {
+            $("#search-facets").html('<br/><p><em>No facets were returned for this search</em></p>');
+            $("#facet-column").hide();
+        } else {
+            $("#facet-column").show();
+        }
+    } else {
+        $("#search-facets").html('<br/><p><em>No facets were returned for this search</em></p>');
+    }
+}
+
+function updateDateGraph(dateRanges) {
+    if (dateRanges && dateRanges.counts) {
+        var dateRangeData = { x: [], y: [], type: 'bar' };
+        for (var i = 0; i < dateRanges.counts.length; i += 2) {
+            dateRangeData.x.push(new Date(dateRanges.counts[i]));
+            dateRangeData.y.push(dateRanges.counts[i + 1]);
+        }
+        draw_date_ranges(dateRangeData);
+    }
+}
+
+function bindEventHandlers() {
+        // Document type filter
+    $('#document-type-dropdown .dropdown-item').off('click').on('click', function(e) {
+        e.preventDefault();
+        selectedDocumentType = $(this).text().split(' (')[0];  // Remove count from selection
+        $('#document-type-dropdownMenuLink').text(selectedDocumentType);
+        perform_search($('#search-query').val(), false);
+    });
+
+    $(".facet-checkbox").off('click').on('click', function(e) {
+        e.preventDefault();
+        var filter_value = $(this).val();
+        var filter_field = $(this).prop('id');
+
+        if (this.checked) {
+            if (!filters[filter_field]) {
+                filters[filter_field] = [];
+            }
+            if (!filters[filter_field].includes(filter_value)) {
+                filters[filter_field].push(filter_value);
+            }
+        } else {
+            if (filters[filter_field]) {
+                var index = filters[filter_field].indexOf(filter_value);
+                if (index > -1) {
+                    filters[filter_field].splice(index, 1);
+                }
+            }
+        }
+
+        var query = $("#search-query").val();
+        search(query, false);
+    });
+
+    $(".search-result-source-filter").off('click').on('click', function(e) {
+        e.preventDefault();
+        var filter_field = "source";
+        var filter_value = $(this).attr('data');
+        filters[filter_field] = [filter_value];
+        var query = $("#search-query").val();
+        search(query, false);
+    });
+
+    // Initialize selectedDocumentType
+    var selectedDocumentType = 'Any type';
+}
+
+        function populate_facet(facet_data, facet_header, facet_id) {
+            console.log("populating " + facet_header);
+            var facets_string = "";
+            facets_string += "<div class='search-facet'><h6 class='facet-field-header'>" + facet_header + "</h6><ul class='list-group'>";
+            for (var x = 0; x < facet_data.length; x++) {
+                facets_string += '<li class="filter-list-item list-group-item d-flex justify-content-between align-items-center"><div class="form-check form-check-inline">';
+
+                var checked = false;
+                if (filters.hasOwnProperty(facet_id) && filters[facet_id].indexOf(facet_data[x]) > -1) {
+                    checked = true;
+                }
+
+                facets_string += '<input class="form-check-input facet-checkbox" type="checkbox" id="' + facet_id + '" value="' + facet_data[x] + '"' +
+                    (checked ? 'checked="checked"' : '') + '>';
+                facets_string += '<label class="form-check-label" for="' + facet_id + '">' + facet_data[x] + '</label></div>';
+                facets_string += '<span class="badge badge-primary badge-pill">';
+                facets_string += facet_data[++x];
+                facets_string += "</span></li>";
+                if (x > 18) {
+                    break;
+                }
+            }
+            facets_string += "</ul></div>";
+            $("#search-facets").append(facets_string);
+        }
+
+        function populate_date_filters(facet_data) {
+
+            $(".date-checkboxes").html('');
+            // Reset empty OR filters
+            if (date_or_filters.length === 0) {
+                $.each(facet_data, function(i, v) {
+                    date_or_filters.push(v);
+                });
+            }
+            for (var i = 0; i < facet_data.length; i++) {
+
+                i++;
+            }
+        }
+
+        function populate_source_dropdown(facet_data) {
+            var dropdown = $("#publication-source-dropdown div.dropdown-menu");
+            $(dropdown).html('');
+            $(dropdown).append('<a class="dropdown-item source-filter-link" href="#">Any publication</a>');
+            $(dropdown).append('<div class="dropdown-divider"></div>');
+            $(".source-checkboxes").html('');
+
+            // Reset empty OR filters
+            if (source_or_filters.length === 0) {
+                $.each(facet_data, function(i, v) {
+                    source_or_filters.push(v);
+                });
+            }
+
+            for (var i = 0; i < facet_data.length; i++) {
+                if (filters.hasOwnProperty('source')) {
+                    if (filters['source'].indexOf(facet_data[i]) > -1) {
+                        $("#publication-source-dropdownMenuLink").text(facet_data[i]);
+                    }
+                }
+                $(dropdown).append('<div class="dropdown-item publication-source-dropdown-item">' +
+                    '<a class="source-filter-link" href="#">' + facet_data[i] +
+                    '</a><span class="badge badge-primary badge-pill">' + facet_data[i + 1] + '</span>' +
+                    '</div>');
+
+                var checkfilter = '<div class="form-check checkfilter"><input class="form-check-input source_or_filter" type="checkbox" value="' +
+                    facet_data[i] + '" id="source_or_filter_' + i + '" ';
+
+                if (source_or_filters.indexOf(facet_data[i]) > -1 || source_or_filters.length === 0) {
+                    // appears in OR filters, so check the box
+                    checkfilter += 'checked = "checked" ';
+                }
+                checkfilter += '><label class="form-check-label" for="source_or_filter_' + i + '">' + facet_data[i] +
+                    '</label>';
+                checkfilter += '<span class="badge badge-primary badge-pill">';
+                checkfilter += facet_data[i + 1];
+                checkfilter += '</span>';
+                checkfilter += '</div>';
+                $(".source-checkboxes").append(checkfilter);
+
+                i++;
+
+            }
+
+            if (!filters.hasOwnProperty('source') || filters.source.length === 0) {
+                $("#publication-source-dropdownMenuLink").text('Any publication');
+            }
+
+            $(".source-filter-link").unbind('click');
+            $(".source-filter-link").click(function(e) {
+                var filter = $(this).html();
+                if (filter === 'Any publication') {
+                    filters['source'] = [];
+                } else {
+                    filters['source'] = [];
+                    filters['source'].push(filter);
+                }
+                var query = $("#search-query").val();
+                perform_search(query, false);
+            });
+
+            $(".source_or_filter").unbind('click');
+            $(".source_or_filter").click(function(e) {
+                if (this.checked) {
+                    if (source_or_filters.indexOf($(this).val()) > -1) {
+                        // already there?
+                    } else {
+                        source_or_filters.push($(this).val());
+                        console.log(this.value);
+                    }
+                } else {
+                    var index = source_or_filters.indexOf(this.value);
+                    if (index > -1) {
+                        source_or_filters.splice(index, 1);
+                    }
+                }
+                var query = $("#search-query").val();
+                perform_search(query, false);
+            });
+
+        }
+
+        function format_date(timestamp, long) {
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var date = new Date(timestamp);
+            if (long) {
+                return (date.toLocaleDateString("en-NZ", options)); // Saturday, September 17, 2016
+            } else {
+                return date.toLocaleDateString("en-NZ");
+            }
+        }
+
+    });
+
+    function updateSpeakerFacet(facetFields) {
+        console.log('updateSpeakerFacet called with:', facetFields);
+        var speakerFacet = facetFields.speaker || [];
+        var speaker2Facet = facetFields.speaker2 || [];
+        var speakerList = $('#speaker-list');
+        console.log('Speaker facet data:', speakerFacet);
+        console.log('Speaker2 facet data:', speaker2Facet);
+        
+        // Combine speakers from both fields
+        var speakerCounts = {};
+        
+        // Process speaker field
+        for (var i = 0; i < speakerFacet.length; i += 2) {
+            if (speakerFacet[i] && speakerFacet[i] !== 'No speakers identified') {
+                speakerCounts[speakerFacet[i]] = (speakerCounts[speakerFacet[i]] || 0) + speakerFacet[i + 1];
+            }
+        }
+        
+        // Process speaker2 field
+        for (var i = 0; i < speaker2Facet.length; i += 2) {
+            if (speaker2Facet[i] && speaker2Facet[i] !== 'No speakers identified') {
+                speakerCounts[speaker2Facet[i]] = (speakerCounts[speaker2Facet[i]] || 0) + speaker2Facet[i + 1];
+            }
+        }
+        
+        // Sort speakers by count (descending) then alphabetically
+        var sortedSpeakers = Object.entries(speakerCounts).sort(function(a, b) {
+            if (b[1] !== a[1]) {
+                return b[1] - a[1]; // Sort by count descending
+            }
+            return a[0].localeCompare(b[0]); // Then alphabetically
+        });
+        
+        // Clear and repopulate speaker list
+        speakerList.empty();
+        
+        // Show current selection if it exists
+        var currentSelection = $('#speaker-dropdownMenuLink').text();
+        if (currentSelection !== 'Any speaker' && selectedSpeaker) {
+            var currentCount = speakerCounts[selectedSpeaker] || 0;
+            speakerList.append('<a class="dropdown-item speaker-option active" href="#" data-speaker="' + selectedSpeaker + '">' + 
+                selectedSpeaker + ' (' + currentCount + ')</a>');
+            speakerList.append('<div class="dropdown-divider"></div>');
+        }
+        
+        // Add sorted speakers with counts
+        sortedSpeakers.forEach(function(speaker) {
+            if (speaker[0] !== selectedSpeaker) { // Don't duplicate current selection
+                speakerList.append('<a class="dropdown-item speaker-option" href="#" data-speaker="' + 
+                    speaker[0] + '">' + speaker[0] + ' <span class="badge badge-secondary float-right">' + 
+                    speaker[1] + '</span></a>');
+            }
+        });
+        
+        // Update dropdown label to show count if speaker is selected
+        if (selectedSpeaker && speakerCounts[selectedSpeaker]) {
+            $('#speaker-dropdownMenuLink').text(selectedSpeaker + ' (' + speakerCounts[selectedSpeaker] + ')');
+        }
+    }
+
+    function draw_date_ranges(dateRangeData) {
+        var xField = 'date';
+        var yField = 'count';
+
+        var selectorOptions = {
+            buttons: [{
+                step: 'month',
+                stepmode: 'backward',
+                count: 1,
+                label: '1m'
+            }, {
+                step: 'month',
+                stepmode: 'backward',
+                count: 6,
+                label: '6m'
+            }, {
+                step: 'year',
+                stepmode: 'todate',
+                count: 1,
+                label: 'YTD'
+            }, {
+                step: 'year',
+                stepmode: 'backward',
+                count: 1,
+                label: '1y'
+            }, {
+                step: 'all',
+            }],
+        };
+
+        //var data = prepData(dateRangeData);
+        var data = [dateRangeData];
+        var layout = {
+            title: 'Number of search results over time',
+            xaxis: {
+                rangeselector: selectorOptions,
+                rangeslider: {}
+            },
+            yaxis: {
+                fixedrange: true
+            }
+        };
+
+        var myPlot = document.getElementById('graph');
+
+        Plotly.newPlot('graph', data, layout, { showSendToCloud: true });
+
+
+        myPlot.on('plotly_click', function(e) {
+            //                alert('cicked');
+            console.dir(e);
+        });
+
+        myPlot.on('plotly_legendclick', function(data) {
+            //              alert('legend click');
+            console.dir(e);
+        });
+
+        myPlot.on('plotly_relayout', function(e) {
+            console.dir(e);
+            console.log('relayout');
+        })
+    }
+    
+//    }); // End of document.ready
+    </script>
+    <!-- Article modal removed - now using standalone article.php page -->
+
+
+
+    <div class="modal fade" id="customDateModal" tabindex="-1" role="dialog" aria-labelledby="customDateModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="customDateModalLabel">Custom Date Range</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="customStartDate">Start Date:</label>
+                        <input type="date" class="form-control" id="customStartDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="customEndDate">End Date:</label>
+                        <input type="date" class="form-control" id="customEndDate">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="applyCustomDateRange">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

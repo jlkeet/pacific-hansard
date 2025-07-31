@@ -12,6 +12,11 @@ $(document).ready(function() {
     bindEventHandlers();
     loadSearchHistory();
     
+    // Perform initial search if there's a query
+    if ($('#search-query').val()) {
+        performSearch();
+    }
+    
     // Speaker Autocomplete
     function initializeSpeakerAutocomplete() {
         $('#speaker-search').autoComplete({
@@ -159,7 +164,7 @@ $(document).ready(function() {
             $('.search-result-list').empty();
         }
         
-        currentQuery = $('#search-query').val() || '*:*';
+        currentQuery = $('#search-query').val() || '*';
         
         // Build filters
         currentFilters = {
@@ -182,28 +187,38 @@ $(document).ready(function() {
         const searchUrl = buildSolrQuery(currentQuery, currentFilters, start);
         
         // Execute search
+        console.log('Searching with URL:', searchUrl);
         $.get(searchUrl, function(data) {
+            console.log('Search response:', data);
             hideLoadingOverlay();
             $('.loading').hide();
             
             if (data.response && data.response.docs) {
                 displayResults(data, append);
                 updateExportButtons(data.response.numFound);
+            } else {
+                console.error('No response data:', data);
+                showError('No results found.');
             }
-        }).fail(function() {
+        }).fail(function(xhr, status, error) {
+            console.error('Search failed:', status, error);
+            console.error('Response:', xhr.responseText);
             hideLoadingOverlay();
             $('.loading').hide();
-            showError('Search failed. Please try again.');
+            showError('Search failed: ' + error);
         });
     }
     
     // Build Solr query URL
     function buildSolrQuery(query, filters, start) {
         let url = '/solr/hansard_core/select?';
-        url += 'q=' + encodeURIComponent(query);
+        // Use proper query syntax with operator
+        url += 'q={!q.op=AND df=content}' + encodeURIComponent(query);
         url += '&fl=id,title,date,source,speaker,speaker2,content,document_type,new_id';
         url += '&hl=true&hl.fl=content&hl.snippets=3&hl.fragsize=250';
         url += '&rows=20&start=' + start;
+        url += '&wt=json';
+        url += '&facet=true&facet.mincount=1&facet.field=source&facet.field=document_type&facet.field=speaker&facet.field=speaker2';
         
         // Add filters
         const fq = [];
@@ -339,8 +354,10 @@ $(document).ready(function() {
             });
             html += '</div>';
         } else if (doc.content) {
+            // Handle content as array or string
+            const content = Array.isArray(doc.content) ? doc.content[0] : doc.content;
             html += '<p class="search-result-snippet">' + 
-                    doc.content.substring(0, 200) + '...</p>';
+                    content.substring(0, 200) + '...</p>';
         }
         
         // Actions
