@@ -7,6 +7,7 @@ import pysolr
 import os
 import time
 import uuid
+from db_config import get_db_config, get_solr_url
 
 def parse_hansard_document(html_content, metadata_content, file_path):
     # Parse HTML
@@ -132,7 +133,6 @@ def create_mysql_table():
     connection = None
     cursor = None
     try:
-        from db_config import get_db_config
         db_config = get_db_config()
         connection = mysql.connector.connect(**db_config)
         cursor = connection.cursor()
@@ -227,7 +227,6 @@ def insert_into_mysql(data):
             
 
 def index_in_solr(data):
-    from db_config import get_solr_url
     solr = pysolr.Solr(get_solr_url(), always_commit=True)
     try:
         # For Solr, we need plain text, so extract it if content contains HTML
