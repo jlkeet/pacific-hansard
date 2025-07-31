@@ -1,0 +1,52 @@
+# Complete Railway deployment with smart indexing
+FROM php:8.2-apache
+
+# Install Python and required system packages
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    python3-venv \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Enable Apache modules
+RUN a2enmod rewrite headers
+
+# Create Python virtual environment and install packages
+WORKDIR /app
+COPY requirements.txt .
+RUN python3 -m venv venv && \
+    . venv/bin/activate && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY site/ /var/www/html/
+COPY collections/ /app/collections/
+COPY pipelines_enhanced.py /app/
+COPY pipelines_smart.py /app/
+COPY config.py /app/
+COPY start-with-indexing.sh /app/
+
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod +x /app/start-with-indexing.sh
+
+# Create startup script that handles PORT
+RUN echo '#!/bin/bash\n\
+sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf\n\
+sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/ports.conf\n\
+# Run indexing in background\n\
+cd /app && . venv/bin/activate && python pipelines_smart.py > /var/log/indexing.log 2>&1 &\n\
+# Start Apache\n\
+apache2-foreground' > /start.sh
+
+RUN chmod +x /start.sh
+
+# Environment variables will be set by Railway
+ENV PORT=80
+
+EXPOSE $PORT
+
+CMD ["/start.sh"]
