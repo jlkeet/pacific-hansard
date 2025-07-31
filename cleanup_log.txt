@@ -1,0 +1,81 @@
+Pacific Hansard Project Cleanup Log
+===================================
+Date: 2025-12-06
+Purpose: Remove unused files after switching from Railway to Gitpod
+
+REMOVED FILES:
+--------------
+
+Railway-related files (7 files):
+✓ railway.json
+✓ railway.toml
+✓ Dockerfile.railway
+✓ Dockerfile.railway-simple
+✓ Dockerfile.railway-web
+✓ RAILWAY_DEPLOYMENT.md
+✓ site/config.railway.php
+
+Test files (6 files):
+✓ test_article.php
+✓ test_format_demo.py
+✓ site/test.php
+✓ site/test-mysql-speakers.php
+✓ site/test-speaker-search.html
+✓ scripts/Fiji/test_improved_formatting.py
+
+Duplicate converters:
+✓ scripts/Cook Islands/CI-hansard-converter.py
+✓ scripts/Cook Islands/CI_hansard_converter.py
+✓ scripts/Cook Islands/CI-gpt-hansard.py
+✓ scripts/Cook Islands/CI_gpt_hansard.py
+✓ scripts/Fiji/fiji-hansard-converter.py
+✓ scripts/Fiji/fiji-pdf-to-html.py
+✓ scripts/Fiji/gpt-hansard.py
+✓ scripts/Fiji/fiji-hansard-scraper.py
+✓ scripts/Fiji/fiji-hansard-scraper-tabs.py
+
+Log files:
+✓ fix_formatting.log
+✓ scripts/Cook Islands/hansard_processing.log
+✓ scripts/Cook Islands/logs/ (entire directory)
+
+Other cleanup:
+✓ Dockerfile.simple
+✓ analyze_fiji_html.php
+✓ deploy_fiji_enhanced.sh
+✓ site/yeartest.csv
+✓ site/favicon_io.zip
+✓ scripts/env/ (virtual environment directory)
+
+Temporary directories:
+✓ scripts/Cook Islands/DAY-* directories
+✓ scripts/Cook Islands/Hansard_* directories
+✓ scripts/Cook Islands/Wednesday-* directories
+
+Fiji analysis files:
+✓ scripts/Fiji/analyze_fiji_results.py
+✓ scripts/Fiji/analyze_production_readiness.py
+✓ scripts/Fiji/production_readiness_report.json
+✓ scripts/Fiji/fiji_production_summary.json
+✓ scripts/Fiji/fiji_final_production_summary.json
+✓ scripts/Fiji/production_summary.py
+✓ scripts/Fiji/final_production_summary.py
+✓ scripts/Fiji/analyze_questions.py
+✓ scripts/Fiji/question_analysis.txt
+
+KEPT FILES:
+-----------
+- Main Dockerfile and docker-compose.yml
+- Essential converters:
+  * scripts/Cook Islands/CI-hansard-converter-integrated.py
+  * scripts/Fiji/fiji-hansard-converter-enhanced.py
+  * scripts/Fiji/fiji-hansard-converter-integrated.py
+  * scripts/Fiji/fiji-hansard-scraper-dynamic.py
+  * scripts/Fiji/fiji-pdf-to-html-pdfminer.py
+- All site files (except test files)
+- Configuration files: config.py, requirements.txt, init.sql
+- Documentation: CLAUDE.md, DEPLOYMENT_GUIDE.md, etc.
+- All processed collections data
+
+Total files removed: ~50+ files
+Estimated space saved: Several MB (mainly from PDFs and temporary files)

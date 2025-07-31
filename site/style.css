@@ -1,8 +1,6 @@
 .search-page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 7em;
+    padding-right: 7em;
 }
 
 .form-control-borderless {
@@ -25,13 +23,13 @@
 
 .navbar-brand {
     overflow:hidden;
-    width: 2.5em;
-    height: 2.5em;
+    width: 2em;
+    height: 2em;
 }
 
 .navbar-brand img {
     margin-top: -5px;
-    height: 2.5em;
+    height: 2em;
 }
 
 .search-result-snippet em {
@@ -50,7 +48,7 @@
    /* border: none; */
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
-.search-result-list { padding-right: 1em; }
+.search-result-list { padding-right: 4em; }
 .search-result-item {margin-top: 2em; border-bottom: 1px solid #ccc; }
 .search-result-item:last-child { border: none !important; }
 /* Ensure short snippets don't lower width of item div */
@@ -88,7 +86,7 @@
     float: right;
 }
 .logo {
-    margin-left: 0;
+    margin-left: -5em;
 }
 .loading {
     display: none;
@@ -117,17 +115,17 @@
 .tkb-result-icon {
     display: inline-block;
     vertical-align: middle;
-    height: 1.5em;
-    width: 1.5em;
+    height: 2em;
+    width: 2em;
     overflow: hidden;
 }
 
 .tkb-result-icon img {
-    height: 1.5em;
+    height: 2em;
 }
 
 .ext-result-icon {
-    font-size: 1.5em;
+    font-size: 2em;
     vertical-align: middle;
 }
 
@@ -165,30 +163,4 @@
     border-right: .3em solid transparent;
     border-bottom: .3em solid;
     border-left: .3em solid transparent;
-}
-
-/* General font size adjustments */
-body {
-    font-size: 16px;
-}
-
-/* Responsive font sizing */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    .search-page-container {
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-}
-
-/* Form elements */
-.form-control {
-    font-size: 1rem;
-}
-
-/* Search results */
-.search-result-item {
-    font-size: 0.95rem;
 }

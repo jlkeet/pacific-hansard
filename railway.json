@@ -1,0 +1,21 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile.railway-complete"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "healthcheckPath": "/health.php",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  },
+  "services": [
+    {
+      "name": "web",
+      "source": {
+        "repo": "https://github.com/jlkeet/pacific-hansard.git"
+      }
+    }
+  ]
+}

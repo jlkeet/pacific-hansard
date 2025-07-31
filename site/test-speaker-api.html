@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Speaker API</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1>Test Speaker API</h1>
+    <button onclick="testAPI()">Test Speaker API</button>
+    <div id="results"></div>
+    
+    <script>
+    function testAPI() {
+        $.getJSON('/api/speakers.php', { q: 'HON' }, function(data) {
+            $('#results').html('<pre>' + JSON.stringify(data, null, 2) + '</pre>');
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            $('#results').html('Error: ' + textStatus + ' - ' + errorThrown + '<br>Response: ' + jqXHR.responseText);
+        });
+    }
+    </script>
+</body>
+</html>
