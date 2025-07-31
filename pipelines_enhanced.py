@@ -304,12 +304,13 @@ def parse_contents_html(directory):
         print(f"Contents file not found in {directory}")
     return order_dict
 
-if __name__ == "__main__":
-    # Wait for MySQL and Solr to be ready
-    time.sleep(20)  # Adjust this as needed
-    
-    # Create MySQL table if it doesn't exist
-    create_mysql_table()
-    
-    # Process all documents
-    process_all_documents("/app/collections/")
+# Commented out - this module should be imported by pipelines_smart.py, not run directly
+# if __name__ == "__main__":
+#     # Wait for MySQL and Solr to be ready
+#     time.sleep(20)  # Adjust this as needed
+#     
+#     # Create MySQL table if it doesn't exist
+#     create_mysql_table()
+#     
+#     # Process all documents
+#     process_all_documents("/app/collections/")
