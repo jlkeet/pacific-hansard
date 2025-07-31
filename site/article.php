@@ -3,14 +3,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Include database configuration
+require_once 'config/database.php';
+
 // Get article ID from URL
 $article_id = isset($_GET['id']) ? $_GET['id'] : '';
-
-// Database connection details
-$servername = getenv('DB_HOST') ?: 'mysql';
-$username = getenv('DB_USER') ?: 'hansard_user';
-$password = getenv('DB_PASSWORD') ?: 'test_pass';
-$dbname = getenv('DB_NAME') ?: 'pacific_hansard_db';
 
 $article = null;
 $error_message = null;
@@ -19,21 +16,18 @@ $error_message = null;
 if (empty($article_id)) {
     $error_message = "Article ID is required";
 } else {
-    // Connect to the database
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    
-    if ($conn->connect_error) {
-        $error_message = "Database connection failed: " . $conn->connect_error;
-    } else {
-        // Get article data
-        $sql = "SELECT title, date, document_type, source, content, speaker, speaker2 FROM pacific_hansard_db WHERE new_id = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $article_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    try {
+        // Connect to the database using PDO
+        $pdo = getDatabaseConnection();
         
-        if ($result->num_rows > 0) {
-            $article = $result->fetch_assoc();
+        // Get article data
+        $sql = "SELECT title, date, document_type, source, content, speaker, speaker2 FROM pacific_hansard_db WHERE new_id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['id' => $article_id]);
+        
+        $article = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($article) {
             
             // Format the date
             if (!empty($article['date'])) {
@@ -48,9 +42,8 @@ if (empty($article_id)) {
         } else {
             $error_message = "Article not found";
         }
-        
-        $stmt->close();
-        $conn->close();
+    } catch (Exception $e) {
+        $error_message = "Database error: " . $e->getMessage();
     }
 }
 
