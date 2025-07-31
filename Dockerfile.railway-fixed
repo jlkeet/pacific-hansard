@@ -1,0 +1,31 @@
+# Railway deployment - Fixed PORT handling
+FROM php:8.2-apache
+
+# Install required PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Enable Apache modules
+RUN a2enmod rewrite headers
+
+# Copy site files
+COPY site/ /var/www/html/
+
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html
+
+# Create startup script to handle Railway's dynamic PORT
+RUN echo '#!/bin/bash\n\
+sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf\n\
+sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/ports.conf\n\
+apache2-foreground' > /start.sh
+
+RUN chmod +x /start.sh
+
+# Default to port 80 if PORT not set
+ENV PORT=80
+
+# Expose the port
+EXPOSE $PORT
+
+# Start Apache with PORT configuration
+CMD ["/start.sh"]
