@@ -1,0 +1,26 @@
+# Railway deployment - Web interface only
+FROM php:8.2-apache
+
+# Install required PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Enable Apache modules
+RUN a2enmod rewrite headers
+
+# Copy site files
+COPY site/ /var/www/html/
+
+# Copy config files
+COPY config/site-railway.conf /etc/apache2/sites-available/000-default.conf
+
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html
+
+# Create health check file
+RUN echo "<?php echo 'OK'; ?>" > /var/www/html/health.php
+
+# Expose port (Railway will provide PORT env var)
+EXPOSE 80
+
+# Start Apache
+CMD ["apache2-foreground"]

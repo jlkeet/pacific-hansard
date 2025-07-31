@@ -106,6 +106,8 @@ def extract_date_from_path(file_path):
         return None
 
 def create_mysql_table():
+    connection = None
+    cursor = None
     try:
         connection = mysql.connector.connect(
             host=os.environ.get('DB_HOST', 'mysql'),
@@ -152,8 +154,9 @@ def create_mysql_table():
     except mysql.connector.Error as error:
         print(f"Failed to update table in MySQL: {error}")
     finally:
-        if connection.is_connected():
-            cursor.close()
+        if connection and connection.is_connected():
+            if cursor:
+                cursor.close()
             connection.close()
 
 
