@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Proxy Solr requests to the Solr service
+RewriteCond %{REQUEST_URI} ^/solr/(.*)$
+RewriteRule ^solr/(.*)$ %{ENV:SOLR_URL}/$1 [P,L]
+
+# Handle API routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ /api/$1.php [L,QSA]
