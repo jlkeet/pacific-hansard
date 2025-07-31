@@ -14,6 +14,10 @@ if ($mysqlUrl) {
     $DB_NAME = ltrim($url['path'], '/');
     $DB_USER = $url['user'];
     $DB_PASSWORD = $url['pass'];
+    
+    // Railway uses 'railway' as database name, but our app expects 'pacific_hansard_db'
+    // We'll keep using the Railway database name
+    define('TABLE_NAME', 'pacific_hansard_db');
 } else {
     // Fallback to individual environment variables
     $DB_HOST = getenv('DB_HOST') ?: getenv('MYSQLHOST') ?: 'mysql';

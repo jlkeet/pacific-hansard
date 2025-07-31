@@ -33,10 +33,19 @@ try {
     $pdo = getDatabaseConnection();
     echo "<p style='color:green'>✓ Database connection successful!</p>";
     
-    // Test query
-    $stmt = $pdo->query("SELECT COUNT(*) as count FROM pacific_hansard_db");
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    echo "<p>Records in database: " . $result['count'] . "</p>";
+    // Show all tables
+    $stmt = $pdo->query("SHOW TABLES");
+    $tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
+    echo "<p>Tables in database: " . implode(', ', $tables) . "</p>";
+    
+    // Test query if table exists
+    if (in_array('pacific_hansard_db', $tables)) {
+        $stmt = $pdo->query("SELECT COUNT(*) as count FROM pacific_hansard_db");
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        echo "<p>Records in database: " . $result['count'] . "</p>";
+    } else {
+        echo "<p style='color:orange'>⚠️ Table 'pacific_hansard_db' not created yet - indexing may still be running</p>";
+    }
 } catch (Exception $e) {
     echo "<p style='color:red'>✗ Database connection failed: " . $e->getMessage() . "</p>";
 }
