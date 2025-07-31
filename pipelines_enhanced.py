@@ -89,20 +89,43 @@ def extract_date_from_path(file_path):
     # Split the path and extract relevant parts
     path_parts = file_path.split(os.sep)
     try:
+        # Debug: print path structure if we get index error
+        if len(path_parts) < 4:
+            print(f"Path too short: {file_path} has only {len(path_parts)} parts: {path_parts}")
+            return None
+            
         year = int(path_parts[-4])  # Assuming year is 4 levels up from the filename
         month = path_parts[-3]  # Month name
         day = int(path_parts[-2])  # Day of the month
         
-        # Convert month name to number
-        month_num = datetime.strptime(month, '%B').month
+        # Convert month name to number - handle both full and abbreviated month names
+        month_mappings = {
+            'January': 1, 'Jan': 1,
+            'February': 2, 'Feb': 2,
+            'March': 3, 'Mar': 3,
+            'April': 4, 'Apr': 4,
+            'May': 5,
+            'June': 6, 'Jun': 6,
+            'July': 7, 'Jul': 7,
+            'August': 8, 'Aug': 8,
+            'September': 9, 'Sep': 9, 'Sept': 9,
+            'October': 10, 'Oct': 10,
+            'November': 11, 'Nov': 11,
+            'December': 12, 'Dec': 12
+        }
+        
+        month_num = month_mappings.get(month)
+        if month_num is None:
+            # Try parsing with strptime as fallback
+            month_num = datetime.strptime(month, '%B').month
         
         # Create a date object
         date = datetime(year, month_num, day)
         
         # Return formatted date string
         return date.strftime('%Y-%m-%d')
-    except (ValueError, IndexError):
-        print(f"Could not extract date from path: {file_path}")
+    except (ValueError, IndexError, KeyError) as e:
+        print(f"Could not extract date from path: {file_path} - Error: {str(e)}")
         return None
 
 def create_mysql_table():
