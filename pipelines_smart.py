@@ -4,6 +4,7 @@ import mysql.connector
 import pysolr
 from datetime import datetime
 import hashlib
+from db_config import get_db_config, get_solr_url
 from pipelines_enhanced import (
     parse_hansard_document, 
     get_source_from_path,
@@ -74,13 +75,12 @@ def create_tracking_table(connection):
 def smart_index_documents(directory):
     """Only index new or changed documents"""
     
+    # Get database configuration
+    from db_config import get_db_config
+    db_config = get_db_config()
+    
     # Setup database connection
-    connection = mysql.connector.connect(
-        host=os.environ.get('DB_HOST', 'mysql'),
-        database=os.environ.get('DB_NAME', 'pacific_hansard_db'),
-        user=os.environ.get('DB_USER', 'hansard_user'),
-        password=os.environ.get('DB_PASSWORD', 'test_pass')
-    )
+    connection = mysql.connector.connect(**db_config)
     
     create_tracking_table(connection)
     

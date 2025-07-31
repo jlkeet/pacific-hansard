@@ -109,12 +109,9 @@ def create_mysql_table():
     connection = None
     cursor = None
     try:
-        connection = mysql.connector.connect(
-            host=os.environ.get('DB_HOST', 'mysql'),
-            database=os.environ.get('DB_NAME', 'pacific_hansard_db'),
-            user=os.environ.get('DB_USER', 'hansard_user'),
-            password=os.environ.get('DB_PASSWORD', 'test_pass')
-        )
+        from db_config import get_db_config
+        db_config = get_db_config()
+        connection = mysql.connector.connect(**db_config)
         cursor = connection.cursor()
         
         # First, create the table if it doesn't exist
@@ -162,12 +159,9 @@ def create_mysql_table():
 
 def insert_into_mysql(data):
     try:
-        connection = mysql.connector.connect(
-            host=os.environ.get('DB_HOST', 'mysql'),
-            database=os.environ.get('DB_NAME', 'pacific_hansard_db'),
-            user=os.environ.get('DB_USER', 'hansard_user'),
-            password=os.environ.get('DB_PASSWORD', 'test_pass')
-        )
+        from db_config import get_db_config
+        db_config = get_db_config()
+        connection = mysql.connector.connect(**db_config)
         cursor = connection.cursor()
         
         # Check if 'order' column exists
@@ -210,7 +204,8 @@ def insert_into_mysql(data):
             
 
 def index_in_solr(data):
-    solr = pysolr.Solr(os.environ.get('SOLR_URL', 'http://solr:8983/solr/hansard_core'), always_commit=True)
+    from db_config import get_solr_url
+    solr = pysolr.Solr(get_solr_url(), always_commit=True)
     try:
         # For Solr, we need plain text, so extract it if content contains HTML
         if data['source'] == 'Fiji' and '<' in data['content']:

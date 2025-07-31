@@ -27,6 +27,7 @@ COPY collections/ /app/collections/
 COPY pipelines_enhanced.py /app/
 COPY pipelines_smart.py /app/
 COPY config.py /app/
+COPY db_config.py /app/
 COPY start-with-indexing.sh /app/
 
 # Set permissions
