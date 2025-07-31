@@ -2,15 +2,11 @@
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-// Database configuration
-$host = getenv('DB_HOST') ?: 'mysql';
-$dbname = getenv('DB_NAME') ?: 'pacific_hansard_db';
-$username = getenv('DB_USER') ?: 'hansard_user';
-$password = getenv('DB_PASSWORD') ?: 'test_pass';
+// Include database configuration
+require_once '../config/database.php';
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = getDatabaseConnection();
     
     // Get search query
     $query = $_GET['q'] ?? '';
