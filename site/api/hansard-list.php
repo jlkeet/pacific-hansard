@@ -1,17 +1,29 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+// Disable error display in production
+ini_set('display_errors', 0);
 error_reporting(E_ALL);
 
 header('Content-Type: application/json');
+header('Cache-Control: public, max-age=300'); // Cache for 5 minutes
+
 $host = getenv('DB_HOST');
 $dbname = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASSWORD');
 
-$source = isset($_GET['source']) ? $_GET['source'] : '';
+// Validate and sanitize input
+$source = isset($_GET['source']) ? filter_var($_GET['source'], FILTER_SANITIZE_STRING) : '';
+$valid_sources = ['Cook Islands', 'Fiji', 'Papua New Guinea', 'Solomon Islands'];
+
 if (!$source) {
+    http_response_code(400);
     echo json_encode(['error' => 'Source is required']);
+    exit;
+}
+
+if (!in_array($source, $valid_sources)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid source provided']);
     exit;
 }
 

@@ -81,7 +81,12 @@ $(document).ready(function() {
         });
         
         // Filters
-        $('#date-filter, #source-filter, #type-filter').on('change', performSearch);
+        $('#date-filter, #source-filter, #type-filter, #speaker-filter').on('change', function() {
+            if (this.id === 'speaker-filter') {
+                selectedSpeaker = $(this).val();
+            }
+            performSearch();
+        });
         $('#questions-only, #answers-only, #recent-first').on('change', performSearch);
         
         // Mobile filter toggle
@@ -312,6 +317,11 @@ $(document).ready(function() {
             $('.search-result-list').append(resultHtml);
         });
         
+        // Update speaker dropdown with facet data
+        if (data.facet_counts && data.facet_counts.facet_fields && !append) {
+            populateSpeakerDropdown(data.facet_counts.facet_fields);
+        }
+        
         // Show/hide export buttons
         if (data.response.numFound > 0) {
             $('.export-buttons').show();
@@ -512,4 +522,50 @@ $(document).ready(function() {
               searchResults.length + ' results.');
         // In production, this would make multiple API calls to get all results
     };
+    
+    // Populate speaker dropdown from facet data
+    function populateSpeakerDropdown(facetFields) {
+        const speakerFacet = facetFields.speaker || [];
+        const speaker2Facet = facetFields.speaker2 || [];
+        const $dropdown = $('#speaker-filter');
+        const currentValue = $dropdown.val();
+        
+        // Clear existing options except the first
+        $dropdown.find('option:not(:first)').remove();
+        
+        // Combine speakers from both fields
+        const speakerCounts = {};
+        
+        // Process speaker field
+        for (let i = 0; i < speakerFacet.length; i += 2) {
+            if (speakerFacet[i] && speakerFacet[i] !== 'No speakers identified') {
+                speakerCounts[speakerFacet[i]] = (speakerCounts[speakerFacet[i]] || 0) + speakerFacet[i + 1];
+            }
+        }
+        
+        // Process speaker2 field
+        for (let i = 0; i < speaker2Facet.length; i += 2) {
+            if (speaker2Facet[i] && speaker2Facet[i] !== 'No speakers identified') {
+                speakerCounts[speaker2Facet[i]] = (speakerCounts[speaker2Facet[i]] || 0) + speaker2Facet[i + 1];
+            }
+        }
+        
+        // Sort speakers by count (descending) then alphabetically
+        const sortedSpeakers = Object.entries(speakerCounts).sort((a, b) => {
+            if (b[1] !== a[1]) {
+                return b[1] - a[1]; // Sort by count descending
+            }
+            return a[0].localeCompare(b[0]); // Then alphabetically
+        });
+        
+        // Add sorted speakers to dropdown
+        sortedSpeakers.forEach(([speaker, count]) => {
+            $dropdown.append(`<option value="${speaker}">${speaker} (${count})</option>`);
+        });
+        
+        // Restore selected value if it still exists
+        if (currentValue) {
+            $dropdown.val(currentValue);
+        }
+    }
 });

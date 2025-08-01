@@ -16,10 +16,10 @@ services:
     image: mysql:latest
     container_name: mysql_pacific_hansard
     environment:
-      MYSQL_ROOT_PASSWORD: Wh1t3sh33ts
-      MYSQL_DATABASE: pacific_hansard_db
-      MYSQL_USER: hansard_user
-      MYSQL_PASSWORD: test_pass
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3307:3306"
     volumes:
@@ -36,11 +36,11 @@ services:
     ports:
       - "8080:80"
     environment:
-      SOLR_URL: "http://solr:8983/solr/hansard_core"
-      DB_HOST: "mysql"
-      DB_NAME: "pacific_hansard_db"
-      DB_USER: "hansard_user"
-      DB_PASSWORD: "test_pass"
+      SOLR_URL: ${SOLR_URL:-http://solr:8983/solr/hansard_core}
+      DB_HOST: ${DB_HOST:-mysql}
+      DB_NAME: ${DB_NAME:-pacific_hansard_db}
+      DB_USER: ${DB_USER:-hansard_user}
+      DB_PASSWORD: ${DB_PASSWORD}
     depends_on:
       - mysql
       - php
@@ -56,11 +56,11 @@ services:
     ports:
       - "9000:9000"
     environment:
-      SOLR_URL: "http://solr:8983/solr/hansard_core"
-      DB_HOST: "mysql"
-      DB_NAME: "pacific_hansard_db"
-      DB_USER: "hansard_user"
-      DB_PASSWORD: "test_pass"
+      SOLR_URL: ${SOLR_URL:-http://solr:8983/solr/hansard_core}
+      DB_HOST: ${DB_HOST:-mysql}
+      DB_NAME: ${DB_NAME:-pacific_hansard_db}
+      DB_USER: ${DB_USER:-hansard_user}
+      DB_PASSWORD: ${DB_PASSWORD}
 
   python_script:
     build: .

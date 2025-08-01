@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Speaker Search</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Testing Speaker Search Functionality</h1>
+    <div id="test-results"></div>
+
+    <script>
+    $(document).ready(function() {
+        // Test Solr query with facets
+        const testUrl = '/solr/hansard_core/select?' + 
+            'q=*:*' +
+            '&wt=json' +
+            '&rows=1' +
+            '&facet=true' +
+            '&facet.field=speaker' +
+            '&facet.field=speaker2' +
+            '&facet.mincount=1';
+
+        $('#test-results').append('<p>Testing Solr facet query...</p>');
+        
+        $.ajax({
+            url: testUrl,
+            dataType: 'json',
+            success: function(data) {
+                $('#test-results').append('<h2>Success! Facet data received:</h2>');
+                
+                if (data.facet_counts && data.facet_counts.facet_fields) {
+                    const speakerFacet = data.facet_counts.facet_fields.speaker || [];
+                    const speaker2Facet = data.facet_counts.facet_fields.speaker2 || [];
+                    
+                    $('#test-results').append('<h3>Speaker field:</h3>');
+                    for (let i = 0; i < Math.min(speakerFacet.length, 20); i += 2) {
+                        $('#test-results').append('<p>' + speakerFacet[i] + ': ' + speakerFacet[i+1] + ' occurrences</p>');
+                    }
+                    
+                    $('#test-results').append('<h3>Speaker2 field:</h3>');
+                    for (let i = 0; i < Math.min(speaker2Facet.length, 20); i += 2) {
+                        $('#test-results').append('<p>' + speaker2Facet[i] + ': ' + speaker2Facet[i+1] + ' occurrences</p>');
+                    }
+                    
+                    // Test speaker filter
+                    if (speakerFacet.length > 0) {
+                        const testSpeaker = speakerFacet[0];
+                        $('#test-results').append('<h3>Testing filter for speaker: ' + testSpeaker + '</h3>');
+                        
+                        const filterUrl = '/solr/hansard_core/select?' +
+                            'q=*:*' +
+                            '&wt=json' +
+                            '&rows=5' +
+                            '&fq=' + encodeURIComponent('(speaker:"' + testSpeaker + '" OR speaker2:"' + testSpeaker + '")');
+                        
+                        $.ajax({
+                            url: filterUrl,
+                            dataType: 'json',
+                            success: function(filterData) {
+                                $('#test-results').append('<p>Filter returned ' + filterData.response.numFound + ' results</p>');
+                                filterData.response.docs.forEach(function(doc) {
+                                    $('#test-results').append('<p>- ' + doc.title + ' (Speaker: ' + doc.speaker + ', Speaker2: ' + doc.speaker2 + ')</p>');
+                                });
+                            },
+                            error: function(xhr, status, error) {
+                                $('#test-results').append('<p style="color:red">Filter test failed: ' + error + '</p>');
+                            }
+                        });
+                    }
+                } else {
+                    $('#test-results').append('<p style="color:red">No facet data found in response</p>');
+                }
+                
+                $('#test-results').append('<pre>' + JSON.stringify(data, null, 2) + '</pre>');
+            },
+            error: function(xhr, status, error) {
+                $('#test-results').append('<p style="color:red">Error: ' + error + '</p>');
+                $('#test-results').append('<p>Response: ' + xhr.responseText + '</p>');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
