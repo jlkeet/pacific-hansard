@@ -1,8 +1,12 @@
+/* Base container styling with better responsive design */
 .search-page-container {
-    padding-left: 7em;
-    padding-right: 7em;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
 }
 
+/* Form controls */
 .form-control-borderless {
     border: none;
 }
@@ -13,25 +17,28 @@
     box-shadow: none;
 }
 
+/* Search highlighting */
 #results em {
     background-color: yellow;
 }
 
+/* Navbar styling */
 .navbar {
     background-color: rgb(247, 170, 51);
 }
 
 .navbar-brand {
-    overflow:hidden;
-    width: 2em;
-    height: 2em;
+    overflow: hidden;
+    width: auto;
+    height: 32px;
 }
 
 .navbar-brand img {
-    margin-top: -5px;
-    height: 2em;
+    height: 100%;
+    width: auto;
 }
 
+/* Search results styling */
 .search-result-snippet em {
     font-weight: bold;
     background: yellow;
@@ -41,27 +48,68 @@
     /*font-weight: bold;*/
 }
 
-.search-result-source { margin-left: 1em; font-size: 0.9em; }
+.search-result-source { 
+    margin-left: 1em; 
+    font-size: 0.9em; 
+}
 
-.search-form-container { padding-top: 2em; }
+.search-form-container { 
+    padding-top: 1.6em; 
+}
+
 #search-form {
-   /* border: none; */
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
-.search-result-list { padding-right: 4em; }
-.search-result-item {margin-top: 2em; border-bottom: 1px solid #ccc; }
-.search-result-item:last-child { border: none !important; }
-/* Ensure short snippets don't lower width of item div */
-.search-result-item>div>div { width: 100%; }
-.search-result-author, .search-result-date { padding-left: 5px; }
-.search-result-crawltime {font-size: 0.9em;}
-.item-favicon { width: 16px; height: 16px; }
-.search-controls { margin-top: 1em; margin-bottom: 1em; }
-.search-control { margin-right: 3em;}
 
+.search-result-list { 
+    padding-right: 1em; 
+}
+
+.search-result-item {
+    margin-top: 1.2em; 
+    padding-bottom: 1.2em;
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+.search-result-item:last-child { 
+    border: none !important; 
+}
+
+/* Ensure short snippets don't lower width of item div */
+.search-result-item>div>div { 
+    width: 100%; 
+}
+
+.search-result-author, .search-result-date { 
+    padding-left: 5px; 
+}
+
+.search-result-crawltime {
+    font-size: 0.75em;
+    color: #666;
+}
+
+.item-favicon { 
+    width: 16px; 
+    height: 16px; 
+}
+
+.search-controls { 
+    margin-top: 0.8em; 
+    margin-bottom: 0.8em; 
+    flex-wrap: wrap;
+}
+
+.search-control { 
+    margin-right: 1.6em;
+    margin-bottom: 0.4em;
+}
+
+/* Facet column */
 #facet-column {
     display: none;
 }
+
 .filter-list-item {
     border: none;
     padding-left: 1em;
@@ -69,63 +117,87 @@
     padding-bottom: 0.5em;
     padding-top: 0;
 }
-.facet-field-header { font-weight: bold; }
-.filter-heading-row {
-    padding-right: 1em;;
+
+.facet-field-header { 
+    font-weight: bold; 
 }
+
+.filter-heading-row {
+    padding-right: 1em;
+}
+
 .reset-link {
     color: #ff6c00;
     text-decoration: underline;
 }
+
 .filter-by-heading {
     padding-bottom: 0.5em;
     border-bottom: 1px solid black;
 }
+
 .tick {
     display: none;
     float: right;
 }
+
+/* Logo styling */
 .logo {
-    margin-left: -5em;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 240px;
 }
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
 .loading {
     display: none;
 }
+
 .search-bottom {
-    margin-bottom: 4em;
+    margin-bottom: 3.2em;
 }
+
 .back-to-top {
     position: fixed;
     bottom: 2em;
     right: 1em;
     display: none;
 }
+
 .publication-source-dropdown-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .publication-source-dropdown-item .badge {
     display: none;
 }
+
 .source-filter-link {
     margin-right: 1em;
 }
 
+/* Result icons */
 .tkb-result-icon {
     display: inline-block;
     vertical-align: middle;
-    height: 2em;
-    width: 2em;
+    height: 1.2em;
+    width: 1.2em;
     overflow: hidden;
 }
 
 .tkb-result-icon img {
-    height: 2em;
+    height: 100%;
+    width: auto;
 }
 
 .ext-result-icon {
-    font-size: 2em;
+    font-size: 1.2em;
     vertical-align: middle;
 }
 
@@ -143,6 +215,7 @@
     margin-left: 2em;
 }
 
+/* Dropdown arrows */
 .caretdown::after {
     display: inline-block;
     margin-left: .255em;
@@ -163,4 +236,102 @@
     border-right: .3em solid transparent;
     border-bottom: .3em solid;
     border-left: .3em solid transparent;
+}
+
+/* Typography improvements */
+body {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+.search-result-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a0dab;
+    margin-bottom: 0.4rem;
+}
+
+.search-result-snippet {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #545454;
+}
+
+/* Form elements */
+.form-control {
+    font-size: 0.9rem;
+}
+
+.btn {
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-page-container {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+    
+    .search-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search-control {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .search-result-list {
+        padding-right: 0;
+    }
+    
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Improve search form appearance */
+#search-form .card-body {
+    padding: 1.2rem;
+}
+
+#search-query {
+    font-size: 0.95rem;
+    padding: 0.4rem;
+}
+
+#search-button {
+    padding: 0.4rem 1.2rem;
+}
+
+/* Better spacing for article metadata */
+.article-metadata p {
+    margin-bottom: 0.4rem;
+}
+
+/* Improve readability of article content */
+.article-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Better button styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
