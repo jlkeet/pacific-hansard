@@ -1,0 +1,20 @@
+{
+  "processing_date": "2025-08-19T18:17:26.267056",
+  "source_file": "H-11-20230317-M06-D04.html",
+  "output_directory": "/Users/jacksonkeet/Pacific Hansard Development/collections/Papua New Guinea/2023/March/17",
+  "parts_processed": 14,
+  "speakers_identified": 2,
+  "status": "success",
+  "metadata": {
+    "id": "52efe2b6-5afe-4320-8431-66d60aa45af8",
+    "title": "(4) Do we have the same option of NDB or are there other arrangements?",
+    "date": "2023-03-17",
+    "country": "Papua New Guinea",
+    "parliament": "National Parliament of Papua New Guinea",
+    "document_type": "Hansard",
+    "speakers_count": 2,
+    "parts_count": 14,
+    "processed_date": "2025-08-19T18:17:26.266899",
+    "processing_status": "completed"
+  }
+}

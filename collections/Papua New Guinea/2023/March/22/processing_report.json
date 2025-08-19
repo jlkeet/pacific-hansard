@@ -1,0 +1,20 @@
+{
+  "processing_date": "2025-08-19T18:19:17.511911",
+  "source_file": "H-11-20230322-M06-D06.html",
+  "output_directory": "/Users/jacksonkeet/Pacific Hansard Development/collections/Papua New Guinea/2023/March/22",
+  "parts_processed": 6,
+  "speakers_identified": 1,
+  "status": "success",
+  "metadata": {
+    "id": "92d76c68-513c-459d-a741-a3a734e0fe52",
+    "title": "Supplementary Question",
+    "date": "2023-03-22",
+    "country": "Papua New Guinea",
+    "parliament": "National Parliament of Papua New Guinea",
+    "document_type": "Hansard",
+    "speakers_count": 1,
+    "parts_count": 6,
+    "processed_date": "2025-08-19T18:19:17.511563",
+    "processing_status": "completed"
+  }
+}

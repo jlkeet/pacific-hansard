@@ -1,0 +1,20 @@
+{
+  "processing_date": "2025-08-19T18:14:37.517469",
+  "source_file": "H-11-20230316-M06-D03.html",
+  "output_directory": "/Users/jacksonkeet/Pacific Hansard Development/collections/Papua New Guinea/2023/March/16",
+  "parts_processed": 6,
+  "speakers_identified": 1,
+  "status": "success",
+  "metadata": {
+    "id": "c96244ec-2348-4499-a2b7-2c95f4a93d06",
+    "title": "PNG Hansard - H-11-20230316-M06-D03.pdf",
+    "date": "2023-03-16",
+    "country": "Papua New Guinea",
+    "parliament": "National Parliament of Papua New Guinea",
+    "document_type": "Hansard",
+    "speakers_count": 1,
+    "parts_count": 6,
+    "processed_date": "2025-08-19T18:14:37.517168",
+    "processing_status": "completed"
+  }
+}

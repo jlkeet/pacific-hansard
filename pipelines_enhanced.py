@@ -49,6 +49,19 @@ def parse_hansard_document(html_content, metadata_content, file_path):
             content = str(body).replace('<body>', '').replace('</body>', '').strip()
         else:
             content = html_content
+    elif source == 'Papua New Guinea':
+        # For PNG, preserve HTML structure like Fiji
+        body = soup.find('body')
+        if body:
+            # Remove the title from the content if it exists
+            h3 = body.find('h3')
+            if h3:
+                h3.extract()
+            
+            # Get the inner HTML
+            content = str(body).replace('<body>', '').replace('</body>', '').strip()
+        else:
+            content = html_content
     else:
         # For other sources, use plain text extraction
         content = soup.get_text(separator=' ', strip=True)
@@ -80,8 +93,23 @@ def get_source_from_path(file_path):
     # Assuming that the structure is /app/collections/{source}/...
     parts = file_path.split(os.sep)
     try:
-        source = parts[3]  # Index 3 assumes /app/collections/{source}/...
-        return source
+        # Look for collections in the path and get the next part
+        collections_index = -1
+        for i, part in enumerate(parts):
+            if part == "collections":
+                collections_index = i
+                break
+        
+        if collections_index >= 0 and collections_index + 1 < len(parts):
+            source = parts[collections_index + 1]
+            # Handle "Papua New Guinea" as a single source name
+            if source == "Papua" and collections_index + 2 < len(parts) and parts[collections_index + 2] == "Guinea":
+                source = "Papua New Guinea"
+            return source
+        else:
+            # Fallback to original logic
+            source = parts[3]  # Index 3 assumes /app/collections/{source}/...
+            return source
     except IndexError:
         return "Unknown Source"
 

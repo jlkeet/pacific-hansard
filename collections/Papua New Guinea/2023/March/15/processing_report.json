@@ -1,0 +1,20 @@
+{
+  "processing_date": "2025-08-19T14:55:44.260139",
+  "source_file": "H-11-20230315-M06-D02.html",
+  "output_directory": "/Users/jacksonkeet/Pacific Hansard Development/collections/Papua New Guinea/2023/March/15",
+  "parts_processed": 21,
+  "speakers_identified": 2,
+  "status": "success",
+  "metadata": {
+    "id": "a888d7b1-6a47-43f1-ae0b-e7923274fbaa",
+    "title": "Status of the Economy",
+    "date": "2023-03-15",
+    "country": "Papua New Guinea",
+    "parliament": "National Parliament of Papua New Guinea",
+    "document_type": "Hansard",
+    "speakers_count": 2,
+    "parts_count": 21,
+    "processed_date": "2025-08-19T14:55:44.259996",
+    "processing_status": "completed"
+  }
+}

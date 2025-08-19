@@ -1,0 +1,20 @@
+{
+  "processing_date": "2025-08-19T18:16:09.886875",
+  "source_file": "test-content.html",
+  "output_directory": "/Users/jacksonkeet/Pacific Hansard Development/collections/Papua New Guinea/2025/August/19",
+  "parts_processed": 6,
+  "speakers_identified": 2,
+  "status": "success",
+  "metadata": {
+    "id": "4764a7e3-6fd7-41e6-b5de-177d746f4f3f",
+    "title": "(2) Is the moratorium on the carbon trade activity in place as yet or not?",
+    "date": "Unknown",
+    "country": "Papua New Guinea",
+    "parliament": "National Parliament of Papua New Guinea",
+    "document_type": "Hansard",
+    "speakers_count": 2,
+    "parts_count": 6,
+    "processed_date": "2025-08-19T18:16:09.886377",
+    "processing_status": "completed"
+  }
+}
