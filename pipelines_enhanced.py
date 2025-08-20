@@ -23,6 +23,12 @@ def parse_hansard_document(html_content, metadata_content, file_path):
             title = h3_tag.text.strip()
     if not title:
         title = title_tag.text.strip()
+        # Clean up PNG titles - remove "PNG Hansard Part X - " prefix
+        if title and 'PNG Hansard Part' in title:
+            # Extract just the meaningful part after the dash
+            parts = title.split(' - ', 1)
+            if len(parts) > 1:
+                title = parts[1].strip()
     if not title:
         title = "Untitled Document"
     
