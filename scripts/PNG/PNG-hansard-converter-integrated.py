@@ -195,7 +195,7 @@ def write_part(directory, part_number, content, title=""):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PNG Hansard Part {part_number}{' - ' + title if title else ''}</title>
+    <title>{title if title else f'PNG Hansard Part {part_number}'}</title>
     <style>
         body {{ font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; }}
         h3 {{ color: #333; }}

@@ -56,8 +56,8 @@ function format_hansard_content($content, $source = '') {
         return '<p>No content available</p>';
     }
     
-    // Check if content is HTML (for Fiji)
-    if ($source === 'Fiji' && strpos($content, '<') !== false) {
+    // Check if content is HTML (for Fiji and PNG)
+    if (($source === 'Fiji' || $source === 'Papua New Guinea') && strpos($content, '<') !== false) {
         // Content is already formatted HTML, just return it
         return $content;
     }
