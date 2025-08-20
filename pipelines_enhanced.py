@@ -127,10 +127,25 @@ def extract_date_from_path(file_path):
         if len(path_parts) < 4:
             print(f"Path too short: {file_path} has only {len(path_parts)} parts: {path_parts}")
             return None
-            
-        year = int(path_parts[-4])  # Assuming year is 4 levels up from the filename
-        month = path_parts[-3]  # Month name
-        day = int(path_parts[-2])  # Day of the month
+        
+        # Find year, month, day by looking for patterns in the path
+        year, month, day = None, None, None
+        
+        # Look for 4-digit year pattern
+        for i, part in enumerate(path_parts):
+            if part.isdigit() and len(part) == 4 and 2000 <= int(part) <= 2030:
+                year = int(part)
+                # Month should be next part
+                if i + 1 < len(path_parts):
+                    month = path_parts[i + 1]
+                # Day should be after month
+                if i + 2 < len(path_parts) and path_parts[i + 2].isdigit():
+                    day = int(path_parts[i + 2])
+                break
+        
+        if not all([year, month, day]):
+            print(f"Could not find year/month/day pattern in path: {file_path}")
+            return None
         
         # Convert month name to number - handle both full and abbreviated month names
         month_mappings = {
