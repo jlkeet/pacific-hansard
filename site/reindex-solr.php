@@ -30,6 +30,27 @@ try {
     }
     echo "✓ Solr is accessible\n\n";
     
+    // Clear all existing documents from Solr first
+    echo "Clearing existing Solr documents...\n";
+    $deleteQuery = json_encode(['delete' => ['query' => '*:*']]);
+    
+    $ch = curl_init($solrUrl . '/update?commit=true');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $deleteQuery);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+    
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    
+    if ($httpCode == 200) {
+        echo "✓ Cleared all existing documents from Solr\n\n";
+    } else {
+        echo "✗ Failed to clear Solr (HTTP $httpCode)\n\n";
+    }
+    
     // Fetch all documents
     echo "Fetching documents from MySQL...\n";
     $stmt = $pdo->query("SELECT new_id, title, date, document_type, source, content, speaker, speaker2 FROM pacific_hansard_db");
