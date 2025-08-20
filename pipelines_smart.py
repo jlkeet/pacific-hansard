@@ -101,6 +101,9 @@ def smart_index_documents(directory):
                         skipped_count += 1
                         continue
                     
+                    # Mark as indexed FIRST to prevent infinite reprocessing
+                    mark_as_indexed(connection, html_file, file_hash)
+                    
                     # Process and index the document
                     try:
                         with open(html_file, 'r', encoding='utf-8') as f:
@@ -115,12 +118,14 @@ def smart_index_documents(directory):
                         if parsed_data:
                             insert_into_mysql(parsed_data)
                             index_in_solr(parsed_data)
-                            mark_as_indexed(connection, html_file, file_hash)
                             indexed_count += 1
                             print(f"Indexed: {filename}")
+                        else:
+                            print(f"No data parsed for: {filename}")
                     
                     except Exception as e:
                         print(f"Error processing {filename}: {e}")
+                        # File is already marked as indexed, so it won't be retried
     
     connection.close()
     
