@@ -1,5 +1,6 @@
 <?php
 // NUCLEAR OPTION: Completely wipe and rebuild everything
+// WARNING: This will delete all data and cannot be undone!
 set_time_limit(600); // 10 minutes
 header('Content-Type: text/plain');
 
