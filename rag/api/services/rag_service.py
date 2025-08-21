@@ -36,10 +36,10 @@ Classification:"""
 
         try:
             # Use the LLM service for classification with minimal parameters
-            response = await self.llm_service._call_ollama(
+            response = await self.llm_service.generate_answer(
                 prompt=classification_prompt,
-                temperature=0.0,  # Make it deterministic
-                max_tokens=10     # We only need one word
+                max_tokens=10,     # We only need one word
+                temperature=0.0    # Make it deterministic
             )
             
             classification = response.strip().lower()
