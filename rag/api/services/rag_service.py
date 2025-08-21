@@ -20,16 +20,83 @@ class RAGService:
         self.enhanced_search_service = EnhancedSearchService(search_service)
         self.llm_service = llm_service
     
+    def _is_conversational_query(self, question: str) -> bool:
+        """Detect if query is conversational rather than research-focused"""
+        question_lower = question.lower().strip()
+        
+        # Simple greetings and social queries
+        conversational_patterns = [
+            r'^(hi|hello|hey|good morning|good afternoon|good evening)$',
+            r'^(how are you|what\'s up|sup)$',
+            r'^(thank you|thanks|bye|goodbye)$',
+            r'^(who are you|what are you|tell me about yourself)$',
+            r'^(can you help me|help|what can you do)$',
+        ]
+        
+        for pattern in conversational_patterns:
+            if re.match(pattern, question_lower):
+                return True
+                
+        # Very short queries without substantive words
+        if len(question_lower.split()) <= 2 and not any(word in question_lower for word in 
+            ['what', 'how', 'when', 'where', 'why', 'who', 'which', 'budget', 'policy', 'minister', 'parliament']):
+            return True
+            
+        return False
+    
+    def _generate_conversational_response(self, question: str) -> Dict[str, Any]:
+        """Generate friendly conversational response"""
+        question_lower = question.lower().strip()
+        
+        if re.match(r'^(hi|hello|hey)', question_lower):
+            response = """👋 Hello! I'm your Pacific Hansard AI assistant. 
+
+I'm here to help you explore parliamentary records from across the Pacific Islands, including:
+• Cook Islands Parliament proceedings
+• Fiji Parliamentary debates  
+• Papua New Guinea legislative discussions
+
+Feel free to ask me about specific policies, budget discussions, ministers' statements, or any parliamentary matters that interest you!
+
+**Try asking:** "What is the Cook Islands government's position on seabed mining?" or "What did Fiji's Minister say about tourism policy?"
+"""
+        elif 'thank' in question_lower:
+            response = "🙏 You're welcome! Happy to help with your Pacific parliamentary research. Feel free to ask me anything about the parliamentary records."
+        elif 'help' in question_lower or 'what can you do' in question_lower:
+            response = """🤖 I can help you research Pacific Island parliamentary records! Here's what I can do:
+
+📋 **Answer policy questions** - "What is Fiji's stance on climate change?"
+🔍 **Find specific debates** - "What was discussed about tourism in Cook Islands?"
+📊 **Explain government positions** - "How did PNG respond to budget concerns?"
+🗣️ **Quote parliamentarians** - "What did the Prime Minister say about seabed mining?"
+
+Just ask me a question about Pacific parliamentary proceedings and I'll search through the official records to find relevant information with proper citations."""
+        else:
+            response = """👋 Hello there! I'm your Pacific Hansard AI assistant, specialized in helping you research parliamentary records from Cook Islands, Fiji, Papua New Guinea, and other Pacific Island nations.
+
+Ask me anything about policies, debates, ministerial statements, or legislative proceedings from these parliaments!"""
+            
+        return {
+            'answer': response,
+            'sources': [],
+            'model_used': 'conversational_handler'
+        }
+
     async def generate_answer(self, request: AskRequest) -> Dict[str, Any]:
         """
         Generate answer using RAG pipeline:
-        1. Search for relevant chunks
-        2. Generate answer with LLM
-        3. Extract and validate citations
-        4. Build source list
+        1. Check if query is conversational
+        2. Search for relevant chunks
+        3. Generate answer with LLM
+        4. Extract and validate citations
+        5. Build source list
         """
         
-        # Step 1: Enhanced multi-pass search for relevant chunks
+        # Step 1: Check for conversational queries
+        if self._is_conversational_query(request.question):
+            return self._generate_conversational_response(request.question)
+        
+        # Step 2: Enhanced multi-pass search for relevant chunks
         search_request = self._build_search_request(request)
         search_results = await self.enhanced_search_service.enhanced_search(search_request)
         
