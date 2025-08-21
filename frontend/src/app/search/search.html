@@ -1,0 +1,50 @@
+<div class="search-container">
+  <header class="search-header">
+    <h1>Pacific Hansard Search</h1>
+    <p class="subtitle">Search through parliamentary records from Cook Islands, Fiji, and Papua New Guinea</p>
+    
+    <div class="stats" *ngIf="stats">
+      <div class="stat">
+        <span class="number">{{stats.total_documents | number}}</span>
+        <span class="label">Total Documents</span>
+      </div>
+      <div class="countries">
+        <div class="country" *ngFor="let country of stats.countries | keyvalue">
+          <span class="name">{{country.key}}</span>
+          <span class="count">({{country.value}})</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-section">
+    <div class="search-box">
+      <input 
+        type="text" 
+        [(ngModel)]="query"
+        (keyup.enter)="onSearch()"
+        placeholder="Ask a question or search for keywords..."
+        class="search-input"
+      >
+      <button 
+        (click)="onSearch()" 
+        [disabled]="loading || !query.trim()"
+        class="search-btn"
+      >
+        <span *ngIf="loading">Searching...</span>
+        <span *ngIf="!loading">Search</span>
+      </button>
+    </div>
+
+    <app-filters 
+      [filters]="filters"
+      (filtersChange)="onFiltersChange($event)"
+    ></app-filters>
+  </div>
+
+  <app-search-results 
+    [results]="results"
+    [loading]="loading"
+    [query]="query"
+  ></app-search-results>
+</div>

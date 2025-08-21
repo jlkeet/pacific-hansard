@@ -1,0 +1,159 @@
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 1rem;
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #3498db;
+      }
+
+      .label {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-top: 0.25rem;
+      }
+    }
+
+    .countries {
+      display: flex;
+      gap: 1rem;
+
+      .country {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+
+        .name {
+          font-weight: 500;
+          color: #2c3e50;
+        }
+
+        .count {
+          color: #6c757d;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .search-input {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+
+    &::placeholder {
+      color: #adb5bd;
+    }
+  }
+
+  .search-btn {
+    padding: 1rem 2rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px;
+
+    &:hover:not(:disabled) {
+      background: #2980b9;
+    }
+
+    &:disabled {
+      background: #bdc3c7;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 1rem;
+  }
+
+  .search-header {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .stats {
+      flex-direction: column;
+      gap: 1rem;
+
+      .countries {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .search-box {
+    flex-direction: column;
+
+    .search-btn {
+      align-self: stretch;
+    }
+  }
+}

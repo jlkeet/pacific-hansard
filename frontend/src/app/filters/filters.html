@@ -1,0 +1,74 @@
+<div class="filters-container">
+  <button class="filters-toggle" (click)="toggleFilters()">
+    <span>Filters</span>
+    <span class="toggle-icon">{{ showFilters ? '▲' : '▼' }}</span>
+  </button>
+
+  <div class="filters-panel" [class.show]="showFilters">
+    <div class="filter-row">
+      <div class="filter-group">
+        <label for="country">Country</label>
+        <select 
+          id="country" 
+          [(ngModel)]="filters.country" 
+          (change)="onFilterChange()"
+        >
+          <option value="">All Countries</option>
+          <option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="speaker">Speaker</label>
+        <input 
+          type="text" 
+          id="speaker"
+          [(ngModel)]="filters.speaker"
+          (input)="onFilterChange()"
+          placeholder="Speaker name..."
+        >
+      </div>
+
+      <div class="filter-group">
+        <label for="chamber">Chamber</label>
+        <input 
+          type="text" 
+          id="chamber"
+          [(ngModel)]="filters.chamber"
+          (input)="onFilterChange()"
+          placeholder="Chamber..."
+        >
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <div class="filter-group">
+        <label for="date_from">Date From</label>
+        <input 
+          type="date" 
+          id="date_from"
+          [(ngModel)]="filters.date_from"
+          (change)="onFilterChange()"
+        >
+      </div>
+
+      <div class="filter-group">
+        <label for="date_to">Date To</label>
+        <input 
+          type="date" 
+          id="date_to"
+          [(ngModel)]="filters.date_to"
+          (change)="onFilterChange()"
+        >
+      </div>
+
+      <div class="filter-actions">
+        <button class="clear-btn" (click)="clearFilters()">
+          Clear All
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

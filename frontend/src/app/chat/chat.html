@@ -1,0 +1,169 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <h1>🤖 Pacific Hansard AI Assistant</h1>
+    <p class="subtitle">Powered by Qwen2.5 7B • Ask questions about Pacific parliamentary records</p>
+  </div>
+
+  <div class="chat-messages">
+    @for (message of messages; track message.id) {
+      <div 
+        class="message-wrapper"
+        [class.user-message]="message.isUser"
+        [class.ai-message]="!message.isUser"
+      >
+        <div class="message-bubble">
+          <div class="message-header">
+            <span class="message-sender">
+              {{ message.isUser ? 'You' : 'AI Assistant' }}
+            </span>
+            <span class="message-time">
+              {{ message.timestamp | date:'short' }}
+            </span>
+          </div>
+          
+          <div class="message-content">
+            @if (message.isLoading) {
+              <div class="loading-indicator">
+                <div class="typing-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                {{ message.content }}
+              </div>
+            } @else {
+              <div 
+                [innerHTML]="formatMessage(message.content, message.sources)"
+                (click)="onCitationClick($event, message)"
+                class="message-text"
+              ></div>
+            }
+          </div>
+
+          <!-- Sources -->
+          @if (message.sources && message.sources.length > 0) {
+            <div class="message-sources">
+              <div class="sources-header">📚 Sources:</div>
+              @for (source of message.sources; track source.id; let i = $index) {
+                <div class="source-item">
+                  <div class="source-meta">
+                    <span class="source-country">{{ source.country }}</span>
+                    <span class="source-date">{{ source.date | date:'mediumDate' }}</span>
+                    @if (source.speaker) {
+                      <span class="source-speaker">{{ source.speaker }}</span>
+                    }
+                    <button 
+                      class="view-full-source-btn"
+                      (click)="openSourceModal(source)"
+                      style="background: #3498db; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; margin-left: 10px; font-size: 0.8rem;"
+                    >
+                      View Full Source
+                    </button>
+                  </div>
+                  <div class="source-text">{{ source.text }}</div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="chat-input-container">
+    <div class="input-wrapper">
+      <textarea
+        [(ngModel)]="currentQuestion"
+        (keydown)="onKeyPress($event)"
+        placeholder="Ask me about Pacific parliamentary proceedings..."
+        class="chat-input"
+        rows="3"
+        [disabled]="isLoading"
+      ></textarea>
+      <button 
+        (click)="sendMessage()" 
+        [disabled]="!currentQuestion.trim() || isLoading"
+        class="send-button"
+      >
+        <span *ngIf="!isLoading">Send</span>
+        <span *ngIf="isLoading">Processing...</span>
+      </button>
+    </div>
+    
+    <div class="example-questions">
+      <p>Try asking:</p>
+      <div class="example-chips">
+        <button 
+          class="example-chip" 
+          (click)="setQuestion('What did the Minister say about the budget in Fiji?')"
+          [disabled]="isLoading"
+        >
+          Budget discussions in Fiji
+        </button>
+        <button 
+          class="example-chip" 
+          (click)="setQuestion('What are the main healthcare policies discussed in Cook Islands?')"
+          [disabled]="isLoading"
+        >
+          Healthcare policies in Cook Islands
+        </button>
+        <button 
+          class="example-chip" 
+          (click)="setQuestion('What has been said about climate change in Papua New Guinea parliament?')"
+          [disabled]="isLoading"
+        >
+          Climate change in PNG
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Source Modal -->
+  @if (showSourceModal && selectedSource) {
+    <div class="modal-overlay" (click)="closeSourceModal()">
+      <div class="source-modal" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h3>📄 Source Document</h3>
+          <button class="close-button" (click)="closeSourceModal()" title="Close">×</button>
+        </div>
+        
+        <div class="modal-content">
+          <div class="source-metadata">
+            <div class="metadata-row">
+              <span class="metadata-label">Country:</span>
+              <span class="metadata-value">{{ selectedSource.country }}</span>
+            </div>
+            <div class="metadata-row">
+              <span class="metadata-label">Date:</span>
+              <span class="metadata-value">{{ formatSourceDate(selectedSource.date) }}</span>
+            </div>
+            <div class="metadata-row">
+              <span class="metadata-label">Speaker:</span>
+              <span class="metadata-value">{{ selectedSource.speaker }}</span>
+            </div>
+            @if (selectedSource.doc_id) {
+              <div class="metadata-row">
+                <span class="metadata-label">Document ID:</span>
+                <span class="metadata-value">{{ selectedSource.doc_id }}</span>
+              </div>
+            }
+          </div>
+          
+          <div class="source-text-container">
+            <h4>Parliamentary Excerpt:</h4>
+            <div class="source-full-text">
+              {{ selectedSource.full_text || selectedSource.text || 'No text available' }}
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button class="btn-primary" (click)="viewFullDocument(selectedSource)">
+            📄 View Full Document
+          </button>
+          <button class="btn-secondary" (click)="closeSourceModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

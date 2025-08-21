@@ -141,6 +141,327 @@
             gap: 20px;
             align-items: center;
         }
+        
+        /* AI Chat Styles */
+        .floating-chat-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .floating-chat-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+        }
+        
+        .chat-container {
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .chat-subtitle {
+            margin: 0;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+        
+        .message-wrapper {
+            margin-bottom: 20px;
+        }
+        
+        .message-wrapper.user-message {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .message-wrapper.ai-message {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .message-bubble {
+            max-width: 80%;
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .message-wrapper.user-message .message-bubble {
+            background: #007bff;
+            color: white;
+        }
+        
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .message-sender {
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .message-time {
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+        
+        .message-content {
+            line-height: 1.6;
+        }
+        
+        .message-text {
+            white-space: pre-line;
+        }
+        
+        .message-text h1, .message-text h2, .message-text h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .message-text p {
+            margin-bottom: 15px;
+        }
+        
+        .message-text ul, .message-text ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .message-sources {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .sources-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .source-item {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+        
+        .source-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .source-country, .source-date, .source-speaker {
+            background: #007bff;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+        
+        .source-text {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        
+        .view-full-source-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        
+        .view-full-source-btn:hover {
+            background: #1e7e34;
+        }
+        
+        .chat-input-container {
+            border-top: 1px solid #dee2e6;
+            padding: 20px;
+            background: white;
+        }
+        
+        .input-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .chat-input {
+            flex: 1;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 12px;
+            resize: none;
+            font-family: inherit;
+        }
+        
+        .chat-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+        
+        .send-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .send-button:hover {
+            background: #0056b3;
+        }
+        
+        .send-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .example-questions p {
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
+        
+        .example-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .example-chip {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            color: #007bff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .example-chip:hover {
+            background: #007bff;
+            color: white;
+        }
+        
+        .loading-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .typing-dots {
+            display: flex;
+            gap: 3px;
+        }
+        
+        .typing-dots span {
+            width: 6px;
+            height: 6px;
+            background: #007bff;
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+        
+        .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Citation links in messages */
+        .citation-link {
+            background: #007bff;
+            color: white;
+            padding: 1px 4px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+        
+        .citation-link:hover {
+            background: #0056b3;
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Mobile responsiveness for chat */
+        @media (max-width: 768px) {
+            .floating-chat-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .chat-container {
+                height: 500px;
+            }
+            
+            .modal-lg {
+                max-width: 95%;
+                margin: 10px;
+            }
+            
+            .example-chips {
+                flex-direction: column;
+            }
+            
+            .input-wrapper {
+                flex-direction: column;
+            }
+            
+            .send-button {
+                align-self: flex-end;
+            }
+        }
     </style>
 </head>
 
@@ -164,6 +485,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="hansard-browser.html">Browse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="aiAssistantNav">🤖 AI Assistant</a>
                 </li>
             </ul>
         </div>
@@ -369,6 +693,103 @@
         </div>
     </div>
 
+    <!-- Floating AI Chat Button -->
+    <button class="floating-chat-btn" id="chatToggle" title="Open AI Assistant">
+        🤖
+    </button>
+
+    <!-- AI Chat Modal -->
+    <div class="modal fade" id="chatModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        🤖 Pacific Hansard AI Assistant
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <!-- Chat Container -->
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <p class="chat-subtitle">Powered by Qwen2.5 7B • Ask questions about Pacific parliamentary records</p>
+                        </div>
+                        
+                        <!-- Chat Messages -->
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message-wrapper ai-message">
+                                <div class="message-bubble">
+                                    <div class="message-header">
+                                        <span class="message-sender">AI Assistant</span>
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="message-text">
+                                            👋 Hello! I'm your Pacific Hansard AI assistant. I can help you find information from parliamentary records across the Pacific Islands. What would you like to know?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Chat Input -->
+                        <div class="chat-input-container">
+                            <div class="input-wrapper">
+                                <textarea
+                                    id="chatInput"
+                                    placeholder="Ask me about Pacific parliamentary proceedings..."
+                                    class="chat-input"
+                                    rows="3"
+                                ></textarea>
+                                <button id="sendButton" class="send-button">
+                                    <span class="send-text">Send</span>
+                                    <span class="loading-text" style="display: none;">Processing...</span>
+                                </button>
+                            </div>
+                            
+                            <div class="example-questions">
+                                <p><strong>Try asking:</strong></p>
+                                <div class="example-chips">
+                                    <button class="example-chip" data-question="What did the Minister say about the budget in Fiji?">
+                                        Budget discussions in Fiji
+                                    </button>
+                                    <button class="example-chip" data-question="What are the main healthcare policies discussed in Cook Islands?">
+                                        Healthcare policies in Cook Islands
+                                    </button>
+                                    <button class="example-chip" data-question="What has been said about climate change in Papua New Guinea parliament?">
+                                        Climate change in PNG
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Source Detail Modal -->
+    <div class="modal fade" id="sourceModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">📄 Source Document</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="sourceModalBody">
+                    <!-- Source content will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="viewFullDocumentBtn">📄 View Full Document</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript Libraries -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -377,6 +798,392 @@
     
     <!-- Enhanced Search JavaScript -->
     <script src="tkb-search-enhanced.js"></script>
+    
+    <!-- AI Chat JavaScript -->
+    <script>
+        // AI Chat functionality
+        class AIChat {
+            constructor() {
+                // For hybrid deployment - detect if running on Railway
+                this.apiUrl = window.location.hostname === 'localhost' 
+                    ? 'http://localhost:8000'
+                    : window.location.hostname.includes('railway.app')
+                        ? 'http://192.168.1.111'  // MANUAL STEP: Replace with your PC's IP (e.g., http://192.168.1.100:8000) or ngrok URL
+                        : 'http://localhost:8000';
+                this.isLoading = false;
+                this.initEventListeners();
+            }
+            
+            initEventListeners() {
+                // Floating button click
+                $('#chatToggle').on('click', () => {
+                    $('#chatModal').modal('show');
+                });
+                
+                // Navigation AI Assistant click
+                $('#aiAssistantNav').on('click', (e) => {
+                    e.preventDefault();
+                    $('#chatModal').modal('show');
+                });
+                
+                // Send button click
+                $('#sendButton').on('click', () => {
+                    this.sendMessage();
+                });
+                
+                // Enter key to send (Ctrl+Enter for new line)
+                $('#chatInput').on('keydown', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey && !e.ctrlKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                });
+                
+                // Example question clicks
+                $('.example-chip').on('click', (e) => {
+                    const question = $(e.target).data('question');
+                    $('#chatInput').val(question);
+                    this.sendMessage();
+                });
+                
+                // Citation clicks
+                $(document).on('click', '.citation-link', (e) => {
+                    e.preventDefault();
+                    const sourceIndex = $(e.target).data('source-index');
+                    const messageId = $(e.target).closest('.message-wrapper').data('message-id');
+                    this.showSourceModal(sourceIndex, messageId);
+                });
+                
+                // Source modal view full document
+                $('#viewFullDocumentBtn').on('click', () => {
+                    const docId = $(this).data('doc-id');
+                    if (docId) {
+                        this.viewFullDocument(docId);
+                    }
+                });
+            }
+            
+            async sendMessage() {
+                const input = $('#chatInput');
+                const question = input.val().trim();
+                
+                if (!question || this.isLoading) return;
+                
+                // Add user message
+                this.addUserMessage(question);
+                input.val('');
+                
+                // Show loading state
+                this.setLoading(true);
+                const loadingMessageId = this.addLoadingMessage();
+                
+                try {
+                    const response = await this.callAPI(question);
+                    
+                    // Remove loading message and add AI response
+                    this.removeMessage(loadingMessageId);
+                    this.addAIMessage(response);
+                    
+                } catch (error) {
+                    console.error('API Error:', error);
+                    this.removeMessage(loadingMessageId);
+                    this.addAIMessage({
+                        answer: '❌ Sorry, I encountered an error processing your question. Please try again.',
+                        sources: []
+                    });
+                } finally {
+                    this.setLoading(false);
+                }
+            }
+            
+            async callAPI(question) {
+                const response = await fetch(`${this.apiUrl}/ask`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        question: question,
+                        top_k: 5,
+                        temperature: 0.1
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API call failed: ${response.status}`);
+                }
+                
+                return await response.json();
+            }
+            
+            addUserMessage(text) {
+                const messageId = Date.now();
+                const timestamp = new Date().toLocaleTimeString();
+                
+                const messageHtml = `
+                    <div class="message-wrapper user-message" data-message-id="${messageId}">
+                        <div class="message-bubble">
+                            <div class="message-header">
+                                <span class="message-sender">You</span>
+                                <span class="message-time">${timestamp}</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">${this.escapeHtml(text)}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                $('#chatMessages').append(messageHtml);
+                this.scrollToBottom();
+            }
+            
+            addLoadingMessage() {
+                const messageId = Date.now();
+                
+                const loadingHtml = `
+                    <div class="message-wrapper ai-message" data-message-id="${messageId}">
+                        <div class="message-bubble">
+                            <div class="message-header">
+                                <span class="message-sender">AI Assistant</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="loading-indicator">
+                                    <div class="typing-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span>Thinking...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                $('#chatMessages').append(loadingHtml);
+                this.scrollToBottom();
+                return messageId;
+            }
+            
+            addAIMessage(response) {
+                const messageId = Date.now();
+                const timestamp = new Date().toLocaleTimeString();
+                
+                // Format the answer with citations
+                const formattedAnswer = this.formatAnswerWithCitations(response.answer, response.sources);
+                
+                let messageHtml = `
+                    <div class="message-wrapper ai-message" data-message-id="${messageId}">
+                        <div class="message-bubble">
+                            <div class="message-header">
+                                <span class="message-sender">AI Assistant</span>
+                                <span class="message-time">${timestamp}</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">${formattedAnswer}</div>
+                            </div>
+                `;
+                
+                // Add sources if available
+                if (response.sources && response.sources.length > 0) {
+                    messageHtml += `
+                        <div class="message-sources">
+                            <div class="sources-header">📚 Sources:</div>
+                    `;
+                    
+                    response.sources.forEach((source, index) => {
+                        messageHtml += `
+                            <div class="source-item" data-source-index="${index}">
+                                <div class="source-meta">
+                                    <span class="source-country">${source.country}</span>
+                                    <span class="source-date">${this.formatDate(source.date)}</span>
+                                    ${source.speaker ? `<span class="source-speaker">${source.speaker}</span>` : ''}
+                                    <button class="view-full-source-btn" onclick="aiChat.showSource(${messageId}, ${index})">
+                                        View Full Source
+                                    </button>
+                                </div>
+                                <div class="source-text">${this.escapeHtml(source.text_preview || source.text || 'No preview available')}</div>
+                            </div>
+                        `;
+                    });
+                    
+                    messageHtml += '</div>';
+                }
+                
+                messageHtml += `
+                        </div>
+                    </div>
+                `;
+                
+                $('#chatMessages').append(messageHtml);
+                
+                // Store sources data for later access
+                $(`[data-message-id="${messageId}"]`).data('sources', response.sources);
+                
+                this.scrollToBottom();
+            }
+            
+            formatAnswerWithCitations(answer, sources) {
+                if (!answer) return 'No answer available';
+                
+                // Convert newlines to HTML breaks for better readability
+                let formatted = answer.replace(/\n/g, '<br>');
+                
+                // Convert ### headings to clean styled headings
+                formatted = formatted.replace(/^### (.+)$/gm, '<h3 style="margin-top: 20px; margin-bottom: 10px; font-weight: bold; color: #495057;">$1</h3>');
+                
+                // Make emoji section headings bold and more prominent
+                formatted = formatted.replace(/(📋|🔍|📊|🗣️|📈)\s*([^<\n]+)/g, '<div style="margin-top: 18px; margin-bottom: 12px; font-size: 1.1em;"><strong>$1 $2</strong></div>');
+                
+                // Remove ** bold formatting - just make text clean
+                formatted = formatted.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+                
+                // Convert citation references [#0], [#1] etc. to clickable links
+                formatted = formatted.replace(/\[#(\d+)\]/g, (match, index) => {
+                    const sourceIndex = parseInt(index);
+                    if (sources && sources[sourceIndex]) {
+                        return `<a href="#" class="citation-link" data-source-index="${sourceIndex}">[#${index}]</a>`;
+                    }
+                    return match;
+                });
+                
+                return formatted;
+            }
+            
+            showSource(messageId, sourceIndex) {
+                const messageElement = $(`[data-message-id="${messageId}"]`);
+                const sources = messageElement.data('sources');
+                
+                if (sources && sources[sourceIndex]) {
+                    this.showSourceModal(sources[sourceIndex]);
+                }
+            }
+            
+            showSourceModal(source) {
+                const modalBody = $('#sourceModalBody');
+                
+                const sourceHtml = `
+                    <div class="source-metadata">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Country:</strong> ${source.country}
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Date:</strong> ${this.formatDate(source.date)}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Speaker:</strong> ${source.speaker || 'Parliament'}
+                            </div>
+                            ${source.doc_id ? `
+                            <div class="col-md-6">
+                                <strong>Document ID:</strong> ${source.doc_id}
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Parliamentary Excerpt:</h5>
+                    <div class="source-full-text" style="background: #f8f9fa; padding: 15px; border-radius: 5px; white-space: pre-wrap; max-height: 400px; overflow-y: auto;">
+                        ${this.escapeHtml(source.full_text || source.text || 'No text available')}
+                    </div>
+                `;
+                
+                modalBody.html(sourceHtml);
+                
+                // Set up view full document button
+                $('#viewFullDocumentBtn').off('click').on('click', () => {
+                    if (source.doc_id) {
+                        this.viewFullDocument(source.doc_id);
+                    }
+                });
+                
+                $('#sourceModal').modal('show');
+            }
+            
+            async viewFullDocument(docId) {
+                try {
+                    const response = await fetch(`${this.apiUrl}/document/${docId}`);
+                    if (response.ok) {
+                        const document = await response.json();
+                        // Open in new window/tab
+                        const newWindow = window.open('', '_blank');
+                        newWindow.document.write(`
+                            <html>
+                                <head>
+                                    <title>Full Document - ${docId}</title>
+                                    <style>
+                                        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+                                        .metadata { background: #f0f0f0; padding: 10px; margin-bottom: 20px; }
+                                        .content { white-space: pre-wrap; }
+                                    </style>
+                                </head>
+                                <body>
+                                    <div class="metadata">
+                                        <h2>Document: ${docId}</h2>
+                                        <p><strong>Country:</strong> ${document.country || 'Unknown'}</p>
+                                        <p><strong>Date:</strong> ${document.date || 'Unknown'}</p>
+                                    </div>
+                                    <div class="content">${this.escapeHtml(document.content || 'No content available')}</div>
+                                </body>
+                            </html>
+                        `);
+                        newWindow.document.close();
+                    } else {
+                        alert('Failed to load full document');
+                    }
+                } catch (error) {
+                    console.error('Error loading document:', error);
+                    alert('Error loading document');
+                }
+            }
+            
+            removeMessage(messageId) {
+                $(`[data-message-id="${messageId}"]`).remove();
+            }
+            
+            setLoading(loading) {
+                this.isLoading = loading;
+                $('#sendButton').prop('disabled', loading);
+                $('.example-chip').prop('disabled', loading);
+                
+                if (loading) {
+                    $('.send-text').hide();
+                    $('.loading-text').show();
+                } else {
+                    $('.send-text').show();
+                    $('.loading-text').hide();
+                }
+            }
+            
+            scrollToBottom() {
+                const chatMessages = $('#chatMessages')[0];
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            formatDate(dateStr) {
+                try {
+                    const date = new Date(dateStr);
+                    return date.toLocaleDateString();
+                } catch (e) {
+                    return dateStr;
+                }
+            }
+            
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        }
+        
+        // Initialize AI Chat when document is ready
+        $(document).ready(function() {
+            window.aiChat = new AIChat();
+        });
+    </script>
 </body>
 
 </html>

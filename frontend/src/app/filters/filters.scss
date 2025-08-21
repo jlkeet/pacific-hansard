@@ -1,0 +1,121 @@
+.filters-container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .filters-toggle {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #f8f9fa;
+      border-color: #dee2e6;
+    }
+
+    .toggle-icon {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .filters-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+
+    &.show {
+      max-height: 400px;
+      padding: 1.5rem;
+    }
+  }
+
+  .filter-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #495057;
+      margin-bottom: 0.5rem;
+    }
+
+    input, select {
+      padding: 0.5rem;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+      }
+    }
+
+    input::placeholder {
+      color: #adb5bd;
+    }
+  }
+
+  .filter-actions {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .clear-btn {
+      padding: 0.5rem 1rem;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: #c82333;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    .filter-row {
+      grid-template-columns: 1fr;
+    }
+
+    .filter-actions {
+      justify-content: stretch;
+
+      .clear-btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div class="app-container">
+  <nav class="nav-tabs">
+    <button 
+      class="nav-tab"
+      [class.active]="currentView === 'chat'"
+      (click)="switchView('chat')"
+    >
+      🤖 AI Chat
+    </button>
+    <button 
+      class="nav-tab"
+      [class.active]="currentView === 'search'"
+      (click)="switchView('search')"
+    >
+      🔍 Document Search
+    </button>
+  </nav>
+
+  <div class="view-container">
+    @if (currentView === 'chat') {
+      <app-chat></app-chat>
+    }
+    @if (currentView === 'search') {
+      <app-search></app-search>
+    }
+  </div>
+</div>
+
+<router-outlet></router-outlet>
