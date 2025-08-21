@@ -44,8 +44,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allow all origins for hybrid deployment
     allow_credentials=False,  # Set to False for ngrok deployment
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],  # Add OPTIONS
     allow_headers=["*"],
+    allow_origin_regex=r".*",  # Explicitly allow all origins
 )
 
 # Global service instances
