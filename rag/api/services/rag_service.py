@@ -35,14 +35,29 @@ Respond with only one word: "conversational" or "research"
 Classification:"""
 
         try:
-            # Use the LLM service for classification with minimal parameters
-            response = await self.llm_service.generate_answer(
-                prompt=classification_prompt,
-                max_tokens=10,     # We only need one word
-                temperature=0.0    # Make it deterministic
-            )
+            # Use a simple HTTP call to Ollama for classification
+            import httpx
+            async with httpx.AsyncClient(timeout=10.0) as client:
+                response = await client.post(
+                    f"{self.llm_service.ollama_url}/api/generate",
+                    json={
+                        "model": self.llm_service.model_name,
+                        "prompt": classification_prompt,
+                        "stream": False,
+                        "options": {
+                            "temperature": 0.0,
+                            "num_predict": 10
+                        }
+                    }
+                )
+                if response.status_code == 200:
+                    result = response.json()
+                    response_text = result.get("response", "").strip()
+                else:
+                    logger.error(f"Ollama classification failed: {response.status_code}")
+                    return 'research'
             
-            classification = response.strip().lower()
+            classification = response_text.lower()
             
             # Validate response and default to research if unclear
             if 'conversational' in classification:
