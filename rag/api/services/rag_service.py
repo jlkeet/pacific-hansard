@@ -20,29 +20,42 @@ class RAGService:
         self.enhanced_search_service = EnhancedSearchService(search_service)
         self.llm_service = llm_service
     
-    def _is_conversational_query(self, question: str) -> bool:
-        """Detect if query is conversational rather than research-focused"""
-        question_lower = question.lower().strip()
-        
-        # Simple greetings and social queries
-        conversational_patterns = [
-            r'^(hi|hello|hey|good morning|good afternoon|good evening)$',
-            r'^(how are you|what\'s up|sup)$',
-            r'^(thank you|thanks|bye|goodbye)$',
-            r'^(who are you|what are you|tell me about yourself)$',
-            r'^(can you help me|help|what can you do)$',
-        ]
-        
-        for pattern in conversational_patterns:
-            if re.match(pattern, question_lower):
-                return True
-                
-        # Very short queries without substantive words
-        if len(question_lower.split()) <= 2 and not any(word in question_lower for word in 
-            ['what', 'how', 'when', 'where', 'why', 'who', 'which', 'budget', 'policy', 'minister', 'parliament']):
-            return True
+    async def _classify_query_intent(self, question: str) -> str:
+        """Use LLM to classify query intent as conversational or research"""
+        classification_prompt = f"""Classify this query as either "conversational" or "research":
+
+Query: "{question}"
+
+Rules:
+- Conversational = greetings (hi, hello), thanks, casual chat, asking about the assistant, general help requests
+- Research = questions about policies, parliament, governments, ministers, specific topics, factual queries
+
+Respond with only one word: "conversational" or "research"
+
+Classification:"""
+
+        try:
+            # Use the LLM service for classification with minimal parameters
+            response = await self.llm_service._call_ollama(
+                prompt=classification_prompt,
+                temperature=0.0,  # Make it deterministic
+                max_tokens=10     # We only need one word
+            )
             
-        return False
+            classification = response.strip().lower()
+            
+            # Validate response and default to research if unclear
+            if 'conversational' in classification:
+                return 'conversational'
+            elif 'research' in classification:
+                return 'research'
+            else:
+                logger.warning(f"Unclear classification: {classification}, defaulting to research")
+                return 'research'
+                
+        except Exception as e:
+            logger.error(f"Classification failed: {e}, defaulting to research")
+            return 'research'
     
     def _generate_conversational_response(self, question: str) -> Dict[str, Any]:
         """Generate friendly conversational response"""
@@ -92,8 +105,11 @@ Ask me anything about policies, debates, ministerial statements, or legislative 
         5. Build source list
         """
         
-        # Step 1: Check for conversational queries
-        if self._is_conversational_query(request.question):
+        # Step 1: Classify query intent using LLM
+        query_intent = await self._classify_query_intent(request.question)
+        logger.info(f"🤖 Query classified as: {query_intent}")
+        
+        if query_intent == 'conversational':
             return self._generate_conversational_response(request.question)
         
         # Step 2: Enhanced multi-pass search for relevant chunks
