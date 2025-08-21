@@ -54,6 +54,18 @@ search_service: Optional[SearchService] = None
 llm_service: Optional[LLMService] = None
 rag_service: Optional[RAGService] = None
 
+@app.options("/{path:path}")
+async def options_handler(path: str):
+    """Handle OPTIONS requests manually for CORS"""
+    return JSONResponse(
+        content={},
+        headers={
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "Access-Control-Allow-Headers": "*",
+        }
+    )
+
 @app.on_event("startup")
 async def startup_event():
     """Initialize services on startup"""
