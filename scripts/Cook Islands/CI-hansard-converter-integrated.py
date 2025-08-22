@@ -8,8 +8,10 @@ import json
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Configuration
-COLLECTIONS_BASE = "/Users/jacksonkeet/Pacific Hansard Development/collections/Cook Islands"
+# Configuration - Use relative path from project root
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+COLLECTIONS_BASE = os.path.join(PROJECT_ROOT, "collections", "Cook Islands")
 
 def normalize_name(name):
     """Remove all spaces and convert to uppercase for comparison"""
@@ -128,6 +130,20 @@ def extract_date_info(filename, content_soup):
     day = None
     
     # Try to extract from filename first
+    # Pattern for new scraped format: 2022_Friday__27_May_2022.html
+    new_pattern = r'(\d{4})_\w+__(\d+)_(\w+)_(\d{4})'
+    match = re.search(new_pattern, filename)
+    if match:
+        year1 = int(match.group(1))
+        day = int(match.group(2))
+        month = match.group(3)
+        year2 = int(match.group(4))
+        
+        # Use the second year (actual document date) as it's more reliable
+        # The first year might be from scraping categorization
+        year = year2
+        return year, month, day
+    
     # Pattern for modern format: DAY-40-Wed-21-May-25
     modern_pattern = r'DAY-\d+-\w+-(\d+)-(\w+)-(\d+)'
     match = re.search(modern_pattern, filename)

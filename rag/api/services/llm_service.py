@@ -160,6 +160,16 @@ class LLMService:
 
 RESEARCH QUESTION: {question}
 
+RELEVANCE CHECK: Before providing analysis, determine if the Parliamentary Sources below contain information relevant to the research question. If the sources do NOT address the question topic, respond with:
+
+"❌ **No Relevant Information Found**
+
+The parliamentary records searched do not contain specific information about [topic from question]. The available sources discuss [brief 1-sentence summary of what sources actually contain], but do not address the question asked.
+
+Please try rephrasing your question or asking about topics that are covered in the Pacific parliamentary records."
+
+Only proceed with full analysis if the sources ARE relevant to the question.
+
 PARLIAMENTARY SOURCES:
 {context}
 
