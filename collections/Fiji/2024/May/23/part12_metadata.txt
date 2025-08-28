@@ -1,15 +1,14 @@
 Part 12 Speakers:
-Speaker 1: Attorney
-Speaker 2: F.S.  KOYA
-Speaker 3: I.B. SERUIRATU
-Speaker 4: J. USAMATE
-Speaker 5: K.K. LAL
-Speaker 6: K.V. RAVU
-Speaker 7: M.D. BULITAVU
-Speaker 8: P.K. BALA
-Speaker 9: RO F.Q. TUISAWAU
-Speaker 10: S.D.  TURAGA
-Speaker 11: S.L.  RABUKA
-Speaker 12: S.T.  KOROILAVESAU
-Speaker 13: V.T.T.K.  RAYALU
+Speaker 1: F.S.  KOYA
+Speaker 2: I.B. SERUIRATU
+Speaker 3: J. USAMATE
+Speaker 4: K.K. LAL
+Speaker 5: K.V. RAVU
+Speaker 6: M.D. BULITAVU
+Speaker 7: P.K. BALA
+Speaker 8: RO F.Q. TUISAWAU
+Speaker 9: S.D.  TURAGA
+Speaker 10: S.L.  RABUKA
+Speaker 11: S.T.  KOROILAVESAU
+Speaker 12: V.T.T.K.  RAYALU
 

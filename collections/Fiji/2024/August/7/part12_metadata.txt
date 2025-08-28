@@ -9,14 +9,13 @@ Speaker 7: I.B. SERUIRATU
 Speaker 8: J.  SAUKURU
 Speaker 9: J. USAMATE
 Speaker 10: M.D. BULITAVU
-Speaker 11: M.D. BULITAVU.-  It cannot be a win
-Speaker 12: M.S.N. KAMIKAMICA
-Speaker 13: N.T. TUINACEVA
-Speaker 14: P.D. KUMAR
-Speaker 15: P.K. RAVUNAWA
-Speaker 16: R.R. SHARMA
-Speaker 17: S.L. RABUKA
-Speaker 18: S.R.  DITOKA
-Speaker 19: V. NAUPOTO
-Speaker 20: V.R.  GAVOKA
+Speaker 11: M.S.N. KAMIKAMICA
+Speaker 12: N.T. TUINACEVA
+Speaker 13: P.D. KUMAR
+Speaker 14: P.K. RAVUNAWA
+Speaker 15: R.R. SHARMA
+Speaker 16: S.L. RABUKA
+Speaker 17: S.R.  DITOKA
+Speaker 18: V. NAUPOTO
+Speaker 19: V.R.  GAVOKA
 
