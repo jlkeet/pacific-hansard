@@ -1,0 +1,1238 @@
+{
+  "extraction_date": "2025-08-25T14:49:52.416277",
+  "total_links": 102,
+  "links_by_year": {
+    "2024": [
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/Daily-Hansard-Friday-6th-December-2024.pdf",
+        "filename": "Daily-Hansard-Friday-6th-December-2024.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 6TH DECEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/Daily-Hansard-Thursday-5th-December-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-5th-December-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 5TH DECEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/Daily-Hansard-Wednesday-4th-December-2024.pdf",
+        "filename": "Daily-Hansard-Wednesday-4th-December-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 4TH DECEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/12/Daily-Hansard-Tuesday-3rd-December-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-3rd-December-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 3RD DECEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/02Daily-Hansard-Monday-2nd-December-2024.pdf",
+        "filename": "02Daily-Hansard-Monday-2nd-December-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 2ND DECEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/11/Daily-Hansard-12th-November-2024.pdf",
+        "filename": "Daily-Hansard-12th-November-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 12TH NOVEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/11/Hansard-Report-Thursday-31st-October-2024.pdf",
+        "filename": "Hansard-Report-Thursday-31st-October-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 31ST OCTOBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/11/Daily-Hansard-Thursday-3rd-October-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-3rd-October-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 3RD OCTOBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/10/Daily-Hansard-Wednesday-2nd-October-2024.pdf",
+        "filename": "Daily-Hansard-Wednesday-2nd-October-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 2ND OCTOBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/10/Daily-Hansard-Tuesday-1st-October-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-1st-October-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 1ST OCTOBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/10/Daily-Hansard-Monday-30th-September-2024.pdf",
+        "filename": "Daily-Hansard-Monday-30th-September-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 30TH SEPTEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Monday-2nd-September-2024.pdf",
+        "filename": "Daily-Hansard-Monday-2nd-September-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 2ND SEPTEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Tuesday-3rd-September-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-3rd-September-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 3RD SEPTEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Wednesday-4th-September-2024.pdf",
+        "filename": "Daily-Hansard-Wednesday-4th-September-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 4TH SEPTEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Thursday-5th-September-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-5th-September-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 5TH SEPTEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Friday-6th-September-2024.pdf",
+        "filename": "Daily-Hansard-Friday-6th-September-2024.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 6TH SEPTEMBER 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Monday-05-August-2024.pdf",
+        "filename": "Daily-Hansard-Monday-05-August-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 5TH AUGUST 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Tuesday-6th-August-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-6th-August-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 6TH AUGUST 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/01Daily-Hansard-Wednesday-7th-August-2024.pdf",
+        "filename": "01Daily-Hansard-Wednesday-7th-August-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 7TH AUGUST 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Thursday-8th-August-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-8th-August-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 8TH AUGUST 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Friday-9th-August-2024.pdf",
+        "filename": "Daily-Hansard-Friday-9th-August-2024.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 9TH AUGUST 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Monday-8th-July-2024.pdf",
+        "filename": "Daily-Hansard-Monday-8th-July-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 8TH JULY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Tuesday-9th-July-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-9th-July-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 9TH JULY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Wednesday-10th-July-2024.pdf",
+        "filename": "Daily-Hansard-Wednesday-10th-July-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 10TH JULY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Thursday-11th-July-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-11th-July-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 11TH JULY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Friday-12th-July-2024.pdf",
+        "filename": "Daily-Hansard-Friday-12th-July-2024.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 12TH JULY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/2_Daily-Hansard-Friday-28th-June-2024.pdf",
+        "filename": "2_Daily-Hansard-Friday-28th-June-2024.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 28TH JUNE 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/06/Daily-Hansard-Monday-20th-May-2024.pdf",
+        "filename": "Daily-Hansard-Monday-20th-May-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 2OTH MAY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/06/Daily-Hansard-Tuesday-21-May-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-21-May-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 21ST MAY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/06/Daily-Hansard-Wednesday-22nd-May-2024.pdf",
+        "filename": "Daily-Hansard-Wednesday-22nd-May-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 22ND MAY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Thursday-23rd-May-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-23rd-May-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 23RD MAY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Friday-24th-May-2024.pdf",
+        "filename": "Daily-Hansard-Friday-24th-May-2024.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 24TH MAY 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Monday-15th-April-2024-2.pdf",
+        "filename": "Daily-Hansard-Monday-15th-April-2024-2.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 15TH APRIL 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Tuesday-16th-April-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-16th-April-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 16TH APRIL 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Wednesday-17th-April-2024.pdf",
+        "filename": "Daily-Hansard-Wednesday-17th-April-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 17TH APRIL 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/05/Daily-Hansard-Thursday-18th-April-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-18th-April-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 18TH APRIL 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/05/2Daily-Hansard-Friday-19th-April-2024.pdf",
+        "filename": "2Daily-Hansard-Friday-19th-April-2024.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 19TH APRIL 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Monday-4th-March-2024.pdf",
+        "filename": "Daily-Hansard-Monday-4th-March-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 4th MARCH 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Monday-11th-March-2024.pdf",
+        "filename": "Daily-Hansard-Monday-11th-March-2024.pdf",
+        "year": "2024",
+        "link_text": "MONDAY \u2013 11th MARCH 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Tuesday-12th-March-2024.pdf",
+        "filename": "Daily-Hansard-Tuesday-12th-March-2024.pdf",
+        "year": "2024",
+        "link_text": "TUESDAY \u2013 12th MARCH 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Wednesday-13th-March-2024.pdf",
+        "filename": "Daily-Hansard-Wednesday-13th-March-2024.pdf",
+        "year": "2024",
+        "link_text": "WEDNESDAY \u2013 13TH MARCH 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/12/Daily-Hansard-Thursday-14th-March-2024.pdf",
+        "filename": "Daily-Hansard-Thursday-14th-March-2024.pdf",
+        "year": "2024",
+        "link_text": "THURSDAY \u2013 14TH MARCH 2024"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Friday-15th-March-2023-1.pdf",
+        "filename": "Daily-Hansard-Friday-15th-March-2023-1.pdf",
+        "year": "2024",
+        "link_text": "FRIDAY \u2013 15TH MARCH 2024"
+      }
+    ],
+    "2023": [
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Friday-24th-November-2023.pdf",
+        "filename": "Daily-Hansard-Friday-24th-November-2023.pdf",
+        "year": "2023",
+        "link_text": "Friday \u2013 November 24, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Thursday-23rd-November-2023.pdf",
+        "filename": "Daily-Hansard-Thursday-23rd-November-2023.pdf",
+        "year": "2023",
+        "link_text": "Thursday \u2013 November 23, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Wednesday-22nd-November-2023.pdf",
+        "filename": "Daily-Hansard-Wednesday-22nd-November-2023.pdf",
+        "year": "2023",
+        "link_text": "Wednesday \u2013 November 22, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Tuesday-21st-November-2023.pdf",
+        "filename": "Daily-Hansard-Tuesday-21st-November-2023.pdf",
+        "year": "2023",
+        "link_text": "Tuesday \u2013 November 21, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Monday-20th-November-2023.pdf",
+        "filename": "Daily-Hansard-Monday-20th-November-2023.pdf",
+        "year": "2023",
+        "link_text": "Monday \u2013 November 20, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Friday-15th-September-2023.pdf",
+        "filename": "Daily-Hansard-Friday-15th-September-2023.pdf",
+        "year": "2023",
+        "link_text": "Friday \u2013 September 15, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Thursday-14th-September-2023.pdf",
+        "filename": "Daily-Hansard-Thursday-14th-September-2023.pdf",
+        "year": "2023",
+        "link_text": "Thursday \u2013 September 14, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Wednesday-13th-September-2023.pdf",
+        "filename": "Daily-Hansard-Wednesday-13th-September-2023.pdf",
+        "year": "2023",
+        "link_text": "Wednesday \u2013 September 13, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Tuesday-12th-September-2023.pdf",
+        "filename": "Daily-Hansard-Tuesday-12th-September-2023.pdf",
+        "year": "2023",
+        "link_text": "Tuesday \u2013 September 12, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Monday-11th-September-2023.pdf",
+        "filename": "Daily-Hansard-Monday-11th-September-2023.pdf",
+        "year": "2023",
+        "link_text": "Monday \u2013 September 11, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Friday-14th-July-2023.pdf",
+        "filename": "Daily-Hansard-Friday-14th-July-2023.pdf",
+        "year": "2023",
+        "link_text": "Friday \u2013 July 14, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Thursday-13th-July-2023.pdf",
+        "filename": "Daily-Hansard-Thursday-13th-July-2023.pdf",
+        "year": "2023",
+        "link_text": "Thursday \u2013 July 13, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Wednesday-12th-July-2023.pdf",
+        "filename": "Daily-Hansard-Wednesday-12th-July-2023.pdf",
+        "year": "2023",
+        "link_text": "Wednesday \u2013 July 12, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Tuesday-11th-July-2023-1.pdf",
+        "filename": "Daily-Hansard-Tuesday-11th-July-2023-1.pdf",
+        "year": "2023",
+        "link_text": "Tuesday \u2013 July 11, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/07/Daily-Hansard-Monday-10th-July-2023.pdf",
+        "filename": "Daily-Hansard-Monday-10th-July-2023.pdf",
+        "year": "2023",
+        "link_text": "Monday \u2013 July 10, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/07/Daily-Hansard-Friday-30th-June-2023.pdf",
+        "filename": "Daily-Hansard-Friday-30th-June-2023.pdf",
+        "year": "2023",
+        "link_text": "Friday \u2013 June 30, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/05/Daily-Hansard-Thursday-6th-April-2023.pdf",
+        "filename": "Daily-Hansard-Thursday-6th-April-2023.pdf",
+        "year": "2023",
+        "link_text": "Thursday \u2013 April 6, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/05/Daily-Hansard-Wednesday-5th-April-2023-for-final.pdf",
+        "filename": "Daily-Hansard-Wednesday-5th-April-2023-for-final.pdf",
+        "year": "2023",
+        "link_text": "Wednesday \u2013 April 5, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/05/2Daily-Hansard-Tuesday-4th-April-2023.pdf",
+        "filename": "2Daily-Hansard-Tuesday-4th-April-2023.pdf",
+        "year": "2023",
+        "link_text": "Tuesday \u2013 April 4, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/Daily-Hansard-Monday-3rd-April-2023.pdf",
+        "filename": "Daily-Hansard-Monday-3rd-April-2023.pdf",
+        "year": "2023",
+        "link_text": "Monday \u2013 April 3, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/2Daily-Hansard-Friday-31st-March-2023.pdf",
+        "filename": "2Daily-Hansard-Friday-31st-March-2023.pdf",
+        "year": "2023",
+        "link_text": "Friday \u2013 March 31, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/Daily-Hansard-Thursday-30th-March-2023.pdf",
+        "filename": "Daily-Hansard-Thursday-30th-March-2023.pdf",
+        "year": "2023",
+        "link_text": "Thursday \u2013 March 30, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/03Daily-Hansard-Wednesday-29th-March-2023.pdf",
+        "filename": "03Daily-Hansard-Wednesday-29th-March-2023.pdf",
+        "year": "2023",
+        "link_text": "Wednesday \u2013 March 29, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/2-Daily-Hansard-Monday-27-March-2023.pdf",
+        "filename": "2-Daily-Hansard-Monday-27-March-2023.pdf",
+        "year": "2023",
+        "link_text": "Monday \u2013 March 27, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/03/2Daily-Hansard-Friday-17th-February-2023.pdf",
+        "filename": "2Daily-Hansard-Friday-17th-February-2023.pdf",
+        "year": "2023",
+        "link_text": "Friday \u2013 February 17, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/02/Daily-Hansard-Thursday-16th-February-2023.pdf",
+        "filename": "Daily-Hansard-Thursday-16th-February-2023.pdf",
+        "year": "2023",
+        "link_text": "Thursday \u2013 February 16, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/02/Daily-Hansard-Wednesday-15th-February-2023.pdf",
+        "filename": "Daily-Hansard-Wednesday-15th-February-2023.pdf",
+        "year": "2023",
+        "link_text": "Wednesday \u2013 February 15, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/03/2Daily-Hansard-Monday-13th-February-2023.pdf",
+        "filename": "2Daily-Hansard-Monday-13th-February-2023.pdf",
+        "year": "2023",
+        "link_text": "Monday \u2013 February 13, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/03/2-Daily-Hansard-Friday-3rd-February-2023.pdf",
+        "filename": "2-Daily-Hansard-Friday-3rd-February-2023.pdf",
+        "year": "2023",
+        "link_text": "Friday \u2013 February 3, 2023"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/01/Daily-Hansard-Saturday-24th-December-2022.pdf",
+        "filename": "Daily-Hansard-Saturday-24th-December-2022.pdf",
+        "year": "2023",
+        "link_text": "SATURDAY 24th DECEMBER 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/01/Daily-Hansard-Saturday-24th-December-2022.pdf",
+        "filename": "Daily-Hansard-Saturday-24th-December-2022.pdf",
+        "year": "2023",
+        "link_text": "SATURDAY 24th DECEMBER 2022"
+      }
+    ],
+    "2022": [
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Friday-2nd-September-2022.pdf",
+        "filename": "Daily-Hansard-Friday-2nd-September-2022.pdf",
+        "year": "2022",
+        "link_text": "FRIDAY \u2013 2ND SEPTEMBER 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Thursday-1st-September-2022.pdf",
+        "filename": "Daily-Hansard-Thursday-1st-September-2022.pdf",
+        "year": "2022",
+        "link_text": "THURSDAY \u2013 1ST SEPTEMBER 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Wednesday-31st-August-2022.pdf",
+        "filename": "Daily-Hansard-Wednesday-31st-August-2022.pdf",
+        "year": "2022",
+        "link_text": "WEDNESDAY \u2013 31ST AUGUST 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Tuesday-30th-August-2022.pdf",
+        "filename": "Daily-Hansard-Tuesday-30th-August-2022.pdf",
+        "year": "2022",
+        "link_text": "TUESDAY \u2013 30TH AUGUST 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Monday-29th-August-2022.pdf",
+        "filename": "Daily-Hansard-Monday-29th-August-2022.pdf",
+        "year": "2022",
+        "link_text": "MONDAY \u2013 29TH AUGUST 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Friday-29th-July-2022.pdf",
+        "filename": "Daily-Hansard-Friday-29th-July-2022.pdf",
+        "year": "2022",
+        "link_text": "FRIDAY \u2013 29TH JULY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Thursday-28th-July-2022-Final.pdf",
+        "filename": "Daily-Hansard-Thursday-28th-July-2022-Final.pdf",
+        "year": "2022",
+        "link_text": "THURSDAY \u2013 28TH JULY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Wednesday-27th-July-2022-1.pdf",
+        "filename": "Daily-Hansard-Wednesday-27th-July-2022-1.pdf",
+        "year": "2022",
+        "link_text": "WEDNESDAY \u2013 27TH JULY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Tuesday-26th-July-2022.pdf",
+        "filename": "Daily-Hansard-Tuesday-26th-July-2022.pdf",
+        "year": "2022",
+        "link_text": "TUESDAY \u2013 26TH JULY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Monday-25th-July-2022.pdf",
+        "filename": "Daily-Hansard-Monday-25th-July-2022.pdf",
+        "year": "2022",
+        "link_text": "MONDAY \u2013 25TH JULY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/07/Daily-Hansard-Friday-15th-July-2022.pdf",
+        "filename": "Daily-Hansard-Friday-15th-July-2022.pdf",
+        "year": "2022",
+        "link_text": "FRIDAY \u2013 15TH JULY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Friday-13th-May-2022.pdf",
+        "filename": "Daily-Hansard-Friday-13th-May-2022.pdf",
+        "year": "2022",
+        "link_text": "FRIDAY \u2013 13TH MAY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Thursday-12th-May-2022.pdf",
+        "filename": "Daily-Hansard-Thursday-12th-May-2022.pdf",
+        "year": "2022",
+        "link_text": "THURSDAY \u2013 12TH MAY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Wednesday-11th-May-2022.pdf",
+        "filename": "Daily-Hansard-Wednesday-11th-May-2022.pdf",
+        "year": "2022",
+        "link_text": "WEDNESDAY \u2013 11TH MAY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Tuesday-10th-May-2022.pdf",
+        "filename": "Daily-Hansard-Tuesday-10th-May-2022.pdf",
+        "year": "2022",
+        "link_text": "TUESDAY \u2013 1OTH MAY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Monday-9th-May-2022.pdf",
+        "filename": "Daily-Hansard-Monday-9th-May-2022.pdf",
+        "year": "2022",
+        "link_text": "MONDAY \u2013 9TH MAY 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Friday-8th-April-2022.pdf",
+        "filename": "Daily-Hansard-Friday-8th-April-2022.pdf",
+        "year": "2022",
+        "link_text": "FRIDAY \u2013 8TH APRIL 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Thursday-7-April-2022.pdf",
+        "filename": "Daily-Hansard-Thursday-7-April-2022.pdf",
+        "year": "2022",
+        "link_text": "THURSDAY \u2013 7TH APRIL 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Wednesday-6th-April-2022.pdf",
+        "filename": "Daily-Hansard-Wednesday-6th-April-2022.pdf",
+        "year": "2022",
+        "link_text": "WEDNESDAY \u2013 6TH APRIL 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Tuesday-5th-April-2022.pdf",
+        "filename": "Daily-Hansard-Tuesday-5th-April-2022.pdf",
+        "year": "2022",
+        "link_text": "TUESDAY \u2013 5TH APRIL 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Monday-4th-April-2022.pdf",
+        "filename": "Daily-Hansard-Monday-4th-April-2022.pdf",
+        "year": "2022",
+        "link_text": "MONDAY \u2013 4TH APRIL 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Friday-25th-March-2022.pdf",
+        "filename": "Daily-Hansard-Friday-25th-March-2022.pdf",
+        "year": "2022",
+        "link_text": "FRIDAY \u2013 25TH MARCH 2022"
+      },
+      {
+        "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Thursday-24-March-2022.pdf",
+        "filename": "Daily-Hansard-Thursday-24-March-2022.pdf",
+        "year": "2022",
+        "link_text": "THURSDAY \u2013 24TH MARCH 2022"
+      },
+      {
+        "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Friday-11th-February-2022.pdf",
+        "filename": "Daily-Hansard-Friday-11th-February-2022.pdf",
+        "year": "2022",
+        "link_text": "FRIDAY \u2013 11TH FEBRUARY 2022"
+      },
+      {
+        "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Thursday-10th-February-2022.pdf",
+        "filename": "Daily-Hansard-Thursday-10th-February-2022.pdf",
+        "year": "2022",
+        "link_text": "THURSDAY \u2013 10TH FEBRUARY 2022"
+      },
+      {
+        "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Wednesday-9th-February-2022-1.pdf",
+        "filename": "Daily-Hansard-Wednesday-9th-February-2022-1.pdf",
+        "year": "2022",
+        "link_text": "WEDNESDAY \u2013 9TH FEBRUARY 2022"
+      },
+      {
+        "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Tuesday-8th-February-2022.pdf",
+        "filename": "Daily-Hansard-Tuesday-8th-February-2022.pdf",
+        "year": "2022",
+        "link_text": "TUESDAY \u2013 8TH FEBRUARY 2022"
+      },
+      {
+        "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Monday-7th-February-2022.pdf",
+        "filename": "Daily-Hansard-Monday-7th-February-2022.pdf",
+        "year": "2022",
+        "link_text": "MONDAY \u2013 7TH FEBRUARY 2022"
+      }
+    ]
+  },
+  "all_links": [
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/Daily-Hansard-Friday-6th-December-2024.pdf",
+      "filename": "Daily-Hansard-Friday-6th-December-2024.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 6TH DECEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/Daily-Hansard-Thursday-5th-December-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-5th-December-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 5TH DECEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/Daily-Hansard-Wednesday-4th-December-2024.pdf",
+      "filename": "Daily-Hansard-Wednesday-4th-December-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 4TH DECEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/12/Daily-Hansard-Tuesday-3rd-December-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-3rd-December-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 3RD DECEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2025/02/02Daily-Hansard-Monday-2nd-December-2024.pdf",
+      "filename": "02Daily-Hansard-Monday-2nd-December-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 2ND DECEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/11/Daily-Hansard-12th-November-2024.pdf",
+      "filename": "Daily-Hansard-12th-November-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 12TH NOVEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/11/Hansard-Report-Thursday-31st-October-2024.pdf",
+      "filename": "Hansard-Report-Thursday-31st-October-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 31ST OCTOBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/11/Daily-Hansard-Thursday-3rd-October-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-3rd-October-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 3RD OCTOBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/10/Daily-Hansard-Wednesday-2nd-October-2024.pdf",
+      "filename": "Daily-Hansard-Wednesday-2nd-October-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 2ND OCTOBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/10/Daily-Hansard-Tuesday-1st-October-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-1st-October-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 1ST OCTOBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/10/Daily-Hansard-Monday-30th-September-2024.pdf",
+      "filename": "Daily-Hansard-Monday-30th-September-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 30TH SEPTEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Monday-2nd-September-2024.pdf",
+      "filename": "Daily-Hansard-Monday-2nd-September-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 2ND SEPTEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Tuesday-3rd-September-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-3rd-September-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 3RD SEPTEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Wednesday-4th-September-2024.pdf",
+      "filename": "Daily-Hansard-Wednesday-4th-September-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 4TH SEPTEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Thursday-5th-September-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-5th-September-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 5TH SEPTEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Friday-6th-September-2024.pdf",
+      "filename": "Daily-Hansard-Friday-6th-September-2024.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 6TH SEPTEMBER 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Monday-05-August-2024.pdf",
+      "filename": "Daily-Hansard-Monday-05-August-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 5TH AUGUST 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Tuesday-6th-August-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-6th-August-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 6TH AUGUST 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/01Daily-Hansard-Wednesday-7th-August-2024.pdf",
+      "filename": "01Daily-Hansard-Wednesday-7th-August-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 7TH AUGUST 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Thursday-8th-August-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-8th-August-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 8TH AUGUST 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/09/Daily-Hansard-Friday-9th-August-2024.pdf",
+      "filename": "Daily-Hansard-Friday-9th-August-2024.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 9TH AUGUST 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Monday-8th-July-2024.pdf",
+      "filename": "Daily-Hansard-Monday-8th-July-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 8TH JULY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Tuesday-9th-July-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-9th-July-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 9TH JULY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Wednesday-10th-July-2024.pdf",
+      "filename": "Daily-Hansard-Wednesday-10th-July-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 10TH JULY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Thursday-11th-July-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-11th-July-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 11TH JULY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/08/Daily-Hansard-Friday-12th-July-2024.pdf",
+      "filename": "Daily-Hansard-Friday-12th-July-2024.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 12TH JULY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/2_Daily-Hansard-Friday-28th-June-2024.pdf",
+      "filename": "2_Daily-Hansard-Friday-28th-June-2024.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 28TH JUNE 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/06/Daily-Hansard-Monday-20th-May-2024.pdf",
+      "filename": "Daily-Hansard-Monday-20th-May-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 2OTH MAY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/06/Daily-Hansard-Tuesday-21-May-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-21-May-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 21ST MAY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/06/Daily-Hansard-Wednesday-22nd-May-2024.pdf",
+      "filename": "Daily-Hansard-Wednesday-22nd-May-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 22ND MAY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Thursday-23rd-May-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-23rd-May-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 23RD MAY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/07/Daily-Hansard-Friday-24th-May-2024.pdf",
+      "filename": "Daily-Hansard-Friday-24th-May-2024.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 24TH MAY 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Monday-15th-April-2024-2.pdf",
+      "filename": "Daily-Hansard-Monday-15th-April-2024-2.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 15TH APRIL 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Tuesday-16th-April-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-16th-April-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 16TH APRIL 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Wednesday-17th-April-2024.pdf",
+      "filename": "Daily-Hansard-Wednesday-17th-April-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 17TH APRIL 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/05/Daily-Hansard-Thursday-18th-April-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-18th-April-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 18TH APRIL 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/05/2Daily-Hansard-Friday-19th-April-2024.pdf",
+      "filename": "2Daily-Hansard-Friday-19th-April-2024.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 19TH APRIL 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Monday-4th-March-2024.pdf",
+      "filename": "Daily-Hansard-Monday-4th-March-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 4th MARCH 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Monday-11th-March-2024.pdf",
+      "filename": "Daily-Hansard-Monday-11th-March-2024.pdf",
+      "year": "2024",
+      "link_text": "MONDAY \u2013 11th MARCH 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Tuesday-12th-March-2024.pdf",
+      "filename": "Daily-Hansard-Tuesday-12th-March-2024.pdf",
+      "year": "2024",
+      "link_text": "TUESDAY \u2013 12th MARCH 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/03/Daily-Hansard-Wednesday-13th-March-2024.pdf",
+      "filename": "Daily-Hansard-Wednesday-13th-March-2024.pdf",
+      "year": "2024",
+      "link_text": "WEDNESDAY \u2013 13TH MARCH 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/12/Daily-Hansard-Thursday-14th-March-2024.pdf",
+      "filename": "Daily-Hansard-Thursday-14th-March-2024.pdf",
+      "year": "2024",
+      "link_text": "THURSDAY \u2013 14TH MARCH 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/04/Daily-Hansard-Friday-15th-March-2023-1.pdf",
+      "filename": "Daily-Hansard-Friday-15th-March-2023-1.pdf",
+      "year": "2024",
+      "link_text": "FRIDAY \u2013 15TH MARCH 2024"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Friday-24th-November-2023.pdf",
+      "filename": "Daily-Hansard-Friday-24th-November-2023.pdf",
+      "year": "2023",
+      "link_text": "Friday \u2013 November 24, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Thursday-23rd-November-2023.pdf",
+      "filename": "Daily-Hansard-Thursday-23rd-November-2023.pdf",
+      "year": "2023",
+      "link_text": "Thursday \u2013 November 23, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Wednesday-22nd-November-2023.pdf",
+      "filename": "Daily-Hansard-Wednesday-22nd-November-2023.pdf",
+      "year": "2023",
+      "link_text": "Wednesday \u2013 November 22, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Tuesday-21st-November-2023.pdf",
+      "filename": "Daily-Hansard-Tuesday-21st-November-2023.pdf",
+      "year": "2023",
+      "link_text": "Tuesday \u2013 November 21, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/12/Daily-Hansard-Monday-20th-November-2023.pdf",
+      "filename": "Daily-Hansard-Monday-20th-November-2023.pdf",
+      "year": "2023",
+      "link_text": "Monday \u2013 November 20, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Friday-15th-September-2023.pdf",
+      "filename": "Daily-Hansard-Friday-15th-September-2023.pdf",
+      "year": "2023",
+      "link_text": "Friday \u2013 September 15, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Thursday-14th-September-2023.pdf",
+      "filename": "Daily-Hansard-Thursday-14th-September-2023.pdf",
+      "year": "2023",
+      "link_text": "Thursday \u2013 September 14, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Wednesday-13th-September-2023.pdf",
+      "filename": "Daily-Hansard-Wednesday-13th-September-2023.pdf",
+      "year": "2023",
+      "link_text": "Wednesday \u2013 September 13, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Tuesday-12th-September-2023.pdf",
+      "filename": "Daily-Hansard-Tuesday-12th-September-2023.pdf",
+      "year": "2023",
+      "link_text": "Tuesday \u2013 September 12, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/09/Daily-Hansard-Monday-11th-September-2023.pdf",
+      "filename": "Daily-Hansard-Monday-11th-September-2023.pdf",
+      "year": "2023",
+      "link_text": "Monday \u2013 September 11, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Friday-14th-July-2023.pdf",
+      "filename": "Daily-Hansard-Friday-14th-July-2023.pdf",
+      "year": "2023",
+      "link_text": "Friday \u2013 July 14, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Thursday-13th-July-2023.pdf",
+      "filename": "Daily-Hansard-Thursday-13th-July-2023.pdf",
+      "year": "2023",
+      "link_text": "Thursday \u2013 July 13, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Wednesday-12th-July-2023.pdf",
+      "filename": "Daily-Hansard-Wednesday-12th-July-2023.pdf",
+      "year": "2023",
+      "link_text": "Wednesday \u2013 July 12, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/08/Daily-Hansard-Tuesday-11th-July-2023-1.pdf",
+      "filename": "Daily-Hansard-Tuesday-11th-July-2023-1.pdf",
+      "year": "2023",
+      "link_text": "Tuesday \u2013 July 11, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/07/Daily-Hansard-Monday-10th-July-2023.pdf",
+      "filename": "Daily-Hansard-Monday-10th-July-2023.pdf",
+      "year": "2023",
+      "link_text": "Monday \u2013 July 10, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/07/Daily-Hansard-Friday-30th-June-2023.pdf",
+      "filename": "Daily-Hansard-Friday-30th-June-2023.pdf",
+      "year": "2023",
+      "link_text": "Friday \u2013 June 30, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/05/Daily-Hansard-Thursday-6th-April-2023.pdf",
+      "filename": "Daily-Hansard-Thursday-6th-April-2023.pdf",
+      "year": "2023",
+      "link_text": "Thursday \u2013 April 6, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/05/Daily-Hansard-Wednesday-5th-April-2023-for-final.pdf",
+      "filename": "Daily-Hansard-Wednesday-5th-April-2023-for-final.pdf",
+      "year": "2023",
+      "link_text": "Wednesday \u2013 April 5, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/05/2Daily-Hansard-Tuesday-4th-April-2023.pdf",
+      "filename": "2Daily-Hansard-Tuesday-4th-April-2023.pdf",
+      "year": "2023",
+      "link_text": "Tuesday \u2013 April 4, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/Daily-Hansard-Monday-3rd-April-2023.pdf",
+      "filename": "Daily-Hansard-Monday-3rd-April-2023.pdf",
+      "year": "2023",
+      "link_text": "Monday \u2013 April 3, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/2Daily-Hansard-Friday-31st-March-2023.pdf",
+      "filename": "2Daily-Hansard-Friday-31st-March-2023.pdf",
+      "year": "2023",
+      "link_text": "Friday \u2013 March 31, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/Daily-Hansard-Thursday-30th-March-2023.pdf",
+      "filename": "Daily-Hansard-Thursday-30th-March-2023.pdf",
+      "year": "2023",
+      "link_text": "Thursday \u2013 March 30, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/03Daily-Hansard-Wednesday-29th-March-2023.pdf",
+      "filename": "03Daily-Hansard-Wednesday-29th-March-2023.pdf",
+      "year": "2023",
+      "link_text": "Wednesday \u2013 March 29, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/04/2-Daily-Hansard-Monday-27-March-2023.pdf",
+      "filename": "2-Daily-Hansard-Monday-27-March-2023.pdf",
+      "year": "2023",
+      "link_text": "Monday \u2013 March 27, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/03/2Daily-Hansard-Friday-17th-February-2023.pdf",
+      "filename": "2Daily-Hansard-Friday-17th-February-2023.pdf",
+      "year": "2023",
+      "link_text": "Friday \u2013 February 17, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/02/Daily-Hansard-Thursday-16th-February-2023.pdf",
+      "filename": "Daily-Hansard-Thursday-16th-February-2023.pdf",
+      "year": "2023",
+      "link_text": "Thursday \u2013 February 16, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/02/Daily-Hansard-Wednesday-15th-February-2023.pdf",
+      "filename": "Daily-Hansard-Wednesday-15th-February-2023.pdf",
+      "year": "2023",
+      "link_text": "Wednesday \u2013 February 15, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/03/2Daily-Hansard-Monday-13th-February-2023.pdf",
+      "filename": "2Daily-Hansard-Monday-13th-February-2023.pdf",
+      "year": "2023",
+      "link_text": "Monday \u2013 February 13, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/03/2-Daily-Hansard-Friday-3rd-February-2023.pdf",
+      "filename": "2-Daily-Hansard-Friday-3rd-February-2023.pdf",
+      "year": "2023",
+      "link_text": "Friday \u2013 February 3, 2023"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/01/Daily-Hansard-Saturday-24th-December-2022.pdf",
+      "filename": "Daily-Hansard-Saturday-24th-December-2022.pdf",
+      "year": "2023",
+      "link_text": "SATURDAY 24th DECEMBER 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Friday-2nd-September-2022.pdf",
+      "filename": "Daily-Hansard-Friday-2nd-September-2022.pdf",
+      "year": "2022",
+      "link_text": "FRIDAY \u2013 2ND SEPTEMBER 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Thursday-1st-September-2022.pdf",
+      "filename": "Daily-Hansard-Thursday-1st-September-2022.pdf",
+      "year": "2022",
+      "link_text": "THURSDAY \u2013 1ST SEPTEMBER 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Wednesday-31st-August-2022.pdf",
+      "filename": "Daily-Hansard-Wednesday-31st-August-2022.pdf",
+      "year": "2022",
+      "link_text": "WEDNESDAY \u2013 31ST AUGUST 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Tuesday-30th-August-2022.pdf",
+      "filename": "Daily-Hansard-Tuesday-30th-August-2022.pdf",
+      "year": "2022",
+      "link_text": "TUESDAY \u2013 30TH AUGUST 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/09/Daily-Hansard-Monday-29th-August-2022.pdf",
+      "filename": "Daily-Hansard-Monday-29th-August-2022.pdf",
+      "year": "2022",
+      "link_text": "MONDAY \u2013 29TH AUGUST 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Friday-29th-July-2022.pdf",
+      "filename": "Daily-Hansard-Friday-29th-July-2022.pdf",
+      "year": "2022",
+      "link_text": "FRIDAY \u2013 29TH JULY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Thursday-28th-July-2022-Final.pdf",
+      "filename": "Daily-Hansard-Thursday-28th-July-2022-Final.pdf",
+      "year": "2022",
+      "link_text": "THURSDAY \u2013 28TH JULY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Wednesday-27th-July-2022-1.pdf",
+      "filename": "Daily-Hansard-Wednesday-27th-July-2022-1.pdf",
+      "year": "2022",
+      "link_text": "WEDNESDAY \u2013 27TH JULY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Tuesday-26th-July-2022.pdf",
+      "filename": "Daily-Hansard-Tuesday-26th-July-2022.pdf",
+      "year": "2022",
+      "link_text": "TUESDAY \u2013 26TH JULY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/08/Daily-Hansard-Monday-25th-July-2022.pdf",
+      "filename": "Daily-Hansard-Monday-25th-July-2022.pdf",
+      "year": "2022",
+      "link_text": "MONDAY \u2013 25TH JULY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/07/Daily-Hansard-Friday-15th-July-2022.pdf",
+      "filename": "Daily-Hansard-Friday-15th-July-2022.pdf",
+      "year": "2022",
+      "link_text": "FRIDAY \u2013 15TH JULY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/01/Daily-Hansard-Saturday-24th-December-2022.pdf",
+      "filename": "Daily-Hansard-Saturday-24th-December-2022.pdf",
+      "year": "2023",
+      "link_text": "SATURDAY 24th DECEMBER 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Friday-13th-May-2022.pdf",
+      "filename": "Daily-Hansard-Friday-13th-May-2022.pdf",
+      "year": "2022",
+      "link_text": "FRIDAY \u2013 13TH MAY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Thursday-12th-May-2022.pdf",
+      "filename": "Daily-Hansard-Thursday-12th-May-2022.pdf",
+      "year": "2022",
+      "link_text": "THURSDAY \u2013 12TH MAY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Wednesday-11th-May-2022.pdf",
+      "filename": "Daily-Hansard-Wednesday-11th-May-2022.pdf",
+      "year": "2022",
+      "link_text": "WEDNESDAY \u2013 11TH MAY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Tuesday-10th-May-2022.pdf",
+      "filename": "Daily-Hansard-Tuesday-10th-May-2022.pdf",
+      "year": "2022",
+      "link_text": "TUESDAY \u2013 1OTH MAY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/05/Daily-Hansard-Monday-9th-May-2022.pdf",
+      "filename": "Daily-Hansard-Monday-9th-May-2022.pdf",
+      "year": "2022",
+      "link_text": "MONDAY \u2013 9TH MAY 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Friday-8th-April-2022.pdf",
+      "filename": "Daily-Hansard-Friday-8th-April-2022.pdf",
+      "year": "2022",
+      "link_text": "FRIDAY \u2013 8TH APRIL 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Thursday-7-April-2022.pdf",
+      "filename": "Daily-Hansard-Thursday-7-April-2022.pdf",
+      "year": "2022",
+      "link_text": "THURSDAY \u2013 7TH APRIL 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Wednesday-6th-April-2022.pdf",
+      "filename": "Daily-Hansard-Wednesday-6th-April-2022.pdf",
+      "year": "2022",
+      "link_text": "WEDNESDAY \u2013 6TH APRIL 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Tuesday-5th-April-2022.pdf",
+      "filename": "Daily-Hansard-Tuesday-5th-April-2022.pdf",
+      "year": "2022",
+      "link_text": "TUESDAY \u2013 5TH APRIL 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Monday-4th-April-2022.pdf",
+      "filename": "Daily-Hansard-Monday-4th-April-2022.pdf",
+      "year": "2022",
+      "link_text": "MONDAY \u2013 4TH APRIL 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Friday-25th-March-2022.pdf",
+      "filename": "Daily-Hansard-Friday-25th-March-2022.pdf",
+      "year": "2022",
+      "link_text": "FRIDAY \u2013 25TH MARCH 2022"
+    },
+    {
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/04/Daily-Hansard-Thursday-24-March-2022.pdf",
+      "filename": "Daily-Hansard-Thursday-24-March-2022.pdf",
+      "year": "2022",
+      "link_text": "THURSDAY \u2013 24TH MARCH 2022"
+    },
+    {
+      "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Friday-11th-February-2022.pdf",
+      "filename": "Daily-Hansard-Friday-11th-February-2022.pdf",
+      "year": "2022",
+      "link_text": "FRIDAY \u2013 11TH FEBRUARY 2022"
+    },
+    {
+      "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Thursday-10th-February-2022.pdf",
+      "filename": "Daily-Hansard-Thursday-10th-February-2022.pdf",
+      "year": "2022",
+      "link_text": "THURSDAY \u2013 10TH FEBRUARY 2022"
+    },
+    {
+      "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Wednesday-9th-February-2022-1.pdf",
+      "filename": "Daily-Hansard-Wednesday-9th-February-2022-1.pdf",
+      "year": "2022",
+      "link_text": "WEDNESDAY \u2013 9TH FEBRUARY 2022"
+    },
+    {
+      "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Tuesday-8th-February-2022.pdf",
+      "filename": "Daily-Hansard-Tuesday-8th-February-2022.pdf",
+      "year": "2022",
+      "link_text": "TUESDAY \u2013 8TH FEBRUARY 2022"
+    },
+    {
+      "url": "http://www.parliament.gov.fj/wp-content/uploads/2022/02/Daily-Hansard-Monday-7th-February-2022.pdf",
+      "filename": "Daily-Hansard-Monday-7th-February-2022.pdf",
+      "year": "2022",
+      "link_text": "MONDAY \u2013 7TH FEBRUARY 2022"
+    }
+  ]
+}

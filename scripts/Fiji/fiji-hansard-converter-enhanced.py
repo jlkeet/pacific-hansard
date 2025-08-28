@@ -20,7 +20,7 @@ logging.basicConfig(
 )
 
 # Base collections directory
-COLLECTIONS_BASE = "/Users/jacksonkeet/Pacific Hansard Development/collections/Fiji"
+COLLECTIONS_BASE = "collections/Fiji"
 
 def normalize_name(name):
     """Remove all spaces and convert to uppercase for comparison"""

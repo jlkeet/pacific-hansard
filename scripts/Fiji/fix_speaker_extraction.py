@@ -110,8 +110,8 @@ def process_hansard_directory(hansard_dir):
     return updated_count
 
 def fix_all_speaker_metadata():
-    """Fix speaker metadata for all 2023-2024 Fiji hansards"""
-    collections_base = "/Users/jacksonkeet/Pacific Hansard Development/collections/Fiji"
+    """Fix speaker metadata for all 2022-2024 Fiji hansards"""
+    collections_base = "../../collections/Fiji"
     
     total_updated = 0
     total_hansards = 0
@@ -119,7 +119,7 @@ def fix_all_speaker_metadata():
     
     logging.info("Starting speaker extraction fix...")
     
-    for year in ['2023', '2024']:
+    for year in ['2022', '2023', '2024']:
         year_path = os.path.join(collections_base, year)
         if not os.path.isdir(year_path):
             continue

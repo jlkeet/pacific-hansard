@@ -1,0 +1,205 @@
+2025-08-25 15:01:09,934 - INFO - Found 101 PDF files to convert
+2025-08-25 15:01:09,934 - INFO - Converting: 01Daily-Hansard-Wednesday-7th-August-2024.pdf
+2025-08-25 15:01:14,567 - INFO -   \u2713 Successfully converted 01Daily-Hansard-Wednesday-7th-August-2024.pdf
+2025-08-25 15:01:14,567 - INFO - Converting: 02Daily-Hansard-Monday-2nd-December-2024.pdf
+2025-08-25 15:01:19,630 - INFO -   \u2713 Successfully converted 02Daily-Hansard-Monday-2nd-December-2024.pdf
+2025-08-25 15:01:19,630 - INFO - Converting: 03Daily-Hansard-Wednesday-29th-March-2023.pdf
+2025-08-25 15:01:25,446 - INFO -   \u2713 Successfully converted 03Daily-Hansard-Wednesday-29th-March-2023.pdf
+2025-08-25 15:01:25,446 - INFO - Converting: 2-Daily-Hansard-Friday-3rd-February-2023.pdf
+2025-08-25 15:01:25,978 - INFO -   \u2713 Successfully converted 2-Daily-Hansard-Friday-3rd-February-2023.pdf
+2025-08-25 15:01:25,978 - INFO - Converting: 2-Daily-Hansard-Monday-27-March-2023.pdf
+2025-08-25 15:01:31,579 - INFO -   \u2713 Successfully converted 2-Daily-Hansard-Monday-27-March-2023.pdf
+2025-08-25 15:01:31,579 - INFO - Converting: 2Daily-Hansard-Friday-17th-February-2023.pdf
+2025-08-25 15:01:37,857 - INFO -   \u2713 Successfully converted 2Daily-Hansard-Friday-17th-February-2023.pdf
+2025-08-25 15:01:37,857 - INFO - Converting: 2Daily-Hansard-Friday-19th-April-2024.pdf
+2025-08-25 15:01:39,900 - INFO -   \u2713 Successfully converted 2Daily-Hansard-Friday-19th-April-2024.pdf
+2025-08-25 15:01:39,900 - INFO - Converting: 2Daily-Hansard-Friday-31st-March-2023.pdf
+2025-08-25 15:01:42,759 - INFO -   \u2713 Successfully converted 2Daily-Hansard-Friday-31st-March-2023.pdf
+2025-08-25 15:01:42,760 - INFO - Converting: 2Daily-Hansard-Monday-13th-February-2023.pdf
+2025-08-25 15:01:46,782 - INFO -   \u2713 Successfully converted 2Daily-Hansard-Monday-13th-February-2023.pdf
+2025-08-25 15:01:46,782 - INFO - Converting: 2Daily-Hansard-Tuesday-4th-April-2023.pdf
+2025-08-25 15:01:52,974 - INFO -   \u2713 Successfully converted 2Daily-Hansard-Tuesday-4th-April-2023.pdf
+2025-08-25 15:01:52,974 - INFO - Converting: 2_Daily-Hansard-Friday-28th-June-2024.pdf
+2025-08-25 15:01:54,882 - INFO -   \u2713 Successfully converted 2_Daily-Hansard-Friday-28th-June-2024.pdf
+2025-08-25 15:01:54,882 - INFO - Converting: Daily-Hansard-12th-November-2024.pdf
+2025-08-25 15:01:55,266 - INFO -   \u2713 Successfully converted Daily-Hansard-12th-November-2024.pdf
+2025-08-25 15:01:55,266 - INFO - Converting: Daily-Hansard-Friday-11th-February-2022.pdf
+2025-08-25 15:01:56,881 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-11th-February-2022.pdf
+2025-08-25 15:01:56,881 - INFO - Converting: Daily-Hansard-Friday-12th-July-2024.pdf
+2025-08-25 15:01:59,201 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-12th-July-2024.pdf
+2025-08-25 15:01:59,201 - INFO - Converting: Daily-Hansard-Friday-13th-May-2022.pdf
+2025-08-25 15:02:00,889 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-13th-May-2022.pdf
+2025-08-25 15:02:00,889 - INFO - Converting: Daily-Hansard-Friday-14th-July-2023.pdf
+2025-08-25 15:02:03,897 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-14th-July-2023.pdf
+2025-08-25 15:02:03,897 - INFO - Converting: Daily-Hansard-Friday-15th-July-2022.pdf
+2025-08-25 15:02:06,072 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-15th-July-2022.pdf
+2025-08-25 15:02:06,072 - INFO - Converting: Daily-Hansard-Friday-15th-March-2023-1.pdf
+2025-08-25 15:02:07,114 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-15th-March-2023-1.pdf
+2025-08-25 15:02:07,114 - INFO - Converting: Daily-Hansard-Friday-15th-September-2023.pdf
+2025-08-25 15:02:09,251 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-15th-September-2023.pdf
+2025-08-25 15:02:09,251 - INFO - Converting: Daily-Hansard-Friday-24th-May-2024.pdf
+2025-08-25 15:02:13,373 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-24th-May-2024.pdf
+2025-08-25 15:02:13,373 - INFO - Converting: Daily-Hansard-Friday-24th-November-2023.pdf
+2025-08-25 15:02:15,352 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-24th-November-2023.pdf
+2025-08-25 15:02:15,352 - INFO - Converting: Daily-Hansard-Friday-25th-March-2022.pdf
+2025-08-25 15:02:20,571 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-25th-March-2022.pdf
+2025-08-25 15:02:20,571 - INFO - Converting: Daily-Hansard-Friday-29th-July-2022.pdf
+2025-08-25 15:02:24,024 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-29th-July-2022.pdf
+2025-08-25 15:02:24,024 - INFO - Converting: Daily-Hansard-Friday-2nd-September-2022.pdf
+2025-08-25 15:02:25,375 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-2nd-September-2022.pdf
+2025-08-25 15:02:25,375 - INFO - Converting: Daily-Hansard-Friday-30th-June-2023.pdf
+2025-08-25 15:02:27,170 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-30th-June-2023.pdf
+2025-08-25 15:02:27,170 - INFO - Converting: Daily-Hansard-Friday-6th-December-2024.pdf
+2025-08-25 15:02:29,493 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-6th-December-2024.pdf
+2025-08-25 15:02:29,493 - INFO - Converting: Daily-Hansard-Friday-6th-September-2024.pdf
+2025-08-25 15:02:31,772 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-6th-September-2024.pdf
+2025-08-25 15:02:31,773 - INFO - Converting: Daily-Hansard-Friday-8th-April-2022.pdf
+2025-08-25 15:02:33,499 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-8th-April-2022.pdf
+2025-08-25 15:02:33,499 - INFO - Converting: Daily-Hansard-Friday-9th-August-2024.pdf
+2025-08-25 15:02:36,044 - INFO -   \u2713 Successfully converted Daily-Hansard-Friday-9th-August-2024.pdf
+2025-08-25 15:02:36,045 - INFO - Converting: Daily-Hansard-Monday-05-August-2024.pdf
+2025-08-25 15:02:40,274 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-05-August-2024.pdf
+2025-08-25 15:02:40,274 - INFO - Converting: Daily-Hansard-Monday-10th-July-2023.pdf
+2025-08-25 15:02:46,747 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-10th-July-2023.pdf
+2025-08-25 15:02:46,747 - INFO - Converting: Daily-Hansard-Monday-11th-March-2024.pdf
+2025-08-25 15:02:50,076 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-11th-March-2024.pdf
+2025-08-25 15:02:50,076 - INFO - Converting: Daily-Hansard-Monday-11th-September-2023.pdf
+2025-08-25 15:02:57,740 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-11th-September-2023.pdf
+2025-08-25 15:02:57,740 - INFO - Converting: Daily-Hansard-Monday-15th-April-2024-2.pdf
+2025-08-25 15:03:00,413 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-15th-April-2024-2.pdf
+2025-08-25 15:03:00,413 - INFO - Converting: Daily-Hansard-Monday-20th-May-2024.pdf
+2025-08-25 15:03:04,034 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-20th-May-2024.pdf
+2025-08-25 15:03:04,034 - INFO - Converting: Daily-Hansard-Monday-20th-November-2023.pdf
+2025-08-25 15:03:08,410 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-20th-November-2023.pdf
+2025-08-25 15:03:08,410 - INFO - Converting: Daily-Hansard-Monday-25th-July-2022.pdf
+2025-08-25 15:03:13,506 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-25th-July-2022.pdf
+2025-08-25 15:03:13,506 - INFO - Converting: Daily-Hansard-Monday-29th-August-2022.pdf
+2025-08-25 15:03:16,786 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-29th-August-2022.pdf
+2025-08-25 15:03:16,786 - INFO - Converting: Daily-Hansard-Monday-2nd-September-2024.pdf
+2025-08-25 15:03:20,050 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-2nd-September-2024.pdf
+2025-08-25 15:03:20,050 - INFO - Converting: Daily-Hansard-Monday-30th-September-2024.pdf
+2025-08-25 15:03:24,371 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-30th-September-2024.pdf
+2025-08-25 15:03:24,371 - INFO - Converting: Daily-Hansard-Monday-3rd-April-2023.pdf
+2025-08-25 15:03:29,798 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-3rd-April-2023.pdf
+2025-08-25 15:03:29,798 - INFO - Converting: Daily-Hansard-Monday-4th-April-2022.pdf
+2025-08-25 15:03:31,262 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-4th-April-2022.pdf
+2025-08-25 15:03:31,262 - INFO - Converting: Daily-Hansard-Monday-4th-March-2024.pdf
+2025-08-25 15:03:31,822 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-4th-March-2024.pdf
+2025-08-25 15:03:31,822 - INFO - Converting: Daily-Hansard-Monday-7th-February-2022.pdf
+2025-08-25 15:03:35,894 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-7th-February-2022.pdf
+2025-08-25 15:03:35,894 - INFO - Converting: Daily-Hansard-Monday-8th-July-2024.pdf
+2025-08-25 15:03:40,942 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-8th-July-2024.pdf
+2025-08-25 15:03:40,942 - INFO - Converting: Daily-Hansard-Monday-9th-May-2022.pdf
+2025-08-25 15:03:43,635 - INFO -   \u2713 Successfully converted Daily-Hansard-Monday-9th-May-2022.pdf
+2025-08-25 15:03:43,635 - INFO - Converting: Daily-Hansard-Saturday-24th-December-2022.pdf
+2025-08-25 15:03:44,027 - INFO -   \u2713 Successfully converted Daily-Hansard-Saturday-24th-December-2022.pdf
+2025-08-25 15:03:44,028 - INFO - Converting: Daily-Hansard-Thursday-10th-February-2022.pdf
+2025-08-25 15:03:49,257 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-10th-February-2022.pdf
+2025-08-25 15:03:49,258 - INFO - Converting: Daily-Hansard-Thursday-11th-July-2024.pdf
+2025-08-25 15:03:53,419 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-11th-July-2024.pdf
+2025-08-25 15:03:53,419 - INFO - Converting: Daily-Hansard-Thursday-12th-May-2022.pdf
+2025-08-25 15:03:56,691 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-12th-May-2022.pdf
+2025-08-25 15:03:56,691 - INFO - Converting: Daily-Hansard-Thursday-13th-July-2023.pdf
+2025-08-25 15:04:01,259 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-13th-July-2023.pdf
+2025-08-25 15:04:01,259 - INFO - Converting: Daily-Hansard-Thursday-14th-March-2024.pdf
+2025-08-25 15:04:05,414 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-14th-March-2024.pdf
+2025-08-25 15:04:05,414 - INFO - Converting: Daily-Hansard-Thursday-14th-September-2023.pdf
+2025-08-25 15:04:09,325 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-14th-September-2023.pdf
+2025-08-25 15:04:09,325 - INFO - Converting: Daily-Hansard-Thursday-16th-February-2023.pdf
+2025-08-25 15:04:14,253 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-16th-February-2023.pdf
+2025-08-25 15:04:14,253 - INFO - Converting: Daily-Hansard-Thursday-18th-April-2024.pdf
+2025-08-25 15:04:17,566 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-18th-April-2024.pdf
+2025-08-25 15:04:17,566 - INFO - Converting: Daily-Hansard-Thursday-1st-September-2022.pdf
+2025-08-25 15:04:22,858 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-1st-September-2022.pdf
+2025-08-25 15:04:22,858 - INFO - Converting: Daily-Hansard-Thursday-23rd-May-2024.pdf
+2025-08-25 15:04:27,765 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-23rd-May-2024.pdf
+2025-08-25 15:04:27,765 - INFO - Converting: Daily-Hansard-Thursday-23rd-November-2023.pdf
+2025-08-25 15:04:33,600 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-23rd-November-2023.pdf
+2025-08-25 15:04:33,600 - INFO - Converting: Daily-Hansard-Thursday-24-March-2022.pdf
+2025-08-25 15:04:35,830 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-24-March-2022.pdf
+2025-08-25 15:04:35,830 - INFO - Converting: Daily-Hansard-Thursday-28th-July-2022-Final.pdf
+2025-08-25 15:04:39,121 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-28th-July-2022-Final.pdf
+2025-08-25 15:04:39,121 - INFO - Converting: Daily-Hansard-Thursday-30th-March-2023.pdf
+2025-08-25 15:04:56,693 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-30th-March-2023.pdf
+2025-08-25 15:04:56,693 - INFO - Converting: Daily-Hansard-Thursday-3rd-October-2024.pdf
+2025-08-25 15:05:01,141 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-3rd-October-2024.pdf
+2025-08-25 15:05:01,141 - INFO - Converting: Daily-Hansard-Thursday-5th-December-2024.pdf
+2025-08-25 15:05:06,480 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-5th-December-2024.pdf
+2025-08-25 15:05:06,481 - INFO - Converting: Daily-Hansard-Thursday-5th-September-2024.pdf
+2025-08-25 15:05:10,559 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-5th-September-2024.pdf
+2025-08-25 15:05:10,559 - INFO - Converting: Daily-Hansard-Thursday-6th-April-2023.pdf
+2025-08-25 15:05:13,267 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-6th-April-2023.pdf
+2025-08-25 15:05:13,267 - INFO - Converting: Daily-Hansard-Thursday-7-April-2022.pdf
+2025-08-25 15:05:17,275 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-7-April-2022.pdf
+2025-08-25 15:05:17,275 - INFO - Converting: Daily-Hansard-Thursday-8th-August-2024.pdf
+2025-08-25 15:05:21,550 - INFO -   \u2713 Successfully converted Daily-Hansard-Thursday-8th-August-2024.pdf
+2025-08-25 15:05:21,551 - INFO - Converting: Daily-Hansard-Tuesday-10th-May-2022.pdf
+2025-08-25 15:05:24,554 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-10th-May-2022.pdf
+2025-08-25 15:05:24,554 - INFO - Converting: Daily-Hansard-Tuesday-11th-July-2023-1.pdf
+2025-08-25 15:05:30,909 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-11th-July-2023-1.pdf
+2025-08-25 15:05:30,911 - INFO - Converting: Daily-Hansard-Tuesday-12th-March-2024.pdf
+2025-08-25 15:05:34,760 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-12th-March-2024.pdf
+2025-08-25 15:05:34,761 - INFO - Converting: Daily-Hansard-Tuesday-12th-September-2023.pdf
+2025-08-25 15:05:39,083 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-12th-September-2023.pdf
+2025-08-25 15:05:39,083 - INFO - Converting: Daily-Hansard-Tuesday-16th-April-2024.pdf
+2025-08-25 15:05:41,855 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-16th-April-2024.pdf
+2025-08-25 15:05:41,855 - INFO - Converting: Daily-Hansard-Tuesday-1st-October-2024.pdf
+2025-08-25 15:05:45,661 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-1st-October-2024.pdf
+2025-08-25 15:05:45,662 - INFO - Converting: Daily-Hansard-Tuesday-21-May-2024.pdf
+2025-08-25 15:05:49,310 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-21-May-2024.pdf
+2025-08-25 15:05:49,310 - INFO - Converting: Daily-Hansard-Tuesday-21st-November-2023.pdf
+2025-08-25 15:05:54,670 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-21st-November-2023.pdf
+2025-08-25 15:05:54,670 - INFO - Converting: Daily-Hansard-Tuesday-26th-July-2022.pdf
+2025-08-25 15:06:00,440 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-26th-July-2022.pdf
+2025-08-25 15:06:00,440 - INFO - Converting: Daily-Hansard-Tuesday-30th-August-2022.pdf
+2025-08-25 15:06:03,575 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-30th-August-2022.pdf
+2025-08-25 15:06:03,575 - INFO - Converting: Daily-Hansard-Tuesday-3rd-December-2024.pdf
+2025-08-25 15:06:08,582 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-3rd-December-2024.pdf
+2025-08-25 15:06:08,582 - INFO - Converting: Daily-Hansard-Tuesday-3rd-September-2024.pdf
+2025-08-25 15:06:10,094 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-3rd-September-2024.pdf
+2025-08-25 15:06:10,094 - INFO - Converting: Daily-Hansard-Tuesday-5th-April-2022.pdf
+2025-08-25 15:06:10,975 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-5th-April-2022.pdf
+2025-08-25 15:06:10,975 - INFO - Converting: Daily-Hansard-Tuesday-6th-August-2024.pdf
+2025-08-25 15:06:12,881 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-6th-August-2024.pdf
+2025-08-25 15:06:12,882 - INFO - Converting: Daily-Hansard-Tuesday-8th-February-2022.pdf
+2025-08-25 15:06:17,546 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-8th-February-2022.pdf
+2025-08-25 15:06:17,546 - INFO - Converting: Daily-Hansard-Tuesday-9th-July-2024.pdf
+2025-08-25 15:06:20,977 - INFO -   \u2713 Successfully converted Daily-Hansard-Tuesday-9th-July-2024.pdf
+2025-08-25 15:06:20,977 - INFO - Converting: Daily-Hansard-Wednesday-10th-July-2024.pdf
+2025-08-25 15:06:25,367 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-10th-July-2024.pdf
+2025-08-25 15:06:25,367 - INFO - Converting: Daily-Hansard-Wednesday-11th-May-2022.pdf
+2025-08-25 15:06:26,918 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-11th-May-2022.pdf
+2025-08-25 15:06:26,918 - INFO - Converting: Daily-Hansard-Wednesday-12th-July-2023.pdf
+2025-08-25 15:06:34,830 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-12th-July-2023.pdf
+2025-08-25 15:06:34,830 - INFO - Converting: Daily-Hansard-Wednesday-13th-March-2024.pdf
+2025-08-25 15:06:38,602 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-13th-March-2024.pdf
+2025-08-25 15:06:38,602 - INFO - Converting: Daily-Hansard-Wednesday-13th-September-2023.pdf
+2025-08-25 15:06:42,332 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-13th-September-2023.pdf
+2025-08-25 15:06:42,332 - INFO - Converting: Daily-Hansard-Wednesday-15th-February-2023.pdf
+2025-08-25 15:06:46,199 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-15th-February-2023.pdf
+2025-08-25 15:06:46,199 - INFO - Converting: Daily-Hansard-Wednesday-17th-April-2024.pdf
+2025-08-25 15:06:50,276 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-17th-April-2024.pdf
+2025-08-25 15:06:50,276 - INFO - Converting: Daily-Hansard-Wednesday-22nd-May-2024.pdf
+2025-08-25 15:06:53,767 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-22nd-May-2024.pdf
+2025-08-25 15:06:53,768 - INFO - Converting: Daily-Hansard-Wednesday-22nd-November-2023.pdf
+2025-08-25 15:06:59,049 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-22nd-November-2023.pdf
+2025-08-25 15:06:59,050 - INFO - Converting: Daily-Hansard-Wednesday-27th-July-2022-1.pdf
+2025-08-25 15:07:03,781 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-27th-July-2022-1.pdf
+2025-08-25 15:07:03,782 - INFO - Converting: Daily-Hansard-Wednesday-2nd-October-2024.pdf
+2025-08-25 15:07:07,747 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-2nd-October-2024.pdf
+2025-08-25 15:07:07,747 - INFO - Converting: Daily-Hansard-Wednesday-31st-August-2022.pdf
+2025-08-25 15:07:11,699 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-31st-August-2022.pdf
+2025-08-25 15:07:11,699 - INFO - Converting: Daily-Hansard-Wednesday-4th-December-2024.pdf
+2025-08-25 15:07:16,672 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-4th-December-2024.pdf
+2025-08-25 15:07:16,672 - INFO - Converting: Daily-Hansard-Wednesday-4th-September-2024.pdf
+2025-08-25 15:07:19,278 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-4th-September-2024.pdf
+2025-08-25 15:07:19,278 - INFO - Converting: Daily-Hansard-Wednesday-5th-April-2023-for-final.pdf
+2025-08-25 15:07:24,115 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-5th-April-2023-for-final.pdf
+2025-08-25 15:07:24,115 - INFO - Converting: Daily-Hansard-Wednesday-6th-April-2022.pdf
+2025-08-25 15:07:25,213 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-6th-April-2022.pdf
+2025-08-25 15:07:25,213 - INFO - Converting: Daily-Hansard-Wednesday-9th-February-2022-1.pdf
+2025-08-25 15:07:29,893 - INFO -   \u2713 Successfully converted Daily-Hansard-Wednesday-9th-February-2022-1.pdf
+2025-08-25 15:07:29,893 - INFO - Converting: Hansard-Report-Thursday-31st-October-2024.pdf
+2025-08-25 15:07:30,160 - INFO -   \u2713 Successfully converted Hansard-Report-Thursday-31st-October-2024.pdf
+2025-08-25 15:07:30,160 - INFO - 
+Conversion complete: 101/101 PDFs converted

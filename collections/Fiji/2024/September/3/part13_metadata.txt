@@ -6,13 +6,12 @@ Speaker 4: F.S. KOYA
 Speaker 5: I. VASU
 Speaker 6: I.B.  SERUIRATU
 Speaker 7: J. USAMATE
-Speaker 8: J. USAMATE.- A follow
-Speaker 9: J.N. NAND
-Speaker 10: K. LAL
-Speaker 11: P.D. KUMAR
-Speaker 12: PROF. B.C. PRASAD
-Speaker 13: R.R. SHARMA
-Speaker 14: RO F.Q. TUISAWAU
-Speaker 15: S. NAND
-Speaker 16: V. LAL
+Speaker 8: J.N. NAND
+Speaker 9: K. LAL
+Speaker 10: P.D. KUMAR
+Speaker 11: PROF. B.C. PRASAD
+Speaker 12: R.R. SHARMA
+Speaker 13: RO F.Q. TUISAWAU
+Speaker 14: S. NAND
+Speaker 15: V. LAL
 

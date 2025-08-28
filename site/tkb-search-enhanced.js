@@ -208,6 +208,22 @@ $(document).ready(function() {
         }).fail(function(xhr, status, error) {
             console.error('Search failed:', status, error);
             console.error('Response:', xhr.responseText);
+            
+            // Check if we actually got valid results despite the 400 status
+            try {
+                const data = JSON.parse(xhr.responseText);
+                if (data.response && data.response.docs && data.response.docs.length > 0) {
+                    console.log('Found results despite 400 status, processing...');
+                    hideLoadingOverlay();
+                    $('.loading').hide();
+                    displayResults(data, false);
+                    updateExportButtons(data.response.numFound);
+                    return;
+                }
+            } catch (e) {
+                console.error('Could not parse response as JSON');
+            }
+            
             hideLoadingOverlay();
             $('.loading').hide();
             showError('Search failed: ' + error);
